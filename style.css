@@ -14,9 +14,11 @@ Tags: custom theme development
 @tailwind components;
 @tailwind utilities;
 
-body,
-html {
-  font-family: "Manrope", sans-serif !important;
-  scroll-behavior: smooth;
+@font-face {
+   font-family: Axiforma_Bold;
+   src: url(/assets/fonts/Axiforma-Bold.ttf);
 }
 
+.Axiforma_Bold{
+  font-family: Axiforma_Bold;
+}

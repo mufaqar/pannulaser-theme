@@ -14,16 +14,20 @@
 <?php wp_body_open(); ?>
   <!-- ////top bar// -->
 <!-- Top Bar -->
+<div
+    class="relative bg-cover bg-center bg-no-repeat min-h-[450px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">
+
 <section class="bg-[#242F48] w-full py-2  opacity-80 hidden md:flex">
   <div class="container mx-auto px-4">
     <div class="flex flex-col md:flex-row justify-between items-center text-white gap-2 md:gap-0">
       <p class="text-center md:text-left">Your Eyes, Our Passion</p>
       <div class="flex flex-wrap justify-center md:justify-end gap-4">
         <a href="/" class="hover:underline">About</a>
-        <a href="/" class="hover:underline">LASIK Self Test</a>
+        <!-- <a href="/" class="hover:underline">LASIK Self Test</a>
         <a href="/" class="hover:underline">Directions</a>
         <a href="/" class="hover:underline">Payment Options</a>
-        <a href="/" class="hover:underline">FAQs</a>
+        <a href="/" class="hover:underline">FAQs</a> -->
+        <?php wp_nav_menu( array( 'theme_location' => 'top','fallback_cb'=> 'fallbackmenu1','menu_class' => 'top_nav', ) ); ?>     
       </div>
     </div>
   </div>
@@ -70,29 +74,11 @@
     </div>
   </div>
 </header>
-
-<!-- Mobile Menu Script -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-
-    // Optional: Hide menu when a link is clicked (UX improvement)
-    menu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.add('hidden');
-      });
-    });
-  });
-</script>
-
-
-
-
-<?php wp_body_open(); ?>
-
+ <!-- Hero Section -->
+   <?php if ( is_front_page() ) {
+    get_template_part( 'templates/hero', 'banner' );
+} else {
+    get_template_part( 'templates/hero', 'page' );
+}?>
+</div>
 
