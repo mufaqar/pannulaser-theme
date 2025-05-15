@@ -221,7 +221,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Empathetic.png" alt=""
                     class='w-[70px] h-[82px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2">Empathetic</h3>
-                <p class='text-2xl text-[#505050]'>Personalized patient care</p>
+                <p class='text-2xl text-Pan_black'>Personalized patient care</p>
             </div>
             <!-- card 4 -->
             <div
