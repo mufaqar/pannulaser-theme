@@ -102,7 +102,7 @@ $citieslist = [
 
 ?>
 
-<footer class="w-full image-overlay bg-[#1F2B37] ">
+<footer class="w-full image-overlay bg-footercol ">
     <div class="px-4 container mx-auto">
         <!--Grid-->
         <div class=" grid grid-cols-1 md:grid-cols-5 sm:grid-cols-3 xl:grid-cols-5 gap-3 gap-y-8 md:gap-8 py-10">

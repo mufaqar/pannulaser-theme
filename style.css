@@ -34,6 +34,8 @@ Tags: custom theme development
   --topBarBg: #445D84;
   --Pan_black: #1F2B37;
   --hovLink: #5076F6;
+  --bgcolor: #F2F6F5;
+  --footercol: #1F2B37;
 }
 
 body,
@@ -65,4 +67,7 @@ html {
 }
 .service_card{
   @apply text-center flex flex-col items-center justify-center p-3 text-white;
+}
+.see_card{
+  @apply bg-white text-center flex flex-col items-center justify-center p-3 shadow-md rounded-[15px] h-[221px];
 }

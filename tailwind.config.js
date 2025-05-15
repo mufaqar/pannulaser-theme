@@ -16,6 +16,8 @@ module.exports = {
       topBarBg: 'var(--topBarBg)',
       Pan_black: 'var(--Pan_black)',
       hovLink: 'var(--hovLink)',
+      bgcolor: 'var(--bgcolor)',
+      footercol: 'var(--footercol)',
     }
     },
   },
