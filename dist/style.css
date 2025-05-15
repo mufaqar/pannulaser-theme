@@ -685,10 +685,6 @@ video {
   margin-top: 2rem;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1277,11 +1273,6 @@ video {
 .text-\[\#505050\] {
   --tw-text-opacity: 1;
   color: rgb(80 80 80 / var(--tw-text-opacity));
-}
-
-.text-\[\#65BD9C\] {
-  --tw-text-opacity: 1;
-  color: rgb(101 189 156 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {

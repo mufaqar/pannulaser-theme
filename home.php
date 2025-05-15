@@ -47,7 +47,7 @@
                     <div class="about_card">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/transparent.png" alt=""
                             class='w-[93px] h-[107px] object-contain' />
-                        <h3 class="font-bold text-xl text-[#65BD9C] py-2">Transparent Price</h3>
+                        <h3 class="font-bold text-xl text-secondry py-2">Transparent Price</h3>
                         <p class="text-Pan_black text-base">Enjoy competitive and clear pricing with no hidden fees.</p>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     <div class="about_card">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/experience.png" alt=""
                             class='w-[93px] h-[107px] object-contain' />
-                        <h3 class="font-bold text-xl text-[#65BD9C] py-2">Experienced Doctor</h3>
+                        <h3 class="font-bold text-xl text-secondry py-2">Experienced Doctor</h3>
                         <p class="text-Pan_black text-base">Our highly skilled doctors ensure safe and effective
                             treatments with years of expertise.</p>
                     </div>
@@ -64,7 +64,7 @@
                     <div class="about_card ">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vision.png" alt=""
                             class='w-[93px] h-[107px] object-contain' />
-                        <h3 class="font-bold text-xl text-[#65BD9C] py-2">100,000 Laser Vision</h3>
+                        <h3 class="font-bold text-xl text-secondry py-2">100,000 Laser Vision</h3>
                         <p class="text-Pan_black text-base">
                             Correction procedures. He has been operating in Broward County for the past 20 years.
                         </p>
@@ -82,8 +82,7 @@
     <div class="container mx-auto px-4">
         <div class="md:max-w-[60%] w-full mx-auto text-white text-center ">
             <p class="text-2xl pb-3">Transparent price</p>
-            <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-[400]">WE PROVIDE BEST <span
-                    class="font-bold">SERVICES FOR
+            <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-[400]">WE PROVIDE BEST <span class="font-bold">SERVICES FOR
                     PATIENT</span></h2>
         </div>
         <!-- Responsive Grid -->
@@ -128,8 +127,7 @@
         </div>
         <!-- Footer Link -->
         <div class="mt-8 text-hovLink text-white ">
-            <a href="/"
-                class="text-md font-semibold hover:underline flex w-fit gap-2 items-center  mx-auto justify-center ">
+            <a href="/" class="text-md font-semibold hover:underline flex w-fit gap-2 items-center  mx-auto justify-center ">
                 VIEW ALL
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg" alt="" />
             </a>
@@ -203,27 +201,31 @@
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-white text-center">See the Difference</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 text-white items-center">
             <!-- card 1 -->
-            <div class="see_card">
+            <div
+                class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Excellence.png" alt="" />
                 <h3 class="font-bold text-secondry text-2xl py-2">Excellence</h3>
                 <p class='text-2xl text-Pan_black'>in Eyecare since 1980</p>
             </div>
             <!-- card 2 -->
-            <div class="see_card">
+            <div
+                class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Award-winning.png" alt=""
                     class='w-[70px] h-[82px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2">Award winning</h3>
                 <p class='text-2xl text-Pan_black'>Eye specialists</p>
             </div>
             <!-- card 3 -->
-            <div class="see_card">
+            <div
+                class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Empathetic.png" alt=""
                     class='w-[70px] h-[82px]'>
-                <h3 class="font-bold text-[#65BD9C] text-2xl py-2">Empathetic</h3>
+                <h3 class="font-bold text-secondry text-2xl py-2">Empathetic</h3>
                 <p class='text-2xl text-[#505050]'>Personalized patient care</p>
             </div>
             <!-- card 4 -->
-            <div class="see_card">
+            <div
+                class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Advanced-care.png" alt=""
                     class='w-[70px] h-[82px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2">Advanced care</h3>
@@ -261,7 +263,8 @@
                         $loop->the_post(); ?>
 
                 <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Dr.Mutyala.png" alt="" class=''>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Dr.Mutyala.png"
+                        alt="" class=''>
                     <div class='p-4 sm:px-6  '>
                         <h3 class="font-bold text-[#000000] text-2xl py-2">Dr. Mutyala</h3>
                         <p class='text-[14px] text-Pan_black'>LASIK eye surgery specialist in Southeast Florida</p>
@@ -343,8 +346,8 @@
             <!-- card 3 -->
             <div class=" flex flex-col  p-3 ">
                 <div class="relative">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Fort-Lauderdale-Office.png"
-                        alt="" class="w-full h-auto">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Fort-Lauderdale-Office.png" alt=""
+                        class="w-full h-auto">
                     <!-- Overlay text on top-left -->
                     <div
                         class="absolute top-3 left-3 bg-secondry text-white text-sm px-3 py-1 rounded-tl-md rounded-br-md shadow-lg">
