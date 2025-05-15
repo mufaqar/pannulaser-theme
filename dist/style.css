@@ -1156,12 +1156,12 @@ video {
   text-align: center;
 }
 
-.font-axiformaregular {
-  font-family: axiformaregular, sans-serif;
-}
-
 .font-axiformabold {
   font-family: axiformabold, sans-serif;
+}
+
+.font-axiformaregular {
+  font-family: axiformaregular, sans-serif;
 }
 
 .\!text-\[32px\] {
@@ -1345,7 +1345,7 @@ video {
   font-style: normal;
 }
 
-p{
+p a{
   font-family: axiformaregular;
   font-weight: 400;
 }

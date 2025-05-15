@@ -150,41 +150,42 @@
         <!-- Testimonial Cards Grid -->
         <div class="grid grid-cols-1 sm:!grid-cols-3 gap-4 w-full px-2">
             <!-- Card 1 -->
+              <?php
+            $args = array(
+                'post_type' => 'testimonials',
+                'posts_per_page' => 3, // change as needed
+            );
+
+            $loop = new WP_Query($args);
+
+            if ($loop->have_posts()):
+
+                while ($loop->have_posts()):
+                    $loop->the_post(); ?>
+                <?php
+                        if (has_post_thumbnail()) {
+                            echo get_the_post_thumbnail(get_the_ID(), 'medium');
+                        }
+                        ?>
             <div class="bg-white p-6 rounded-lt-3xl rounded-bl-3xl shadow-lg">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/wps-office-user-2.d4d85cc@2x.png"
                     alt="" class="w-10 h-10 mb-4">
                 <p class="text-Pan_black text-[17px] mb-4">
-                    LASIK performed by Pannu Laser & Vision Institute "My LASIK procedure was quick, easy and painless-
-                    why did I wait so long to have it?! Your staff is fantastic. Thank you for the miracle that is my
-                    20-20 vision!
+                    <?php the_content();  ?>
                 </p>
-                <h4 class="font-semibold text-Pan_black text-[17px]">Olga Vizcaino</h4>
+                <h4 class="font-semibold text-Pan_black text-[17px] mt-4">Olga Vizcaino</h4>
                 <h4 class="font-semibold text-secondry text-[17px]">Patient</h4>
             </div>
+             <?php endwhile;
+
+            else:
+                echo '<p>No doctors found.</p>';
+            endif;
+
+            wp_reset_postdata();
+            ?>
             <!-- Card 2 -->
-            <div class="bg-white p-6 rounded-lt-3xl rounded-bl-3xl shadow-lg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/wps-office-user-2.d4d85cc@2x.png"
-                    alt="" class="w-10 h-10 mb-4">
-                <p class="text-Pan_black text-[17px] mb-4">
-                    Great experience, the staff is very nice and welcoming since the first time I called to make an
-                    appointment. Dr. Don (optometrist) and Dr. Mutyala (surgeon) are great, they took their time to
-                    explain the procedure in depth and what we could expect after.
-                </p>
-                <h4 class="font-semibold text-Pan_black text-[17px]">Olga Vizcaino</h4>
-                <h4 class="font-semibold text-secondry text-[17px]">Patient</h4>
-            </div>
-            <!-- Card 3 -->
-            <div class="bg-white p-6 rounded-lt-3xl rounded-bl-3xl shadow-lg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/wps-office-user-2.d4d85cc@2x.png"
-                    alt="" class="w-10 h-10 mb-4">
-                <p class="text-Pan_black text-[17px] mb-4">
-                    Had a great experience with my Lasik procedure at Pannu. Dr Brian was great and very helpful. He
-                    explained every step of the process very well and I felt very comfortable. As for Dr Mutyala who
-                    performed the procedure, he has hands of gold.
-                </p>
-                <h4 class="font-semibold text-Pan_black text-[17px]">Olga Vizcaino</h4>
-                <h4 class="font-semibold text-secondry text-[17px]">Patient</h4>
-            </div>
+        
         </div>
     </div>
 </section>

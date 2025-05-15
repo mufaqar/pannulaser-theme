@@ -28,7 +28,7 @@ Tags: custom theme development
     font-weight: normal;
     font-style: normal;
 }
-p{
+p a{
   font-family: axiformaregular;
   font-weight: 400;
 }
