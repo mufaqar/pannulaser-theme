@@ -1,4 +1,5 @@
-<?php  get_header(); ?>
+<?php 
+ get_header(); ?>
 
    
 
@@ -269,71 +270,50 @@
     <div class='container mx-auto px-4'>
         <div>
             <div class=" w-full mx-auto text-center">
-                <p class="text-[24px] pb-3 text-[#27304B]">MEET OUR TEAM</p>
-                <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-[#27304B]">THE MOST QUALIFIED,<br><span
+                <p class="text-2xl pb-3 text-[#27304B] font-axiformaregular">MEET OUR TEAM</p>
+
+                <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-[#27304B] abc">THE MOST QUALIFIED,<br><span
                         class="font-bold"> SKILLFUL& PROFESSIONAL DOCTORS.</span></h2>
             </div>
             <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-8 items-center'>
-                <!-- //////card 1/// -->
-                <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Rectangle 1 copy 7@2x.png"
-                        alt="" class=''>
-                    <div class='p-4 sm:px-6  '>
-                        <h3 class="font-bold text-[#000000] text-2xl py-2">Dr. Mutyala</h3>
-                        <p class='text-[14px] text-[#302E2E]'>LASIK eye surgery specialist in Southeast Florida</p>
-                        <div class="mt-8 text-[#5076F6] text-center flex items-center mx-auto justify-center ">
-                            <a href="/" class="text-md font-semibold hover:underline flex gap-2 items-center ">MORE
-                                DETAILS <img
-                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4188.svg"
-                                    alt="" class='w-4'></a>
+
+                <?php
+                $args = array(
+                    'post_type' => 'doctors',
+                    'posts_per_page' => 4, // change as needed
+                );
+
+                $loop = new WP_Query($args);
+
+                if ($loop->have_posts()):
+
+                    while ($loop->have_posts()):
+                        $loop->the_post(); ?>
+
+                        <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Rectangle 1 copy 7@2x.png"
+                                alt="" class=''>
+                            <div class='p-4 sm:px-6  '>
+                                <h3 class="font-bold text-[#000000] text-2xl py-2">Dr. Mutyala</h3>
+                                <p class='text-[14px] text-[#302E2E]'>LASIK eye surgery specialist in Southeast Florida</p>
+                                <div class="mt-8 text-[#5076F6] text-center flex items-center mx-auto justify-center ">
+                                    <a href="/" class="read-more">MORE
+                                        DETAILS <img
+                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4188.svg"
+                                            alt="" class='w-4'></a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <!-- //////card 2/// -->
-                <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Rectangle2.png" alt="" class=''>
-                    <div class='p-4  '>
-                        <h3 class="font-bold text-[#000000] text-2xl py-2">Dr. Omair Ali</h3>
-                        <p class='text-[14px] text-[#302E2E]'>Comprehensive ophthalmologist at Pannu Laser and Vision
-                            Institute.</p>
-                        <div class="mt-8 text-[#5076F6] text-center flex items-center mx-auto justify-center ">
-                            <a href="/" class="text-md font-semibold hover:underline flex gap-2 items-center ">MORE
-                                DETAILS <img
-                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4188.svg"
-                                    alt="" class='w-4'></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- //////card 3/// -->
-                <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Rectangle3.png" alt="" class=''>
-                    <div class='p-4  '>
-                        <h3 class="font-bold text-[#000000] text-2xl py-2">Dr. David Silver</h3>
-                        <p class='text-[14px] text-[#302E2E]'>Patient-oriented and thorough doctor serving his patients
-                            in South Florida.</p>
-                        <div class="mt-8 text-[#5076F6] text-center flex items-center mx-auto justify-center ">
-                            <a href="/" class="text-md font-semibold hover:underline flex gap-2 items-center ">MORE
-                                DETAILS <img
-                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4188.svg"
-                                    alt="" class='w-4'></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- //////card 4/// -->
-                <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Rectangle4.png" alt="" class=''>
-                    <div class='p-4  '>
-                        <h3 class="font-bold text-[#000000] text-2xl py-2">Dr. Don Bryan</h3>
-                        <p class='text-[14px] text-[#302E2E]'>highly motivated, personable health care practitioner with
-                            multiple professional.</p>
-                        <div class="mt-8 text-[#5076F6] text-center flex items-center mx-auto justify-center ">
-                            <a href="/" class="text-md font-semibold hover:underline flex gap-2 items-center ">MORE
-                                DETAILS <img
-                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4188.svg"
-                                    alt="" class='w-4'></a>
-                        </div>
-                    </div>
-                </div>
+
+                    <?php endwhile;
+
+                else:
+                    echo '<p>No doctors found.</p>';
+                endif;
+
+                wp_reset_postdata();
+                ?>
+
             </div>
         </div>
     </div>

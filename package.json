@@ -1,13 +1,13 @@
 {
-  "name": "cbl-theme",
+  "name": "PannuLaser-Theme",
   "version": "1.0.0",
-  "description": "Theme",
+  "description": "PannuLaser Theme",
   "main": "index.js",
   "scripts": {
     "dev": "tailwindcss -i ./style.css -o ./dist/style.css --watch"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mufaqar",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^10.4.20",
