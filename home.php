@@ -82,7 +82,7 @@
     <div class="container mx-auto px-4">
         <div class="md:max-w-[60%] w-full mx-auto text-white text-center ">
             <p class="text-2xl pb-3">Transparent price</p>
-            <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-[400]">WE PROVIDE BEST <span class="font-bold">SERVICES FOR
+            <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-[400] font-axiformaregular">WE PROVIDE BEST <span class="font-bold font-axiformabold">SERVICES FOR
                     PATIENT</span></h2>
         </div>
         <!-- Responsive Grid -->
@@ -244,8 +244,8 @@
             <div class=" w-full mx-auto text-center">
                 <p class="text-2xl pb-3 text-[#27304B] font-axiformaregular">MEET OUR TEAM</p>
 
-                <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-[#27304B] abc">THE MOST QUALIFIED,<br><span
-                        class="font-bold"> SKILLFUL& PROFESSIONAL DOCTORS.</span></h2>
+                <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-primary font-axiformaregular">THE MOST QUALIFIED,<br><span
+                        class="font-bold font-axiformabold"> SKILLFUL& PROFESSIONAL DOCTORS.</span></h2>
             </div>
             <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-8 items-center'>
 

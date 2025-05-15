@@ -28,6 +28,18 @@ Tags: custom theme development
     font-weight: normal;
     font-style: normal;
 }
+p{
+  font-family: axiformaregular;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family:axiformabold ;
+}
 :root {
   --primary: #27304B;
   --secondry: #65BD9C;

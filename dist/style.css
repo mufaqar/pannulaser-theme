@@ -1160,6 +1160,10 @@ video {
   font-family: axiformaregular, sans-serif;
 }
 
+.font-axiformabold {
+  font-family: axiformabold, sans-serif;
+}
+
 .\!text-\[32px\] {
   font-size: 32px !important;
 }
@@ -1284,6 +1288,10 @@ video {
   color: var(--hovLink);
 }
 
+.text-primary {
+  color: var(--primary);
+}
+
 .text-secondry {
   color: var(--secondry);
 }
@@ -1335,6 +1343,20 @@ video {
   font-weight: normal;
 
   font-style: normal;
+}
+
+p{
+  font-family: axiformaregular;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family:axiformabold ;
 }
 
 :root {
