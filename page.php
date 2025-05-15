@@ -14,11 +14,7 @@
 
 get_header();
 ?>
-<section class="py-24 bg-[#6041BB]">
-    <div class="container mx-auto px-4">
-        <h1 class="sm:text-5xl text-4xl leading-normal font-extrabold text-white text-center"><?php the_title()?></h1>
-    </div>
-</section>
+
 
 <section class="py-16">
     <div class="container mx-auto px-4">
