@@ -315,13 +315,13 @@
         <div>
             <div class=" w-full mx-auto text-center">
                 <p class="text-2xl pb-3 text-[#27304B] font-axiformaregular">MEET OUR TEAM</p>
-              
+
                 <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-[#27304B] abc">THE MOST QUALIFIED,<br><span
                         class="font-bold"> SKILLFUL& PROFESSIONAL DOCTORS.</span></h2>
             </div>
             <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-8 items-center'>
 
-            <?php
+                <?php
                 $args = array(
                     'post_type' => 'doctors',
                     'posts_per_page' => 4, // change as needed
@@ -329,34 +329,35 @@
 
                 $loop = new WP_Query($args);
 
-                if ($loop->have_posts()) :
-                
-                    while ($loop->have_posts()) : $loop->the_post(); ?>
-            
-                <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Rectangle 1 copy 7@2x.png"
-                        alt="" class=''>
-                    <div class='p-4 sm:px-6  '>
-                        <h3 class="font-bold text-[#000000] text-2xl py-2">Dr. Mutyala</h3>
-                        <p class='text-[14px] text-[#302E2E]'>LASIK eye surgery specialist in Southeast Florida</p>
-                        <div class="mt-8 text-[#5076F6] text-center flex items-center mx-auto justify-center ">
-                            <a href="/" class="read-more">MORE
-                                DETAILS <img
-                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4188.svg"
-                                    alt="" class='w-4'></a>
-                        </div>
-                    </div>
-                </div>
+                if ($loop->have_posts()):
 
-                  <?php endwhile;
-                  
-                else :
+                    while ($loop->have_posts()):
+                        $loop->the_post(); ?>
+
+                        <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Rectangle 1 copy 7@2x.png"
+                                alt="" class=''>
+                            <div class='p-4 sm:px-6  '>
+                                <h3 class="font-bold text-[#000000] text-2xl py-2">Dr. Mutyala</h3>
+                                <p class='text-[14px] text-[#302E2E]'>LASIK eye surgery specialist in Southeast Florida</p>
+                                <div class="mt-8 text-[#5076F6] text-center flex items-center mx-auto justify-center ">
+                                    <a href="/" class="read-more">MORE
+                                        DETAILS <img
+                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4188.svg"
+                                            alt="" class='w-4'></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php endwhile;
+
+                else:
                     echo '<p>No doctors found.</p>';
                 endif;
 
                 wp_reset_postdata();
                 ?>
-              
+
             </div>
         </div>
     </div>
