@@ -19,11 +19,7 @@ Tags: custom theme development
     src: url('../assets/fonts/axiforma-bold-webfont.woff2') format('woff2'),
          url('../assets/fonts/axiforma-bold-webfont.woff') format('woff');
 
-
 }
-
-
-
 
 @font-face {
     font-family: 'axiformaregular';
@@ -31,7 +27,13 @@ Tags: custom theme development
          url('../assets/fonts/axiforma-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+}
+:root {
+  --primary: #27304B;
+  --secondry: #65BD9C;
+  --topBarBg: #445D84;
+  --Pan_black: #1F2B37;
+  --hovLink: #5076F6;
 }
 
 body,
@@ -40,8 +42,27 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 .read-more {
   @apply  font-semibold hover:underline flex gap-2 items-center;
+}
+.top_nav{
+  @apply flex flex-wrap justify-center md:justify-end gap-4
+}
+.top_nav .menu-item{
+  @apply text-white hover:text-secondry
+}
+.primary_nav{
+  @apply hidden lg:flex items-center space-x-6;
+}
+.primary_nav .menu-item{
+  @apply text-white hover:text-secondry
+}
+.primary_nav .menu-item.current-menu-item , .top_nav .menu-item.current-menu-item{
+  @apply text-secondry
+}
+.about_card{
+  @apply h-[323px] bg-white text-center flex flex-col items-center justify-center py-4 px-8 shadow-md rounded-md;
+}
+.service_card{
+  @apply text-center flex flex-col items-center justify-center p-3 text-white;
 }

@@ -162,7 +162,7 @@ function cptui_register_my_cpts_services() {
 		"can_export" => false,
 		"rewrite" => [ "slug" => "services", "with_front" => true ],
 		"query_var" => true,
-		"supports" => [ "title", "editor", "thumbnail" ],
+		"supports" => [ "title", "editor", "thumbnail", "excerpt", "revisions" ],
 		"show_in_graphql" => false,
 	];
 
@@ -170,5 +170,6 @@ function cptui_register_my_cpts_services() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts_services' );
+
 
 

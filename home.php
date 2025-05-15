@@ -1,28 +1,26 @@
-<?php 
- get_header(); ?>
+<?php /*Template Name: FrontPage*/ get_header(); ?>
 
-   
 
-<!-- //////Meet /// -->
 
-<section class="bg-gray-300 py-20">
+<!--Meet-->
+
+<section class="bg-[#F2F6F5] py-20">
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-start gap-10">
-
+        <div class="flex md:flex-row flex-col items-center md:gap-16 gap-10">
             <!-- Left Text Block -->
-            <div>
-                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold pb-3 text-[#1F2B37]">Meet Our Surgeon</h2>
-                <p class='text-[16px] md:text-[20px] text-[#1F2B37] mt-3'>
+            <div class="md:w-1/2 w-full">
+                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold pb-3 text-Pan_black">Meet Our Surgeon</h2>
+                <p class='text-base md:text-xl text-Pan_black mt-5'>
                     PANNU LASER & VISION INSTITUTE is proud to have DR. SRINI
                     MUTYALA as our Medical Director and LASIK Surgeon.
                 </p>
-                <p class="py-3 text-[16px] md:text-[20px] text-[#1F2B37]">
+                <p class="py-3 text-base md:text-xl text-Pan_black mt-5">
 
                     DR. M is a LASIK eye surgery specialist in Southeast Florida
                     and has performed over 100,000 laser vision correction procedures. He has been operating in Broward
                     County for the past 20 years.
                 </p>
-                <p class='text-[16px] md:text-[20px] text-[#1F2B37]'>
+                <p class='text-base md:text-xl text-Pan_black mt-5'>
                     DR. SRINI MUTYALA studied ophthalmology at the world-renowned
                     Mayo Clinic. After completing his training at Mayo Clinic, DR. M was hand-selected for a prestigious
                     advanced training program to further his specialization in LASIK, laser and cornea surgery. This
@@ -30,45 +28,47 @@
                     world.
                 </p>
 
-                <div class="mt-8 text-[#5076F6]">
-                    <a href="/" class="text-md font-semibold hover:underline flex gap-2 items-center">
+                <div class="mt-8 text-hovLink">
+                    <a href="/" class="text-md font-semibold hover:underline flex w-fit gap-2 items-center">
                         MORE DETAILS
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4188.svg" alt=""
-                            class='w-4'>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg" alt="" />
                     </a>
                 </div>
             </div>
-
             <!-- Right Side: Image + Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <!-- Surgeon Image (full width of first column) -->
-                <div class=" text-center flex flex-col items-center justify-center  shadow-md rounded-md">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/srini (1).png" alt=""
-                        class="w-full h-auto rounded-md ">
+            <div class="md:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="space-y-3 flex flex-col sm:pt-6">
+                    <!-- Surgeon Image (full width of first column) -->
+                    <div class="h-[323px] items-center justify-center shadow-md rounded-md">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/srini.png" alt=""
+                            class="w-full h-full object-cover rounded-md " />
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="about_card">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/transparent.png" alt=""
+                            class='w-[93px] h-[107px] object-contain' />
+                        <h3 class="font-bold text-xl text-[#65BD9C] py-2">Transparent Price</h3>
+                        <p class="text-Pan_black text-base">Enjoy competitive and clear pricing with no hidden fees.</p>
+                    </div>
                 </div>
-                <!-- Card 1 -->
-                <div class="bg-white text-center flex flex-col items-center justify-center p-6 shadow-md rounded-md  ">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4173@2x.png" alt=""
-                        class='w-[72px] h-[72px]'>
-                    <h3 class="font-bold text-[24px] text-[#65BD9C] py-2">Experienced Doctor</h3>
-                    <p class="text-[#4D4D4D] text-[16px]">Our highly skilled doctors ensure safe and effective
-                        treatments with years of expertise.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="bg-white text-center flex flex-col items-center justify-center p-6 shadow-md rounded-md">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4175.png" alt=""
-                        class='w-[72px] h-[72px]'>
-                    <h3 class="font-bold text-[24px] text-[#65BD9C] py-2">Transparent Price</h3>
-                    <p class="text-[#4D4D4D] text-[16px]">Enjoy competitive and clear pricing with no hidden fees.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="bg-white text-center flex flex-col items-center justify-center p-6 shadow-md rounded-md ">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4177.png" alt=""
-                        class='w-[72px] h-[72px]'>
-                    <h3 class="font-bold text-[24px] text-[#65BD9C] py-2">100,000 Laser Vision</h3>
-                    <p class="text-[#4D4D4D] text-[16px]">
-                        Correction procedures. He has been operating in Broward County for the past 20 years.
-                    </p>
+                <div class="space-y-3 flex flex-col">
+                    <!-- Card 2 -->
+                    <div class="about_card">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/experience.png" alt=""
+                            class='w-[93px] h-[107px] object-contain' />
+                        <h3 class="font-bold text-xl text-[#65BD9C] py-2">Experienced Doctor</h3>
+                        <p class="text-Pan_black text-base">Our highly skilled doctors ensure safe and effective
+                            treatments with years of expertise.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="about_card ">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vision.png" alt=""
+                            class='w-[93px] h-[107px] object-contain' />
+                        <h3 class="font-bold text-xl text-[#65BD9C] py-2">100,000 Laser Vision</h3>
+                        <p class="text-Pan_black text-base">
+                            Correction procedures. He has been operating in Broward County for the past 20 years.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,30 +76,52 @@
 </section>
 
 
-<!-- /////////Transparent price -->
+<!--Transparent price -->
 
-<section class="bg-[#27304B] py-14">
+<section class="bg-primary py-14">
     <div class="container mx-auto px-4">
-        <!-- Header -->
-        <div class="text-white text-center ">
-            <div class="md:max-w-[60%] w-full mx-auto">
-                <p class="text-[24px] pb-3">Transparent price</p>
-                <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3">WE PROVIDE BEST <span class="font-bold">SERVICES FOR
-                        PATIENT</span></h2>
-            </div>
+        <div class="md:max-w-[60%] w-full mx-auto text-white text-center ">
+            <p class="text-2xl pb-3">Transparent price</p>
+            <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3">WE PROVIDE BEST <span class="font-bold">SERVICES FOR
+                    PATIENT</span></h2>
         </div>
         <!-- Responsive Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 text-white items-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 items-center">
             <!-- Reusable Card -->
-            <div class="text-center flex flex-col items-center justify-center p-3 shadow-md rounded-md mt-2 ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4180.svg" alt=""
-                    class='w-18 h-18'>
-                <h3 class="font-bold text-xl py-2">Cataract Surgery & Lenses</h3>
-                <p class='text-[15px]'>World’s most advanced laser vision correction hospital treating vision problems.
-                </p>
-            </div>
+            <?php
+            $args = array(
+                'post_type' => 'services',
+                'posts_per_page' => 8, // change as needed
+            );
+
+            $loop = new WP_Query($args);
+
+            if ($loop->have_posts()):
+
+                while ($loop->have_posts()):
+                    $loop->the_post(); ?>
+                    <div class="service_card">
+                        <?php
+                        if (has_post_thumbnail()) {
+                            echo get_the_post_thumbnail(get_the_ID(), 'medium');
+                        }
+                        ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4180.svg" alt=""
+                            class='w-18 h-18'>
+                        <h3 class="font-bold text-xl py-2">Cataract Surgery & Lenses</h3>
+                        <p class='text-[15px]'>World’s most advanced laser vision correction hospital treating vision problems.
+                        </p>
+                    </div>
+                <?php endwhile;
+
+            else:
+                echo '<p>No doctors found.</p>';
+            endif;
+
+            wp_reset_postdata();
+            ?>
             <!-- Repeat Card 7 more times -->
-            <div class="text-center flex flex-col items-center justify-center p-3 shadow-md rounded-md ">
+            <!-- <div class="text-center flex flex-col items-center justify-center p-3 shadow-md rounded-md ">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4207.svg" alt=""
                     class='w-18 h-18'>
                 <h3 class="font-bold text-lg py-2">Glaucoma Treatment</h3>
@@ -149,7 +171,7 @@
                 <h3 class="font-bold text-lg py-2">Premium Intraocular Lens</h3>
                 <p class='text-[15px]'>Premium intraocular lens (IOL) implants for crystal-clear vision after cataract
                     surgery!</p>
-            </div>
+            </div> -->
         </div>
         <!-- Footer Link -->
         <div class="mt-8 text-white text-center flex items-center mx-auto justify-center ">
@@ -233,7 +255,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4192@2x.png" alt=""
                     class='w-18 h-18'>
                 <h3 class="font-bold text-[#65BD9C] text-2xl py-2">Excellence</h3>
-                <p class='text-[24px] text-[#505050]'>in Eyecare since 1980</p>
+                <p class='text-2xl text-[#505050]'>in Eyecare since 1980</p>
             </div>
             <!-- //////card 2/// -->
             <div
@@ -241,7 +263,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/winner-cup-7824@2x.png" alt=""
                     class='w-18 h-18'>
                 <h3 class="font-bold text-[#65BD9C] text-2xl py-2">Award winning</h3>
-                <p class='text-[24px] text-[#505050]'>Eye specialists</p>
+                <p class='text-2xl text-[#505050]'>Eye specialists</p>
             </div>
             <!-- //////card 3/// -->
             <div
@@ -249,7 +271,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4194@2x.png" alt=""
                     class='w-18 h-18'>
                 <h3 class="font-bold text-[#65BD9C] text-2xl py-2">Empathetic</h3>
-                <p class='text-[24px] text-[#505050]'>Personalized patient care</p>
+                <p class='text-2xl text-[#505050]'>Personalized patient care</p>
             </div>
             <!-- //////card 4/// -->
             <div
@@ -257,7 +279,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4196@2x.png" alt=""
                     class='w-18 h-18'>
                 <h3 class="font-bold text-[#65BD9C] text-2xl py-2">Advanced care</h3>
-                <p class='text-[24px] text-[#505050]'>Personalized patient care</p>
+                <p class='text-2xl text-[#505050]'>Personalized patient care</p>
             </div>
         </div>
     </div>
@@ -296,7 +318,7 @@
                             <div class='p-4 sm:px-6  '>
                                 <h3 class="font-bold text-[#000000] text-2xl py-2">Dr. Mutyala</h3>
                                 <p class='text-[14px] text-[#302E2E]'>LASIK eye surgery specialist in Southeast Florida</p>
-                                <div class="mt-8 text-[#5076F6] text-center flex items-center mx-auto justify-center ">
+                                <div class="mt-8 text-hovLink text-center flex items-center mx-auto justify-center ">
                                     <a href="/" class="read-more">MORE
                                         DETAILS <img
                                             src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4188.svg"
@@ -424,7 +446,7 @@
         <div class='flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8'>
             <!-- Left text content -->
             <div class='lg:w-[70%]'>
-                <p class='text-[24px] md:text-[30px] lg:text-[36px] text-white font-normal'>
+                <p class='text-2xl md:text-[30px] lg:text-[36px] text-white font-normal'>
                     If you Have Any Questions Schedule an Appointment
                 </p>
                 <h2 class='!text-[32px] md:!text-[48px] lg:!text-[62px] font-bold text-white'>
@@ -436,7 +458,7 @@
                 <a href="tel:03244644208"
                     class='flex  gap-2 bg-[#27304B] py-4 px-8 items-center rounded-tl-2xl rounded-br-2xl'>
                     <i class="fa-solid fa-phone-volume text-white text-xl"></i>
-                    <p class='text-[18px] md:text-[20px] text-white'>0324 4644208</p>
+                    <p class='text-[18px] md:text-xl text-white'>0324 4644208</p>
                 </a>
                 <a href="#"
                     class='bg-[#27304B] text-white py-4 px-8 items-center rounded-tl-2xl rounded-br-2xl font-semibold'>
