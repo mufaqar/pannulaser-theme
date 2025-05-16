@@ -107,7 +107,7 @@
                         ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4180.svg" alt=""
                     class='w-18 h-18'>
-                <div class="font-bold text-xl py-2 line-clamp-1 overflow-hidden ">
+                <div class="font-bold text-xl  line-clamp-1 ">
                     <?php the_title()?>
                 </div>
                 <div class='text-[15px] line-clamp-3'>
@@ -163,12 +163,11 @@
         if ($loop->have_posts()):
           while ($loop->have_posts()): $loop->the_post(); ?>
             <div class="bg-white p-6 rounded-xl shadow-lg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/wps-office-user-2.d4d85cc@2x.png"
-                    alt="" class="w-10 h-10 mb-4">
-                <p class="text-Pan_black text-[17px] mb-4">
+                <?php the_title(); ?>
+                <p class="text-Pan_black text-[17px] mb-4 line-clamp-5">
                     <?php the_content(); ?>
                 </p>
-                <h4 class="font-semibold text-Pan_black text-[17px]">Olga Vizcaino</h4>
+                <h4 class="font-semibold text-Pan_black text-[17px] pt-3">Olga Vizcaino</h4>
                 <h4 class="font-semibold text-secondry text-[17px]">Patient</h4>
             </div>
             <?php
