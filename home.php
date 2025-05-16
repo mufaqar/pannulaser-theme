@@ -105,8 +105,6 @@
                             echo get_the_post_thumbnail(get_the_ID(), 'medium');
                         }
                         ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4180.svg" alt=""
-                    class='w-18 h-18'>
                 <div class="font-bold text-xl  line-clamp-1 mt-5">
                     <?php the_title()?>
                 </div>
@@ -140,6 +138,7 @@
 <section class="flex flex-col md:flex-row min-h-full">
     <!-- Image Side -->
     <div class="w-full md:w-[45%]">
+
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dentist.png" alt="Dentist"
             class="w-full md:w-[824px] md:h-[808px] h-full ">
     </div>
@@ -251,7 +250,11 @@
                         $loop->the_post(); ?>
 
                 <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Dr.Mutyala.png" alt="" class=''>
+                    <?php
+                        if ( has_post_thumbnail() ) {
+                                echo get_the_post_thumbnail( get_the_ID(), 'full' );}
+                     ?>
+
                     <div class='p-4 sm:px-6  '>
                         <div class="font-bold text-[#000000] text-2xl py-2">
                             <?php the_title()?>
