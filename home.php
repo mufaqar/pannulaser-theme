@@ -110,7 +110,7 @@
                 <div class="font-bold text-xl  line-clamp-1 ">
                     <?php the_title()?>
                 </div>
-                <div class='text-[15px] line-clamp-3'>
+                <div class='text-[15px] line-clamp-3 mt-2'>
                     <?php the_excerpt();  ?>
                 </div>
             </div>
