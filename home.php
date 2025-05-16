@@ -140,9 +140,9 @@
 <section class="flex flex-col md:flex-row min-h-full">
     <!-- Image Side -->
     <div class="w-full md:w-[45%]">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dentist.png" alt="Dentist"
-      class="w-full md:w-[824px] md:h-[808px] h-full ">
-  </div>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dentist.png" alt="Dentist"
+            class="w-full md:w-[824px] md:h-[808px] h-full ">
+    </div>
 
     <!-- Text & Testimonials Side -->
     <div
@@ -252,8 +252,12 @@
                 <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Dr.Mutyala.png" alt="" class=''>
                     <div class='p-4 sm:px-6  '>
-                        <h3 class="font-bold text-[#000000] text-2xl py-2">Dr. Mutyala</h3>
-                        <p class='text-[14px] text-Pan_black'>LASIK eye surgery specialist in Southeast Florida</p>
+                        <div class="font-bold text-[#000000] text-2xl py-2">
+                            <?php the_title()?>
+                        </div>
+                        <div class='text-[14px] text-Pan_black'>
+                            <?php the_excerpt();  ?>
+                        </div>
                         <div class="mt-8 text-hovLink text-center flex items-center mx-auto justify-center ">
                             <a href="/" class="read-more">MORE
                                 DETAILS <img
