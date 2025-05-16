@@ -111,7 +111,7 @@
                     <?php the_title()?>
                 </div>
                 <div class='text-[15px]'>
-                    <?php the_content();  ?>
+                    <?php the_excerpt();  ?>
                 </div>
             </div>
             <?php endwhile;
