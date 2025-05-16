@@ -107,7 +107,7 @@
                         ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4180.svg" alt=""
                     class='w-18 h-18'>
-                <div class="font-bold text-xl py-2 line-clamp-1 overflow-hidden text-ellipsis whitespace-nowrap  ">
+                <div class="font-bold text-xl py-2 line-clamp-1 overflow-hidden ">
                     <?php the_title()?>
                 </div>
                 <div class='text-[15px] line-clamp-3'>
