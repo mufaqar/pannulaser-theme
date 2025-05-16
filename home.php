@@ -250,10 +250,11 @@
                         $loop->the_post(); ?>
 
                 <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
-                    <?php
-                        if ( has_post_thumbnail() ) {
-                                echo get_the_post_thumbnail( get_the_ID(), 'full' );}
-                     ?>
+                  <?php
+if ( has_post_thumbnail() ) {
+    echo '<div style="width:306px;height:auto;">' . get_the_post_thumbnail( get_the_ID(), 'full', ['style' => 'width:100%; height:auto;']) . '</div>';
+}
+?>
 
                     <div class='p-4 sm:px-6  '>
                         <div class="font-bold text-[#000000] text-2xl py-2">
