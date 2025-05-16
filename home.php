@@ -107,7 +107,7 @@
                         ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Group 4180.svg" alt=""
                     class='w-18 h-18'>
-                <div class="font-bold text-xl  line-clamp-1 ">
+                <div class="font-bold text-xl  line-clamp-1 mt-5">
                     <?php the_title()?>
                 </div>
                 <div class='text-[15px] line-clamp-3 mt-2'>
@@ -166,7 +166,7 @@
                 <div class='font-[700] text-xl'>
                     <?php the_title(); ?>
                 </div>
-                <p class="text-Pan_black text-[17px] mb-4 line-clamp-5">
+                <p class="text-Pan_black text-[17px] mb-4 line-clamp-5 ">
                     <?php the_content(); ?>
                 </p>
                 <h4 class="font-semibold text-Pan_black text-[17px] pt-3">Olga Vizcaino</h4>
