@@ -8,7 +8,7 @@
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images//favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" type="image/x-icon">
   <?php wp_head(); ?>
 </head>
 
@@ -38,7 +38,7 @@
           </a>
 
           <!-- Desktop Navigation -->
-          <nav class="hidden lg:flex items-center space-x-6">
+          <nav class="hidden md:flex items-center space-x-6">
             <?php wp_nav_menu(array('theme_location' => 'primary', 'fallback_cb' => 'fallbackmenu1', 'menu_class' => 'primary_nav', )); ?>
             <div class="bg-secondry hover:bg-primary py-2 px-4 rounded-sm">
               <a href="tel:9544840700" class='flex gap-2 items-center'>
@@ -47,22 +47,28 @@
               </a>
             </div>
           </nav>
-
           <!-- Mobile Toggle -->
-          <button id="menu-toggle" class="lg:hidden text-white text-2xl focus:outline-none">
-            ☰
+          <button id="menu-toggle"
+            class="md:hidden p-2 text-white text-2xl focus:outline-none border border-white/20 rounded-md">
+            <!-- Hamburger Icon -->
+            <svg id="icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!-- Close (X) Icon -->
+            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
         </div>
       </div>
 
-      <!-- Mobile Navigation -->
-      <div id="mobile-menu" class="lg:hidden hidden px-6 pb-4 text-white space-y-2 py-2 mt-2 border-t">
-        <a href="/Doctors" class="block hover:text-blue-400">Doctors</a>
-        <a href="/LASIK-Eye-Surgery" class="block hover:text-blue-400">LASIK Eye Surgery</a>
-        <a href="/Pricing" class="block hover:text-blue-400">Pricing</a>
-        <a href="/Services" class="block hover:text-blue-400">Services</a>
-        <a href="/contact-us" class="block hover:text-blue-400">Contact us</a>
-        <div class="bg-green-700 py-2 px-4 rounded-sm w-max">
+      <!-- Mobile Menu -->
+      <div id="mobile-menu"
+        class="md:hidden hidden text-white space-y-4 py-8 px-5 border-t bg-primary absolute left-0 right-0 z-50">
+        <?php wp_nav_menu(array('theme_location' => 'primary', 'fallback_cb' => 'fallbackmenu1', 'menu_class' => 'primary_nav', )); ?>
+        <div class="bg-secondry py-2 px-4 rounded-sm w-max">
           <a href="tel:9544840700" class="hover:underline">954-484-0700</a>
         </div>
       </div>
@@ -74,3 +80,18 @@
       get_template_part('templates/hero', 'page');
     } ?>
   </div>
+
+  <Script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+
+      menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("hidden");
+        iconOpen.classList.toggle("hidden");
+        iconClose.classList.toggle("hidden");
+      });
+    });
+  </Script>
