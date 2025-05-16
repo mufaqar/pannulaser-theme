@@ -1,7 +1,5 @@
 <?php /*Template Name: FrontPage*/ get_header(); ?>
 
-
-
 <!--Meet-->
 
 <section class="bg-bgcolor py-20">
@@ -82,7 +80,8 @@
     <div class="container mx-auto px-4">
         <div class="md:max-w-[60%] w-full mx-auto text-white text-center ">
             <p class="text-2xl pb-3">Transparent price</p>
-            <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-[400] font-axiformaregular">WE PROVIDE BEST <span class="font-bold font-axiformabold">SERVICES FOR
+            <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-[400] font-axiformaregular">WE PROVIDE BEST <span
+                    class="font-bold font-axiformabold">SERVICES FOR
                     PATIENT</span></h2>
         </div>
         <!-- Responsive Grid -->
@@ -127,7 +126,8 @@
         </div>
         <!-- Footer Link -->
         <div class="mt-8 text-hovLink text-white ">
-            <a href="/" class="text-md font-semibold hover:underline flex w-fit gap-2 items-center  mx-auto justify-center ">
+            <a href="/"
+                class="text-md font-semibold hover:underline flex w-fit gap-2 items-center  mx-auto justify-center ">
                 VIEW ALL
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg" alt="" />
             </a>
@@ -138,60 +138,49 @@
 <!-- See What Our Patients Are Saying -->
 <section class="flex flex-col md:flex-row min-h-full">
     <!-- Image Side -->
-    <div class=" w-full  md:!w-[60%]">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dentist.png" alt="Dentist"
-            class="w-full h-full object-cover ">
-    </div>
+    <div class="w-full md:w-[45%]">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dentist.png" alt="Dentist"
+      class="w-full md:w-[824px] md:h-[808px] h-full ">
+  </div>
+
     <!-- Text & Testimonials Side -->
-    <div class="w-full md:w-1/1 flex flex-col items-center justify-center px-4 py-8 ml-0 md:ml-[-150px]">
-        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold md:px-40 px-0 pb-6">
+    <div
+        class="w-full md:w-[65%] flex flex-col gap-6 items-center justify-center px-6 py-12 bg-white container mx-auto">
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold  pb-6">
             See What Our Patients Are Saying
         </h2>
+
         <!-- Testimonial Cards Grid -->
-        <div class="grid grid-cols-1 sm:!grid-cols-3 gap-4 w-full px-2">
-            <!-- Card 1 -->
-              <?php
-            $args = array(
-                'post_type' => 'testimonials',
-                'posts_per_page' => 3, // change as needed
-            );
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full md:ml-[-150px] ml-0 ">
+            <?php
+        $args = array(
+          'post_type' => 'testimonials',
+          'posts_per_page' => 3,
+        );
+        $loop = new WP_Query($args);
 
-            $loop = new WP_Query($args);
-
-            if ($loop->have_posts()):
-
-                while ($loop->have_posts()):
-                    $loop->the_post(); ?>
-                <?php
-                        if (has_post_thumbnail()) {
-                            echo get_the_post_thumbnail(get_the_ID(), 'medium');
-                        }
-                        ?>
-            <div class="bg-white p-6 rounded-lt-3xl rounded-bl-3xl shadow-lg">
+        if ($loop->have_posts()):
+          while ($loop->have_posts()): $loop->the_post(); ?>
+            <div class="bg-white p-6 rounded-xl shadow-lg">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/wps-office-user-2.d4d85cc@2x.png"
                     alt="" class="w-10 h-10 mb-4">
-                <p class="text-Pan_black text-[17px] mb-4">
-                    <?php the_content();  ?>
+                <p class="text-[#1F2B37] text-[17px] mb-4">
+                    <?php the_content(); ?>
                 </p>
-                <h4 class="font-semibold text-Pan_black text-[17px] mt-4">Olga Vizcaino</h4>
-                <h4 class="font-semibold text-secondry text-[17px]">Patient</h4>
+                <h4 class="font-semibold text-[#1F2B37] text-[17px]">Olga Vizcaino</h4>
+                <h4 class="font-semibold text-[#65BD9C] text-[17px]">Patient</h4>
             </div>
-             <?php endwhile;
+            <?php
+          endwhile;
+        else:
+          echo '<p>No testimonials found.</p>';
+        endif;
 
-            else:
-                echo '<p>No doctors found.</p>';
-            endif;
-
-            wp_reset_postdata();
-            ?>
-            <!-- Card 2 -->
-        
+        wp_reset_postdata();
+      ?>
         </div>
     </div>
 </section>
-
-
-
 
 
 
@@ -202,31 +191,27 @@
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-white text-center">See the Difference</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 text-white items-center">
             <!-- card 1 -->
-            <div
-                class="see_card">
+            <div class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Excellence.png" alt="" />
                 <h3 class="font-bold text-secondry text-2xl py-2">Excellence</h3>
                 <p class='text-2xl text-Pan_black'>in Eyecare since 1980</p>
             </div>
             <!-- card 2 -->
-            <div
-                class="see_card">
+            <div class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Award-winning.png" alt=""
                     class='w-[70px] h-[82px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2">Award winning</h3>
                 <p class='text-2xl text-Pan_black'>Eye specialists</p>
             </div>
             <!-- card 3 -->
-            <div
-                class="see_card">
+            <div class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Empathetic.png" alt=""
                     class='w-[70px] h-[82px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2">Empathetic</h3>
                 <p class='text-2xl text-Pan_black'>Personalized patient care</p>
             </div>
             <!-- card 4 -->
-            <div
-                class="see_card">
+            <div class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Advanced-care.png" alt=""
                     class='w-[70px] h-[82px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2">Advanced care</h3>
@@ -245,8 +230,8 @@
             <div class=" w-full mx-auto text-center">
                 <p class="text-2xl pb-3 text-[#27304B] font-axiformaregular">MEET OUR TEAM</p>
 
-                <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-primary font-axiformaregular">THE MOST QUALIFIED,<br><span
-                        class="font-bold font-axiformabold"> SKILLFUL& PROFESSIONAL DOCTORS.</span></h2>
+                <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-primary font-axiformaregular">THE MOST
+                    QUALIFIED,<br><span class="font-bold font-axiformabold"> SKILLFUL& PROFESSIONAL DOCTORS.</span></h2>
             </div>
             <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-8 items-center'>
 
@@ -264,8 +249,7 @@
                         $loop->the_post(); ?>
 
                 <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Dr.Mutyala.png"
-                        alt="" class=''>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Dr.Mutyala.png" alt="" class=''>
                     <div class='p-4 sm:px-6  '>
                         <h3 class="font-bold text-[#000000] text-2xl py-2">Dr. Mutyala</h3>
                         <p class='text-[14px] text-Pan_black'>LASIK eye surgery specialist in Southeast Florida</p>
@@ -347,8 +331,8 @@
             <!-- card 3 -->
             <div class=" flex flex-col  p-3 ">
                 <div class="relative">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Fort-Lauderdale-Office.png" alt=""
-                        class="w-full h-auto">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Fort-Lauderdale-Office.png"
+                        alt="" class="w-full h-auto">
                     <!-- Overlay text on top-left -->
                     <div
                         class="absolute top-3 left-3 bg-secondry text-white text-sm px-3 py-1 rounded-tl-md rounded-br-md shadow-lg">
