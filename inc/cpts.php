@@ -189,3 +189,4 @@ function cptui_register_my_taxes() {
 	register_taxonomy( "doc_types", [ "testimonials" ], $args );
 }
 add_action( 'init', 'cptui_register_my_taxes' );
+
