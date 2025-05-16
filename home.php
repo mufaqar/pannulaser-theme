@@ -164,11 +164,11 @@
             <div class="bg-white p-6 rounded-xl shadow-lg">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/wps-office-user-2.d4d85cc@2x.png"
                     alt="" class="w-10 h-10 mb-4">
-                <p class="text-[#1F2B37] text-[17px] mb-4">
+                <p class="text-Pan_black text-[17px] mb-4">
                     <?php the_content(); ?>
                 </p>
-                <h4 class="font-semibold text-[#1F2B37] text-[17px]">Olga Vizcaino</h4>
-                <h4 class="font-semibold text-[#65BD9C] text-[17px]">Patient</h4>
+                <h4 class="font-semibold text-Pan_black text-[17px]">Olga Vizcaino</h4>
+                <h4 class="font-semibold text-secondry text-[17px]">Patient</h4>
             </div>
             <?php
           endwhile;
