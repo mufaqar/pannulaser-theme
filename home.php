@@ -163,7 +163,9 @@
         if ($loop->have_posts()):
           while ($loop->have_posts()): $loop->the_post(); ?>
             <div class="bg-white p-6 rounded-xl shadow-lg">
-                <?php the_title(); ?>
+                <div class='font-[700] text-xl'>
+                    <?php the_title(); ?>
+                </div>
                 <p class="text-Pan_black text-[17px] mb-4 line-clamp-5">
                     <?php the_content(); ?>
                 </p>

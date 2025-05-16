@@ -1200,6 +1200,10 @@ video {
   font-family: axiformaregular, sans-serif;
 }
 
+.font-\[\] {
+  font-family: ;
+}
+
 .\!text-\[32px\] {
   font-size: 32px !important;
 }
@@ -1281,6 +1285,10 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-\[700\] {
+  font-weight: 700;
 }
 
 .leading-none {
