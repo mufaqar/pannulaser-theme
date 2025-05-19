@@ -166,10 +166,10 @@
                 <div class='font-[700] text-xl'>
                     <?php the_title(); ?>
                 </div>
-                <div class="text-Pan_black text-[17px]  line-clamp-9 ">
+                <div class="text-Pan_black text-[17px] pt-3 line-clamp-9 ">
                     <?php the_content();  ?>
         </div>
-                <h4 class="font-semibold text-Pan_black text-[17px] pt-3">Olga Vizcaino</h4>
+                <h4 class="font-semibold text-Pan_black text-[17px] pt-6">Olga Vizcaino</h4>
                 <h4 class="font-semibold text-secondry text-[17px]">Patient</h4>
             </div>
             <?php
