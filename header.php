@@ -14,7 +14,7 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <!-- ////top bar// -->
+  <!-- top bar -->
   <!-- Top Bar -->
   <div
     class="relative bg-cover bg-center bg-no-repeat min-h-[450px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">

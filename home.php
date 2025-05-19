@@ -105,6 +105,7 @@
                             echo get_the_post_thumbnail(get_the_ID(), 'medium');
                         }
                         ?>
+            
                 <div class="font-bold text-xl  line-clamp-1 mt-5">
                     <?php the_title()?>
                 </div>
@@ -252,7 +253,7 @@
                 <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
                     <?php
                        if ( has_post_thumbnail() ) {
-                          echo '<div style="width:306px;height:350px;">' . get_the_post_thumbnail( get_the_ID(), 'full', ['style' => 'width:100%; height:350px;']) . '</div>';
+                          echo '<div style="width:100%;height:350px;">' . get_the_post_thumbnail( get_the_ID(), 'full', ['style' => 'width:100%; height:350px;']) . '</div>';
                          }
                     ?>
 
