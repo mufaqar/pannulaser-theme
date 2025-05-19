@@ -697,10 +697,6 @@ video {
   margin-top: 2rem;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -720,13 +716,6 @@ video {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-}
-
-.line-clamp-5 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
 }
 
 .block {
@@ -1184,6 +1173,10 @@ video {
   padding-top: 0.75rem;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1198,10 +1191,6 @@ video {
 
 .font-axiformaregular {
   font-family: axiformaregular, sans-serif;
-}
-
-.font-\[\] {
-  font-family: ;
 }
 
 .\!text-\[32px\] {
@@ -1267,6 +1256,10 @@ video {
   font-weight: 600;
 }
 
+.font-\[700\] {
+  font-weight: 700;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1285,10 +1278,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-\[700\] {
-  font-weight: 700;
 }
 
 .leading-none {
@@ -1478,17 +1467,55 @@ html {
   }
 }
 
-.primary_nav .menu-item {
+.primary_nav .menu-item a, .primary_nav .menu-item-has-children > ul .menu-item a {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.primary_nav .menu-item:hover {
+.primary_nav .menu-item a:hover, .primary_nav .menu-item-has-children > ul .menu-item a:hover {
   color: var(--secondry);
 }
 
-.primary_nav .menu-item.current-menu-item , .top_nav .menu-item.current-menu-item {
+.primary_nav .menu-item.current-menu-item a, .top_nav .menu-item.current-menu-item a {
   color: var(--secondry);
+}
+
+.primary_nav .menu-item-has-children {
+  position: relative;
+}
+
+.primary_nav .menu-item-has-children:hover > ul {
+  display: block;
+}
+
+.primary_nav .menu-item-has-children > ul {
+  display: none;
+  min-width: 200px;
+}
+
+.primary_nav .menu-item-has-children > ul > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.primary_nav .menu-item-has-children > ul {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 1rem;
+  padding-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+  .primary_nav .menu-item-has-children > ul {
+    position: absolute;
+    top: 2rem;
+    z-index: 20;
+    background-color: var(--primary);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .about_card {

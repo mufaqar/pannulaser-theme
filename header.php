@@ -8,13 +8,14 @@
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico"
+    type="image/x-icon">
   <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <!-- top bar -->
+  <!-- ////top bar// -->
   <!-- Top Bar -->
   <div
     class="relative bg-cover bg-center bg-no-repeat min-h-[450px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">
@@ -39,7 +40,7 @@
 
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex items-center space-x-6">
-            <?php wp_nav_menu(array('theme_location' => 'primary', 'fallback_cb' => 'fallbackmenu1', 'menu_class' => 'primary_nav', )); ?>
+            <?php wp_nav_menu(array('theme_location' => 'primary', 'fallback_cb' => 'fallbackmenu1', 'menu_class' => 'primary_nav', 'walker' => '', )); ?>
             <div class="bg-secondry hover:bg-primary py-2 px-4 rounded-sm">
               <a href="tel:9544840700" class='flex gap-2 items-center'>
                 <i class="fa-solid fa-phone-volume text-white text-xl"></i>
@@ -94,4 +95,5 @@
         iconClose.classList.toggle("hidden");
       });
     });
+    
   </Script>
