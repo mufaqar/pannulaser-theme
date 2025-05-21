@@ -77,7 +77,7 @@
       <!-- Mobile Menu -->
       <div id="mobile-menu"
         class="md:hidden hidden text-white space-y-4 py-8 px-5 border-t bg-primary absolute left-0 right-0 z-50">
-        <?php wp_nav_menu(array('theme_location' => 'primary', 'fallback_cb' => 'fallbackmenu1', 'menu_class' => 'primary_nav','walker'          => new Tailwind_Navwalker(), )); ?>
+        <?php wp_nav_menu(array('theme_location' => 'primary', 'fallback_cb' => 'fallbackmenu1' )); ?>
         <div class="bg-secondry py-2 px-4 rounded-sm w-max">
           <a href="tel:9544840700" class="hover:underline">954-484-0700</a>
         </div>
