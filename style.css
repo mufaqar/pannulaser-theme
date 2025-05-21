@@ -74,7 +74,7 @@ html {
 .primary_nav .menu-item.current-menu-item a, .top_nav .menu-item.current-menu-item a{
   @apply text-secondry
 }
-.primary_nav .menu-item-has-children {
+/* .primary_nav .menu-item-has-children {
   @apply relative;
 }
 .primary_nav .menu-item-has-children:hover > ul {
@@ -82,7 +82,14 @@ html {
 }
 .primary_nav .menu-item-has-children > ul {
   @apply hidden md:absolute md:bg-primary md:top-8 space-y-4 md:px-5 px-0 pt-4 md:pb-4 pb-0 min-w-[200px] md:z-20;
+} */
+
+/* optional: improve dropdown transition */
+.dropdown {
+  transition: opacity 0.2s ease;
 }
+
+
 .about_card{
   @apply h-[323px] bg-white text-center flex flex-col items-center justify-center py-4 px-8 shadow-md rounded-md;
 }
