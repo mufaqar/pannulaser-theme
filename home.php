@@ -1,7 +1,6 @@
 <?php /*Template Name: FrontPage*/ get_header(); ?>
 
 <!--Meet-->
-
 <section class="bg-bgcolor py-20">
     <div class="container mx-auto px-4">
         <div class="flex md:flex-row flex-col items-center md:gap-16 gap-10">
@@ -60,7 +59,7 @@
                     </div>
                     <!-- Card 3 -->
                     <div class="about_card ">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vision.png" alt=""
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vision.svg" alt=""
                             class='w-[93px] h-[107px] object-contain' />
                         <h3 class="font-bold text-xl text-secondry py-2">100,000 Laser Vision</h3>
                         <p class="text-Pan_black text-base">
@@ -73,14 +72,12 @@
     </div>
 </section>
 
-
-<!--Transparent price -->
-
+<!--Services -->
 <section class="bg-primary py-14">
     <div class="container mx-auto px-4">
-        <div class="md:max-w-[60%] w-full mx-auto text-white text-center ">
-            <p class="text-2xl pb-3">Transparent price</p>
-            <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-[400] font-axiformaregular">WE PROVIDE BEST <span
+        <div class="md:max-w-[60%] w-full mx-auto text-white text-center mb-10">
+            <p class="text-2xl pb-7">Transparent price</p>
+            <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-normal font-axiformaregular">WE PROVIDE BEST <span
                     class="font-bold font-axiformabold">SERVICES FOR
                     PATIENT</span></h2>
         </div>
@@ -92,40 +89,33 @@
                 'post_type' => 'services',
                 'posts_per_page' => 8, // change as needed
             );
-
             $loop = new WP_Query($args);
-
             if ($loop->have_posts()):
-
                 while ($loop->have_posts()):
                     $loop->the_post(); ?>
             <div class="service_card">
                 <?php
-                        if (has_post_thumbnail()) {
-                            echo get_the_post_thumbnail(get_the_ID(), 'medium');
+                        $services_icon = get_post_meta($post->ID, 'services_icon', true);
+                        if ($services_icon) {
+                            echo wp_get_attachment_image($services_icon, 'medium', false, ['class' => 'h-[60px] w-[60px]']);
                         }
                         ?>
-            
-                <div class="font-bold text-xl  line-clamp-1 mt-5">
-                    <?php the_title()?>
+                <div class="font-bold text-xl line-clamp-1 mt-5">
+                    <?php the_title() ?>
                 </div>
                 <div class='text-[15px] line-clamp-3 mt-2'>
-                    <?php the_excerpt();  ?>
+                    <?php the_excerpt(); ?>
                 </div>
             </div>
             <?php endwhile;
-
             else:
                 echo '<p>No doctors found.</p>';
             endif;
-
             wp_reset_postdata();
             ?>
-
         </div>
-        <!-- Footer Link -->
         <div class="mt-8 text-hovLink text-white ">
-            <a href="/"
+            <a href="/services"
                 class="text-md font-semibold hover:underline flex w-fit gap-2 items-center  mx-auto justify-center ">
                 VIEW ALL
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg" alt="" />
@@ -136,51 +126,57 @@
 
 
 <!-- See What Our Patients Are Saying -->
-<section class="flex flex-col md:flex-row min-h-full">
+<section class="flex flex-col md:flex-row ">
     <!-- Image Side -->
-    <div class="w-full md:w-[45%]">
-
+    <div class="w-full md:w-1/3">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dentist.png" alt="Dentist"
-            class="w-full md:w-[824px] md:h-[808px] h-full ">
+            class="w-full h-full object-cover">
     </div>
-
-    <!-- Text & Testimonials Side -->
-    <div
-        class="w-full md:w-[65%] flex flex-col gap-6 items-center justify-center px-6 py-12 bg-white container mx-auto">
+    <!-- Testimonials Side -->
+    <div class="w-full md:w-2/3  px-6 bg-white container mx-auto md:py-16 md:px-10 py-12">
         <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold  pb-6">
-            See What Our Patients Are Saying
+            See What Our<br /> Patients Are Saying
         </h2>
 
-        <!-- Testimonial Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full md:ml-[-150px] ml-0 ">
+        <!-- Testimonial Slider -->
+        <div class="testimonial-slider w-full md:-ml-20">
             <?php
-        $args = array(
-          'post_type' => 'testimonials',
-          'posts_per_page' => 3,
-        );
-        $loop = new WP_Query($args);
+            $args = array(
+                'post_type' => 'testimonials',
+                'posts_per_page' => -1,
+            );
+            $loop = new WP_Query($args);
 
-        if ($loop->have_posts()):
-          while ($loop->have_posts()): $loop->the_post(); ?>
-            <div class="bg-white p-6 rounded-xl shadow-lg">
-                <div class='font-[700] text-xl'>
-                    <?php the_title(); ?>
+            if ($loop->have_posts()):
+                while ($loop->have_posts()):
+                    $loop->the_post(); ?>
+            <div class="p-4 h-full">
+                <div
+                    class="bg-white p-6 rounded-tr-[30px] rounded-bl-[30px] shadow-[0_0_15px_0_rgba(0,40,255,0.15)] flex flex-col justify-between h-[388px]">
+
+                    <div class="text-Pan_black text-base italic pt-3 line-clamp-9">
+                        <?php the_content(); ?>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-Pan_black text-lg pt-6">
+                            <?php the_title(); ?>
+                        </h4>
+                        <h4 class="font-semibold text-secondry text-lg">
+                            <?php echo get_field('position'); ?>
+                        </h4>
+                    </div>
                 </div>
-                <div class="text-Pan_black text-[17px] pt-3 line-clamp-9 ">
-                    <?php the_content();  ?>
-        </div>
-                <h4 class="font-semibold text-Pan_black text-[17px] pt-6">Olga Vizcaino</h4>
-                <h4 class="font-semibold text-secondry text-[17px]">Patient</h4>
             </div>
             <?php
-          endwhile;
-        else:
-          echo '<p>No testimonials found.</p>';
-        endif;
+                endwhile;
+            else:
+                echo '<p>No testimonials found.</p>';
+            endif;
 
-        wp_reset_postdata();
-      ?>
+            wp_reset_postdata();
+            ?>
         </div>
+
     </div>
 </section>
 
@@ -188,33 +184,33 @@
 
 <!-- See the Difference -->
 
-<section class='bg-primary py-14'>
+<section class='bg-primary py-[103px]'>
     <div class='container mx-auto px-4'>
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-white text-center">See the Difference</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 text-white items-center">
             <!-- card 1 -->
-            <div class="see_card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Excellence.png" alt="" />
-                <h3 class="font-bold text-secondry text-2xl py-2">Excellence</h3>
-                <p class='text-2xl text-Pan_black'>in Eyecare since 1980</p>
+            <div class="see_card ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Excellence.svg" alt="" class='w-[70px] h-[82px] ' />
+                <h3 class="font-bold text-secondry text-2xl   py-2">Excellence</h3>
+                <p class='text-2xl text-Pan_black '>in Eyecare since 1980</p>
             </div>
             <!-- card 2 -->
             <div class="see_card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Award-winning.png" alt=""
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Award-winning.svg" alt=""
                     class='w-[70px] h-[82px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2">Award winning</h3>
                 <p class='text-2xl text-Pan_black'>Eye specialists</p>
             </div>
             <!-- card 3 -->
             <div class="see_card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Empathetic.png" alt=""
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Empathetic.svg" alt=""
                     class='w-[70px] h-[82px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2">Empathetic</h3>
                 <p class='text-2xl text-Pan_black'>Personalized patient care</p>
             </div>
             <!-- card 4 -->
             <div class="see_card">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Advanced-care.png" alt=""
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vision.svg" alt=""
                     class='w-[70px] h-[82px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2">Advanced care</h3>
                 <p class='text-2xl text-Pan_black'>Personalized patient care</p>
@@ -236,60 +232,51 @@
                     QUALIFIED,<br><span class="font-bold font-axiformabold"> SKILLFUL& PROFESSIONAL DOCTORS.</span></h2>
             </div>
             <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-8 items-center'>
-
                 <?php
                 $args = array(
                     'post_type' => 'doctors',
                     'posts_per_page' => 4, // change as needed
                 );
-
                 $loop = new WP_Query($args);
-
                 if ($loop->have_posts()):
-
                     while ($loop->have_posts()):
                         $loop->the_post(); ?>
-
                 <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
-                    <?php
-                       if ( has_post_thumbnail() ) {
-                          echo '<div style="width:100%;height:350px;">' . get_the_post_thumbnail( get_the_ID(), 'full', ['style' => 'width:100%; height:350px;']) . '</div>';
-                         }
-                    ?>
+                   <?php
+if (has_post_thumbnail()) {
+    echo get_the_post_thumbnail(get_the_ID(), 'full', [
+        'class' => 'h-[320px] w-full  !h-[320px]'
+    ]);
+}
+?>
 
-                    <div class='p-4 sm:px-6  '>
-                        <div class="font-bold text-[#000000] text-2xl py-2">
-                            <?php the_title()?>
+                    <div class='p-4 sm:px-6'>
+                        <div class="font-bold text-Pan_black text-2xl py-2">
+                            <?php the_title() ?>
                         </div>
                         <div class='text-[14px] text-Pan_black line-clamp-3'>
-                            <?php the_excerpt();  ?>
+                            <?php the_excerpt(); ?>
                         </div>
                         <div class="mt-8 text-hovLink text-center flex items-center mx-auto justify-center ">
                             <a href="/" class="read-more">MORE
                                 DETAILS <img
-                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg.svg"
-                                    alt="" class='w-4'></a>
+                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg"
+                                    alt="icon" class='w-4'></a>
                         </div>
                     </div>
                 </div>
-
                 <?php endwhile;
-
                 else:
                     echo '<p>No doctors found.</p>';
                 endif;
-
                 wp_reset_postdata();
                 ?>
-
             </div>
         </div>
     </div>
 </section>
 
-
 <!-- Locate a Centre -->
-
 <section class='bg-primary py-14'>
     <div class='container mx-auto px-4'>
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-white text-center">Locate a Centre</h2>
@@ -300,7 +287,6 @@
                 <div class="relative">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Davie-Office.png" alt=""
                         class="w-full h-auto">
-
                     <!-- Overlay text on top-left -->
                     <div
                         class="absolute top-3 left-3 bg-secondry text-white text-sm px-3 py-1 rounded-tl-md rounded-br-md shadow-lg">

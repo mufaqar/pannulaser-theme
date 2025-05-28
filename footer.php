@@ -187,6 +187,14 @@ $Menu2 = [
 </footer>
 
 <?php wp_footer(); ?>
+
+
+<!-- jQuery and Slick JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+ <!-- custom js files  -->
+<script src="<?php echo get_template_directory_uri(); ?>/js/slick-slider.js" type="text/javascript"></script>
 </body>
 
 </html>

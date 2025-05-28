@@ -10,6 +10,9 @@
 
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico"
     type="image/x-icon">
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <?php wp_head(); ?>
 </head>
 
@@ -40,7 +43,13 @@
 
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex items-center space-x-6">
-            <?php wp_nav_menu(array('theme_location' => 'primary', 'fallback_cb' => 'fallbackmenu1', 'menu_class' => 'primary_nav', 'walker' => '', )); ?>
+            <?php
+            wp_nav_menu([
+              'theme_location' => 'primary',
+              'menu_class' => 'flex space-x-6 ',
+              'container' => false,
+              'walker' => new Tailwind_Hover_Nav_Walker()
+            ]); ?>
             <div class="bg-secondry hover:bg-primary py-2 px-4 rounded-sm">
               <a href="tel:9544840700" class='flex gap-2 items-center'>
                 <i class="fa-solid fa-phone-volume text-white text-xl"></i>
@@ -68,7 +77,8 @@
       <!-- Mobile Menu -->
       <div id="mobile-menu"
         class="md:hidden hidden text-white space-y-4 py-8 px-5 border-t bg-primary absolute left-0 right-0 z-50">
-        <?php wp_nav_menu(array('theme_location' => 'primary', 'fallback_cb' => 'fallbackmenu1', 'menu_class' => 'primary_nav', )); ?>
+        <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'flex flex-col', 'fallback_cb' => 'fallbackmenu1','container' => false,
+              'walker' => new Tailwind_Hover_Nav_Walker())); ?>
         <div class="bg-secondry py-2 px-4 rounded-sm w-max">
           <a href="tel:9544840700" class="hover:underline">954-484-0700</a>
         </div>
@@ -83,6 +93,31 @@
   </div>
 
   <Script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('[data-toggle="dropdown"]').forEach(function (trigger) {
+        trigger.addEventListener("click", function (e) {
+          e.preventDefault();
+          const parent = this.closest(".has-dropdown");
+          const dropdown = parent.querySelector(".dropdown");
+
+          // Hide all others
+          document.querySelectorAll(".dropdown").forEach(d => {
+            if (d !== dropdown) d.classList.add("hidden");
+          });
+
+          // Toggle current
+          dropdown.classList.toggle("hidden");
+        });
+      });
+
+      // Close on outside click
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".has-dropdown")) {
+          document.querySelectorAll(".dropdown").forEach(d => d.classList.add("hidden"));
+        }
+      });
+    });
     document.addEventListener("DOMContentLoaded", function () {
       const menuToggle = document.getElementById("menu-toggle");
       const menu = document.getElementById("mobile-menu");
@@ -95,5 +130,6 @@
         iconClose.classList.toggle("hidden");
       });
     });
-    
+
+
   </Script>

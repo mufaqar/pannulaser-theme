@@ -18,7 +18,7 @@
 add_action('wp_enqueue_scripts', 'enqueue_font_awesome');
 
 
-include_once('inc/cpts.php');
+include_once('inc/extra.php');
 
 
 function theme_register_nav_menu() {
