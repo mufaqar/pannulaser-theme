@@ -1,7 +1,7 @@
 <?php /*Template Name: FrontPage*/ get_header(); ?>
 
 <!--Meet-->
-<section class="bg-bgcolor py-20">
+<section class="bg-bgcolor py-32">
     <div class="container mx-auto px-4">
         <div class="flex md:flex-row flex-col items-center md:gap-16 gap-10">
             <!-- Left Text Block -->
@@ -73,11 +73,11 @@
 </section>
 
 <!--Services -->
-<section class="bg-primary py-14">
+<section class="bg-primary pt-[100px] pb-[80px]">
     <div class="container mx-auto px-4">
-        <div class="md:max-w-[60%] w-full mx-auto text-white text-center mb-10">
-            <p class="text-2xl pb-7">Transparent price</p>
-            <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-normal font-axiformaregular">WE PROVIDE BEST <span
+        <div class="md:max-w-[50%] w-full mx-auto text-white text-center mb-10">
+            <p class="text-2xl pb-7 font-normal">Transparent price</p>
+            <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-[300] font-axiformaregular">WE PROVIDE BEST <span
                     class="font-bold font-axiformabold">SERVICES FOR
                     PATIENT</span></h2>
         </div>
@@ -184,7 +184,7 @@
 
 <!-- See the Difference -->
 
-<section class='bg-primary py-[103px]'>
+<section class='bg-primary pt-[131px] pb-[108px]'>
     <div class='container mx-auto px-4'>
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-white text-center">See the Difference</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 text-white items-center">
@@ -222,7 +222,7 @@
 
 <!--  MEET OUR TEAM  -->
 
-<section class='bg-bgcolor py-14'>
+<section class='bg-bgcolor pt-[106px] pb-[105px]'>
     <div class='container mx-auto px-4'>
         <div>
             <div class=" w-full mx-auto text-center">
@@ -231,7 +231,7 @@
                 <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-primary font-axiformaregular">THE MOST
                     QUALIFIED,<br><span class="font-bold font-axiformabold"> SKILLFUL& PROFESSIONAL DOCTORS.</span></h2>
             </div>
-            <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-8 items-center'>
+            <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 items-center'>
                 <?php
                 $args = array(
                     'post_type' => 'doctors',
@@ -241,14 +241,14 @@
                 if ($loop->have_posts()):
                     while ($loop->have_posts()):
                         $loop->the_post(); ?>
-                <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-md ">
+                <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-lg ">
                    <?php
-if (has_post_thumbnail()) {
-    echo get_the_post_thumbnail(get_the_ID(), 'full', [
-        'class' => 'h-[320px] w-full  !h-[320px]'
-    ]);
-}
-?>
+                         if (has_post_thumbnail()) {
+                         echo get_the_post_thumbnail(get_the_ID(), 'full', [
+                         'class' => 'h-[320px] w-full  !h-[320px]'
+                       ]);
+                      }
+                   ?>
 
                     <div class='p-4 sm:px-6'>
                         <div class="font-bold text-Pan_black text-2xl py-2">
@@ -277,7 +277,7 @@ if (has_post_thumbnail()) {
 </section>
 
 <!-- Locate a Centre -->
-<section class='bg-primary py-14'>
+<section class='bg-primary pt-[85px] pb-[113px]'>
     <div class='container mx-auto px-4'>
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-white text-center">Locate a Centre</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2  text-white items-center">
@@ -377,7 +377,7 @@ if (has_post_thumbnail()) {
     <div class='container mx-auto px-4'>
         <div class='flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8'>
             <!-- Left text content -->
-            <div class='lg:w-[75%]'>
+            <div class='lg:w-[75%] '>
                 <p class='text-2xl md:text-[30px] lg:text-[36px] text-white font-normal'>
                     If you Have Any Questions Schedule an Appointment
                 </p>
