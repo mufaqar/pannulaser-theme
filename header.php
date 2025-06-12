@@ -41,14 +41,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <!-- ////top bar// -->
-  <!-- Top Bar -->
   <div
     class="relative bg-cover bg-center bg-no-repeat min-h-[450px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">
-
     <section class="!bg-primary w-full py-3.5 hidden md:flex">
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
@@ -57,7 +53,6 @@
         </div>
       </div>
     </section>
-
     <!-- Header -->
     <header class="bg-topBarBg w-full py-4">
       <div class="container mx-auto px-4">
@@ -66,7 +61,6 @@
           <a href="/">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class='w-52'>
           </a>
-
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex items-center space-x-6">
             <?php
@@ -86,7 +80,6 @@
           <!-- Mobile Toggle -->
           <button id="menu-toggle"
             class="md:hidden p-2 text-white text-2xl focus:outline-none border border-white/20 rounded-md">
-            <!-- Hamburger Icon -->
             <svg id="icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor" stroke-width="2"
               viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
