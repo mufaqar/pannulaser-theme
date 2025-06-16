@@ -52,50 +52,50 @@ $Menu1 = [
 $Menu3 = [
     [
         'name' => 'Diabetic Eye Care & Treatment ',
-        'link' => '/diabetic-eye-care-treatment',
+        'link' => '/services/diabetic-eye-care-treatment'
     ],
     [
         'name' => 'Glaucoma Treatment',
-        'link' => '/glaucoma-treatment',
+        'link' => '/services/glaucoma-treatment',
     ],
     [
         'name' => 'Macular Degeneration',
-        'link' => '/macular-degeneration',
+        'link' => '/services/macular-degeneration',
     ],
     [
         'name' => 'Pterygium Removal',
-        'link' => '/pterygium-removal',
+        'link' => '/services/pterygium-removal',
     ],
     [
         'name' => 'Cornea Transplants',
-        'link' => '/cornea-transplants',
+        'link' => '/services/cornea-transplants',
     ],
 ];
 
 $Menu2 = [
     [
         'name' => 'Laser Vision Correction',
-        'link' => '/laser-vision-cor…-lasik-prk-lasek',
+        'link' => '/services/laser-vision-cor…-lasik-prk-lasek',
     ],
     [
         'name' => 'Cataract Surgery & Lenses',
-        'link' => '/cataract-surgery-lenses',
+        'link' => '/services/cataract-surgery-lenses',
     ],
     [
         'name' => 'Premium Intraocular Lens',
-        'link' => '/premium-intraocular-lens',
+        'link' => '/services/premium-intraocular-lens',
     ],
     [
         'name' => 'Cosmetic Fillers',
-        'link' => '/cosmetic-fillers',
+        'link' => '/services/cosmetic-fillers',
     ],
     [
         'name' => 'Dry Eye Treatment',
-        'link' => '/dry-eye-treatment',
+        'link' => '/services/dry-eye-treatment',
     ],
     [
         'name' => 'Eye Exams, Contacts & Glasses',
-        'link' => '/eye-exams-contacts-glasses',
+        'link' => '/services/eye-exams-contacts-glasses',
     ],
 
 ]
