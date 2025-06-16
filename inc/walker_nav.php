@@ -18,11 +18,9 @@ class Tailwind_Hover_Nav_Walker extends Walker_Nav_Menu {
         $output .= esc_html($item->title);
         $output .= '</a>';
     }
-
     public function end_el( &$output, $item, $depth = 0, $args = null ) {
         $output .= '</li>';
     }
-
     public function end_lvl( &$output, $depth = 0, $args = null ) {
         $output .= '</ul>';
     }
