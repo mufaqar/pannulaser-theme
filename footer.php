@@ -9,99 +9,7 @@
  * @package tp_theme
  */
 
-$navLinks = [
-    [
-        'name' => 'About',
-        'link' => '/',
-    ],
-    [
-        'name' => 'Partnerships',
-        'link' => '/',
-    ],
-
-];
-
-$Menu1 = [
-    [
-        'name' => 'What is LASIK Eye Surgery?',
-        'link' => '/what-is-lasik-eye-surgery',
-    ],
-    [
-        'name' => 'WaveFront Custom LASIK',
-        'link' => '/wavefront-custom-lasik',
-    ],
-    [
-        'name' => 'PRK/LASEK/Laser Surface Treatment',
-        'link' => '/prk-lasek-laser-surface-treatment',
-    ],
-    [
-        'name' => 'Schedule A Free LASIK Consultation',
-        'link' => '/schedule-a-free-lasik-consultation',
-    ],
-    [
-        'name' => 'LASIK Testimonials for Pannu',
-        'link' => '/lasik-testimonials-for-pannu',
-    ],
-    [
-        'name' => 'LASIK Self Eval Test',
-        'link' => '/lasik-self-eval-test',
-    ],
-
-];
-
-$Menu3 = [
-    [
-        'name' => 'Diabetic Eye Care & Treatment ',
-        'link' => '/services/diabetic-eye-care-treatment'
-    ],
-    [
-        'name' => 'Glaucoma Treatment',
-        'link' => '/services/glaucoma-treatment',
-    ],
-    [
-        'name' => 'Macular Degeneration',
-        'link' => '/services/macular-degeneration',
-    ],
-    [
-        'name' => 'Pterygium Removal',
-        'link' => '/services/pterygium-removal',
-    ],
-    [
-        'name' => 'Cornea Transplants',
-        'link' => '/services/cornea-transplants',
-    ],
-];
-
-$Menu2 = [
-    [
-        'name' => 'Laser Vision Correction',
-        'link' => '/services/laser-vision-cor…-lasik-prk-lasek',
-    ],
-    [
-        'name' => 'Cataract Surgery & Lenses',
-        'link' => '/services/cataract-surgery-lenses',
-    ],
-    [
-        'name' => 'Premium Intraocular Lens',
-        'link' => '/services/premium-intraocular-lens',
-    ],
-    [
-        'name' => 'Cosmetic Fillers',
-        'link' => '/services/cosmetic-fillers',
-    ],
-    [
-        'name' => 'Dry Eye Treatment',
-        'link' => '/services/dry-eye-treatment',
-    ],
-    [
-        'name' => 'Eye Exams, Contacts & Glasses',
-        'link' => '/services/eye-exams-contacts-glasses',
-    ],
-
-]
-
-    ?>
-
+?>
 <footer class="w-full image-overlay bg-footercol ">
     <div class="px-4 container mx-auto">
         <!--Grid-->
@@ -124,51 +32,60 @@ $Menu2 = [
                     <a href="/" aria-label="Instagram">
                         <i class="fa-brands fa-instagram text-2xl text-white"></i>
                     </a>
+
+
                 </div>
             </div>
             <!--End Col-->
             <div class="lg:mx-auto text-left text-white">
                 <h4 class="text-xl  font-[600] mb-7">LASIK Eye Surgery</h4>
-                <ul class="text-sm transition-all duration-500">
-                    <?php
-                    foreach (array_slice($Menu1, 0, 7) as $provider) {
-                        echo "<li class='mb-4'><a href='{$provider['link']}' class='text-white '>{$provider['name']}</a></li>";
-                    }
-                    ?>
-                </ul>
+              
+                <?php                
+                wp_nav_menu( array(
+                    'container' => false ,
+                    'menu_class'=>'footer_nav',                   
+                    'theme_location' => 'footer_services',
+                    'fallback_cb'    => false // Do not fall back to wp_page_menu()
+                    ) );
+                ?>
             </div>
             <!--End Col-->
             <div class="lg:mx-auto text-left text-white ">
                 <h4 class="text-xl  font-[600] mb-7 ">Services</h4>
-                <ul class="text-sm  transition-all duration-500">
-                    <?php
-                    foreach ($Menu2 as $provider) {
-                        echo "<li class='mb-4'><a href='{$provider['link']}' class='text-white'>{$provider['name']}</a></li>";
-                    }
-                    ?>
-                </ul>
+               
+                <?php                
+                wp_nav_menu( array(
+                    'container' => false ,
+                    'menu_class'=>'footer_nav',                   
+                    'theme_location' => 'footer_services',
+                    'fallback_cb'    => false // Do not fall back to wp_page_menu()
+                    ) );
+                ?>
             </div>
             <!--End Col-->
             <div class="lg:mx-auto text-left text-white ">
                 <h4 class="text-xl font-[600] mb-7">Services</h4>
-                <ul class="text-sm transition-all duration-500">
-                    <?php
-                    foreach ($Menu3 as $provider) {
-                        echo "<li class='mb-4'><a href='{$provider['link']}' class='text-white'>{$provider['name']}</a></li>";
-                    }
-                    ?>
-                </ul>
+               
+                <?php                
+                wp_nav_menu( array(
+                    'container' => false ,
+                    'menu_class'=>'footer_nav',                   
+                    'theme_location' => 'footer_services1',
+                    'fallback_cb'    => false // Do not fall back to wp_page_menu()
+                    ) );
+                ?>
             </div>
             <!--End Col-->
             <div class="lg:mx-auto text-left  text-white">
                 <h4 class="text-xl  font-[600] mb-7">Company</h4>
-                <ul class="text-sm  transition-all duration-500">
-                    <?php
-                    foreach (array_slice($navLinks, 0, 11) as $otherpage) {
-                        echo "<li class='mb-4'><a href='{$otherpage['link']}' class='text-white'>{$otherpage['name']}</a></li>";
-                    }
-                    ?>
-                </ul>
+                <?php                
+                wp_nav_menu( array(
+                    'container' => false ,
+                    'menu_class'=>'footer_nav',                   
+                    'theme_location' => 'footer_company',
+                    'fallback_cb'    => false // Do not fall back to wp_page_menu()
+                    ) );
+                ?>
             </div>
         </div>
         <!--Grid-->

@@ -15,20 +15,19 @@ Tags: custom theme development
 @tailwind utilities;
 
 @font-face {
-    font-family: 'axiformabold';
-    src: url('../assets/fonts/axiforma-bold-webfont.woff2') format('woff2'),
-         url('../assets/fonts/axiforma-bold-webfont.woff') format('woff');
-
+  font-family: "axiformabold";
+  src: url("../assets/fonts/axiforma-bold-webfont.woff2") format("woff2"),
+    url("../assets/fonts/axiforma-bold-webfont.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'axiformaregular';
-    src: url('../assets/fonts/axiforma-regular-webfont.woff2') format('woff2'),
-         url('../assets/fonts/axiforma-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "axiformaregular";
+  src: url("../assets/fonts/axiforma-regular-webfont.woff2") format("woff2"),
+    url("../assets/fonts/axiforma-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-p a{
+p a {
   font-family: axiformaregular;
   font-weight: 400;
 }
@@ -37,43 +36,53 @@ h2,
 h3,
 h4,
 h5,
-h6{
-  font-family:axiformabold ;
+h6 {
+  font-family: axiformabold;
 }
 :root {
-  --primary: #27304B;
-  --secondry: #65BD9C;
-  --topBarBg: #445D84;
-  --Pan_black: #1F2B37;
-  --hovLink: #5076F6;
-  --bgcolor: #F2F6F5;
-  --footercol: #1F2B37;
+  --primary: #27304b;
+  --secondry: #65bd9c;
+  --topBarBg: #445d84;
+  --Pan_black: #1f2b37;
+  --hovLink: #5076f6;
+  --bgcolor: #f2f6f5;
+  --footercol: #1f2b37;
 }
 
 body,
 html {
-  font-family: "axiformaregular", sans-serif ;
+  font-family: "axiformaregular", sans-serif;
   scroll-behavior: smooth;
 }
 
 .read-more {
-  @apply  font-semibold hover:underline flex gap-2 items-center;
+  @apply font-semibold hover:underline flex gap-2 items-center;
 }
-.top_nav{
-  @apply flex flex-wrap justify-center md:justify-end gap-4
+.top_nav {
+  @apply flex flex-wrap justify-center md:justify-end gap-4;
 }
-.top_nav .menu-item{
-  @apply text-white hover:text-secondry
+.top_nav .menu-item {
+  @apply text-white hover:text-secondry;
 }
-.primary_nav{
+.primary_nav {
   @apply flex md:flex-row flex-col md:items-center md:space-x-6 md:space-y-0 space-y-4;
 }
-.primary_nav .menu-item a, .primary_nav .menu-item-has-children > ul .menu-item a{
-  @apply text-white hover:text-secondry
+.primary_nav .menu-item a,
+.primary_nav .menu-item-has-children > ul .menu-item a {
+  @apply text-white hover:text-secondry;
 }
-.primary_nav .menu-item.current-menu-item a, .top_nav .menu-item.current-menu-item a{
-  @apply text-secondry
+.primary_nav .menu-item.current-menu-item a,
+.top_nav .menu-item.current-menu-item a {
+  @apply text-secondry;
 }
+
+.footer_nav {
+  @apply text-sm  transition-all duration-500;
+}
+.footer_nav li {
+  @apply mb-4;
+}
+
 /* .primary_nav .menu-item-has-children {
   @apply relative;
 }
@@ -89,30 +98,29 @@ html {
   transition: opacity 0.2s ease;
 }
 
-
-.about_card{
+.about_card {
   @apply h-[323px] bg-white text-center flex flex-col items-center justify-center py-4 px-8 shadow-md rounded-md;
 }
-.service_card{
+.service_card {
   @apply text-center flex flex-col items-center justify-center p-3 text-white;
 }
-.see_card{
+.see_card {
   @apply bg-white text-center flex flex-col items-center justify-center p-3 shadow-md rounded-[15px] h-[221px];
 }
-.slick-dots li{
+.slick-dots li {
   margin: 0;
 }
-.slick-dots li button{
+.slick-dots li button {
   padding: 0;
 }
-.slick-dots li button:before{
-  color: #0028FF;
+.slick-dots li button:before {
+  color: #0028ff;
   font-size: 12px;
 }
-.slick-dots li.slick-active button:before{
-    opacity: .75;
-    color: #0028FF;
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #0028ff;
 }
-.slick-dots li.slick-active button{
+.slick-dots li.slick-active button {
   scale: 130%;
 }

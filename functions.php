@@ -24,6 +24,10 @@ include_once('inc/extra.php');
 function theme_register_nav_menu() {
     register_nav_menu('primary', __('Primary Menu', 'theme-textdomain'));
     register_nav_menu('top', __('Top Menu', 'theme-textdomain'));
+    register_nav_menu('footer_surgery', __('Footer Surgery', 'theme-textdomain'));
+     register_nav_menu('footer_services', __('Footer Services', 'theme-textdomain'));
+     register_nav_menu('footer_services1', __('Footer Services', 'theme-textdomain'));
+     register_nav_menu('footer_company', __('Footer Company', 'theme-textdomain'));
 }
 
 add_action('after_setup_theme', 'theme_register_nav_menu');
