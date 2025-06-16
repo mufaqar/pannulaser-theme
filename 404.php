@@ -6,55 +6,70 @@
  *
  * @package tp_theme
  */
+<?php get_header(); ?>
 
-get_header();
-?>
+<main id="primary" class="site-main bg-[#f9fafb] py-16 min-h-[70vh]">
+  <div class="container mx-auto px-4 text-center max-w-2xl">
+    
+    <h1 class="text-4xl sm:text-5xl font-bold text-primary mb-6">
+      <?php esc_html_e('Oops! Page not found.', 'tp_theme'); ?>
+    </h1>
 
-	<main id="primary" class="site-main">
+    <p class="text-lg text-gray-600 mb-8">
+      <?php esc_html_e('The page you’re looking for doesn’t exist or has been moved.', 'tp_theme'); ?>
+    </p>
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'tp_theme' ); ?></h1>
-			</header><!-- .page-header -->
+    <?php get_search_form(); ?>
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'tp_theme' ); ?></p>
+    <div class="grid md:grid-cols-2 gap-8 text-left mt-12">
+      <div>
+        <h2 class="text-xl font-semibold mb-4 text-gray-700">
+          <?php esc_html_e('Recent Posts', 'tp_theme'); ?>
+        </h2>
+        <?php the_widget('WP_Widget_Recent_Posts'); ?>
+      </div>
 
-					<?php
-					get_search_form();
+      <div>
+        <h2 class="text-xl font-semibold mb-4 text-gray-700">
+          <?php esc_html_e('Most Used Categories', 'tp_theme'); ?>
+        </h2>
+        <ul class="list-disc pl-5 text-gray-600">
+          <?php
+          wp_list_categories([
+            'orderby' => 'count',
+            'order' => 'DESC',
+            'show_count' => true,
+            'title_li' => '',
+            'number' => 5,
+          ]);
+          ?>
+        </ul>
+      </div>
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
+      <div class="col-span-2">
+        <h2 class="text-xl font-semibold mb-4 text-gray-700">
+          <?php esc_html_e('Archives', 'tp_theme'); ?>
+        </h2>
+        <p class="text-gray-500 mb-2">
+          <?php printf(esc_html__('Try looking in the monthly archives. %s', 'tp_theme'), convert_smilies(':)')); ?>
+        </p>
+        <?php the_widget('WP_Widget_Archives', 'dropdown=1'); ?>
+      </div>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'tp_theme' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
+      <div class="col-span-2">
+        <h2 class="text-xl font-semibold mb-4 text-gray-700">
+          <?php esc_html_e('Tags', 'tp_theme'); ?>
+        </h2>
+        <?php the_widget('WP_Widget_Tag_Cloud'); ?>
+      </div>
+    </div>
 
-					<?php
-					/* translators: %1$s: smiley */
-					$tp_theme_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'tp_theme' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$tp_theme_archive_content" );
+    <a href="<?php echo home_url(); ?>" class="inline-block mt-10 bg-primary text-white px-6 py-3 rounded hover:bg-secondary transition">
+      <?php esc_html_e('Back to Home', 'tp_theme'); ?>
+    </a>
 
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+  </div>
+</main>
 
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
+<?php get_footer(); ?>
 
-	</main><!-- #main -->
-
-<?php
-get_footer();
