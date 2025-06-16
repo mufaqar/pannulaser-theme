@@ -5,6 +5,32 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="https://gmpg.org/xfn/11">
+  <?php if (is_search()) { ?>
+	   <meta name="robots" content="noindex, nofollow" /> 
+	<?php } ?>
+		<title>
+			<?php
+				/*
+				 * Print the <title> tag based on what is being viewed.
+				 */
+				global $page, $paged, $post;
+			
+				wp_title( '|', true, 'right' );
+			
+				// Add the blog name.
+				bloginfo( 'name' );
+			
+				// Add the blog description for the home/front page.
+				$site_description = get_bloginfo( 'description', 'display' );
+				if ( $site_description && ( is_home() || is_front_page() ) )
+					echo " | $site_description";
+			
+				// Add a page number if necessary:
+				if ( $paged >= 2 || $page >= 2 )
+					echo ' | ' . sprintf( __( 'Page %s', 'wpv' ), max( $paged, $page ) );
+            ?>
+	</title>
+    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -15,14 +41,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <!-- ////top bar// -->
-  <!-- Top Bar -->
   <div
     class="relative bg-cover bg-center bg-no-repeat min-h-[450px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">
-
     <section class="!bg-primary w-full py-3.5 hidden md:flex">
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
@@ -31,7 +53,6 @@
         </div>
       </div>
     </section>
-
     <!-- Header -->
     <header class="bg-topBarBg w-full py-4">
       <div class="container mx-auto px-4">
@@ -40,7 +61,6 @@
           <a href="/">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class='w-52'>
           </a>
-
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex items-center space-x-6">
             <?php
@@ -60,7 +80,6 @@
           <!-- Mobile Toggle -->
           <button id="menu-toggle"
             class="md:hidden p-2 text-white text-2xl focus:outline-none border border-white/20 rounded-md">
-            <!-- Hamburger Icon -->
             <svg id="icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor" stroke-width="2"
               viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -92,6 +111,31 @@
     } ?>
   </div>
   <Script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('[data-toggle="dropdown"]').forEach(function (trigger) {
+        trigger.addEventListener("click", function (e) {
+          e.preventDefault();
+          const parent = this.closest(".has-dropdown");
+          const dropdown = parent.querySelector(".dropdown");
+
+          // Hide all others
+          document.querySelectorAll(".dropdown").forEach(d => {
+            if (d !== dropdown) d.classList.add("hidden");
+          });
+
+          // Toggle current
+          dropdown.classList.toggle("hidden");
+        });
+      });
+
+      // Close on outside click
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".has-dropdown")) {
+          document.querySelectorAll(".dropdown").forEach(d => d.classList.add("hidden"));
+        }
+      });
+    });
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll('[data-toggle="dropdown"]').forEach(function (trigger) {
         trigger.addEventListener("click", function (e) {
@@ -128,4 +172,7 @@
         iconClose.classList.toggle("hidden");
       });
     });
+
+
+
   </Script>
