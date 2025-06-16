@@ -6,35 +6,35 @@
  *
  * @package tp_theme
  */
-<?php get_header(); ?>
 
-<main id="primary" class="site-main bg-[#f9fafb] py-16 min-h-[70vh]">
-  <div class="container mx-auto px-4 text-center max-w-2xl">
-    
-    <h1 class="text-4xl sm:text-5xl font-bold text-primary mb-6">
-      <?php esc_html_e('Oops! Page not found.', 'tp_theme'); ?>
-    </h1>
+get_header();
+?>
 
-    <p class="text-lg text-gray-600 mb-8">
-      <?php esc_html_e('The page you’re looking for doesn’t exist or has been moved.', 'tp_theme'); ?>
-    </p>
+<main id="primary" class="site-main bg-[#f8f9fc] min-h-screen flex items-center justify-center px-4 py-16">
+    <div class="max-w-3xl text-center">
 
-    <?php get_search_form(); ?>
+        <h1 class="text-5xl font-bold text-primary mb-4">
+            <?php esc_html_e('404 - Page Not Found', 'tp_theme'); ?>
+        </h1>
 
-    <div class="grid md:grid-cols-2 gap-8 text-left mt-12">
-      <div>
-        <h2 class="text-xl font-semibold mb-4 text-gray-700">
-          <?php esc_html_e('Recent Posts', 'tp_theme'); ?>
-        </h2>
-        <?php the_widget('WP_Widget_Recent_Posts'); ?>
-      </div>
+        <p class="text-lg text-gray-700 mb-8">
+            <?php esc_html_e('Sorry, we couldn’t find the page you were looking for. It might have been moved or deleted.', 'tp_theme'); ?>
+        </p>
 
-      <div>
-        <h2 class="text-xl font-semibold mb-4 text-gray-700">
-          <?php esc_html_e('Most Used Categories', 'tp_theme'); ?>
-        </h2>
-        <ul class="list-disc pl-5 text-gray-600">
-          <?php
+        <?php get_search_form(); ?>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 mb-4"><?php esc_html_e('Recent Posts', 'tp_theme'); ?>
+                </h2>
+                <?php the_widget('WP_Widget_Recent_Posts'); ?>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 mb-4"><?php esc_html_e('Top Categories', 'tp_theme'); ?>
+                </h2>
+                <ul class="list-disc pl-5 text-gray-700">
+                    <?php
           wp_list_categories([
             'orderby' => 'count',
             'order' => 'DESC',
@@ -43,33 +43,25 @@
             'number' => 5,
           ]);
           ?>
-        </ul>
-      </div>
+                </ul>
+            </div>
 
-      <div class="col-span-2">
-        <h2 class="text-xl font-semibold mb-4 text-gray-700">
-          <?php esc_html_e('Archives', 'tp_theme'); ?>
-        </h2>
-        <p class="text-gray-500 mb-2">
-          <?php printf(esc_html__('Try looking in the monthly archives. %s', 'tp_theme'), convert_smilies(':)')); ?>
-        </p>
-        <?php the_widget('WP_Widget_Archives', 'dropdown=1'); ?>
-      </div>
+            <div class="md:col-span-2">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4"><?php esc_html_e('Archives', 'tp_theme'); ?></h2>
+                <?php
+        $archive_content = '<p>' . sprintf( esc_html__('Try looking in the monthly archives. %1$s', 'tp_theme'), convert_smilies(':)') ) . '</p>';
+        the_widget('WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content");
+        ?>
+            </div>
+        </div>
 
-      <div class="col-span-2">
-        <h2 class="text-xl font-semibold mb-4 text-gray-700">
-          <?php esc_html_e('Tags', 'tp_theme'); ?>
-        </h2>
-        <?php the_widget('WP_Widget_Tag_Cloud'); ?>
-      </div>
+        <a href="<?php echo esc_url(home_url('/')); ?>"
+            class="inline-block mt-10 bg-primary hover:bg-secondary text-white px-6 py-3 rounded transition-all">
+            <?php esc_html_e('Back to Homepage', 'tp_theme'); ?>
+        </a>
+
     </div>
-
-    <a href="<?php echo home_url(); ?>" class="inline-block mt-10 bg-primary text-white px-6 py-3 rounded hover:bg-secondary transition">
-      <?php esc_html_e('Back to Home', 'tp_theme'); ?>
-    </a>
-
-  </div>
 </main>
 
-<?php get_footer(); ?>
-
+<?php
+get_footer();
