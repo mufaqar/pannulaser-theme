@@ -640,6 +640,10 @@ video {
   top: 0.75rem;
 }
 
+.top-12 {
+  top: 3rem;
+}
+
 .z-50 {
   z-index: 50;
 }
