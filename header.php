@@ -110,9 +110,32 @@
       get_template_part('templates/hero', 'page');
     } ?>
   </div>
-
   <Script>
 
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('[data-toggle="dropdown"]').forEach(function (trigger) {
+        trigger.addEventListener("click", function (e) {
+          e.preventDefault();
+          const parent = this.closest(".has-dropdown");
+          const dropdown = parent.querySelector(".dropdown");
+
+          // Hide all others
+          document.querySelectorAll(".dropdown").forEach(d => {
+            if (d !== dropdown) d.classList.add("hidden");
+          });
+
+          // Toggle current
+          dropdown.classList.toggle("hidden");
+        });
+      });
+
+      // Close on outside click
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".has-dropdown")) {
+          document.querySelectorAll(".dropdown").forEach(d => d.classList.add("hidden"));
+        }
+      });
+    });
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll('[data-toggle="dropdown"]').forEach(function (trigger) {
         trigger.addEventListener("click", function (e) {
@@ -149,6 +172,7 @@
         iconClose.classList.toggle("hidden");
       });
     });
+
 
 
   </Script>
