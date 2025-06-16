@@ -1,4 +1,4 @@
- <section class="">
+ <section>
         <!-- Content -->
         <div class="relative container mx-auto px-4 text-white flex items-center justify-start text-left min-h-[500px]">
             <div class="md:w-[49%] w-full">

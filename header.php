@@ -44,7 +44,7 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <div
-    class="relative bg-cover bg-center bg-no-repeat min-h-[450px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">
+    class="relative bg-cover bg-center  bg-cente bg-no-repeat bg-[#27304B] min-h-[450px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">
     <section class="!bg-primary w-full py-3.5 hidden md:flex">
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">

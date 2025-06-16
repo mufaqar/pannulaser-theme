@@ -24,27 +24,27 @@ $navLinks = [
 $Menu1 = [
     [
         'name' => 'What is LASIK Eye Surgery?',
-        'link' => '/',
+        'link' => '/what-is-lasik-eye-surgery',
     ],
     [
         'name' => 'WaveFront Custom LASIK',
-        'link' => '/',
+        'link' => '/wavefront-custom-lasik',
     ],
     [
         'name' => 'PRK/LASEK/Laser Surface Treatment',
-        'link' => '/',
+        'link' => '/prk-lasek-laser-surface-treatment',
     ],
     [
         'name' => 'Schedule A Free LASIK Consultation',
-        'link' => '/',
+        'link' => '/schedule-a-free-lasik-consultation',
     ],
     [
         'name' => 'LASIK Testimonials for Pannu',
-        'link' => '/',
+        'link' => '/lasik-testimonials-for-pannu',
     ],
     [
         'name' => 'LASIK Self Eval Test',
-        'link' => '/',
+        'link' => '/lasik-self-eval-test',
     ],
 
 ];
@@ -52,50 +52,50 @@ $Menu1 = [
 $Menu3 = [
     [
         'name' => 'Diabetic Eye Care & Treatment ',
-        'link' => '#',
+        'link' => '/diabetic-eye-care-treatment',
     ],
     [
         'name' => 'Glaucoma Treatment',
-        'link' => '#',
+        'link' => '/glaucoma-treatment',
     ],
     [
         'name' => 'Macular Degeneration',
-        'link' => '#',
+        'link' => '/macular-degeneration',
     ],
     [
         'name' => 'Pterygium Removal',
-        'link' => '#',
+        'link' => '/pterygium-removal',
     ],
     [
         'name' => 'Cornea Transplants',
-        'link' => '#',
+        'link' => '/cornea-transplants',
     ],
 ];
 
 $Menu2 = [
     [
         'name' => 'Laser Vision Correction',
-        'link' => '/',
+        'link' => '/laser-vision-cor…-lasik-prk-lasek',
     ],
     [
         'name' => 'Cataract Surgery & Lenses',
-        'link' => '/',
+        'link' => '/cataract-surgery-lenses',
     ],
     [
         'name' => 'Premium Intraocular Lens',
-        'link' => '/',
+        'link' => '/premium-intraocular-lens',
     ],
     [
         'name' => 'Cosmetic Fillers',
-        'link' => '/internet/va/new-kent/',
+        'link' => '/cosmetic-fillers',
     ],
     [
         'name' => 'Dry Eye Treatment',
-        'link' => '/internet/ga/atlanta/',
+        'link' => '/dry-eye-treatment',
     ],
     [
         'name' => 'Eye Exams, Contacts & Glasses',
-        'link' => '/internet/ne/omaha/',
+        'link' => '/eye-exams-contacts-glasses',
     ],
 
 ]
@@ -150,8 +150,8 @@ $Menu2 = [
             </div>
             <!--End Col-->
             <div class="lg:mx-auto text-left text-white ">
-                <h4 class="text-xl  font-[600] mb-7">Services</h4>
-                <ul class="text-sm   transition-all duration-500">
+                <h4 class="text-xl font-[600] mb-7">Services</h4>
+                <ul class="text-sm transition-all duration-500">
                     <?php
                     foreach ($Menu3 as $provider) {
                         echo "<li class='mb-4'><a href='{$provider['link']}' class='text-white'>{$provider['name']}</a></li>";

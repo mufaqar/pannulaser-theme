@@ -133,15 +133,15 @@
             class="w-full h-full object-cover">
     </div>
     <!-- Testimonials Side -->
-     <div class='container mx-auto px-4'>
-    <div class="w-full  px-6 bg-white container mx-auto md:py-16  py-12">
-        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold  pb-6">
-            See What Our<br /> Patients Are Saying
-        </h2>
+    <div class='container mx-auto px-4'>
+        <div class="w-full  px-6 bg-white container mx-auto md:py-16  py-12">
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold  pb-6">
+                See What Our<br /> Patients Are Saying
+            </h2>
 
-        <!-- Testimonial Slider -->
-        <div class="testimonial-slider w-full md:-ml-24">
-            <?php
+            <!-- Testimonial Slider -->
+            <div class="testimonial-slider w-full md:-ml-24">
+                <?php
             $args = array(
                 'post_type' => 'testimonials',
                 'posts_per_page' => -1,
@@ -151,24 +151,24 @@
             if ($loop->have_posts()):
                 while ($loop->have_posts()):
                     $loop->the_post(); ?>
-            <div class="p-4 h-full">
-                <div
-                    class="bg-white p-6 rounded-tr-[30px] rounded-bl-[30px] shadow-[0_0_15px_0_rgba(0,40,255,0.15)] flex flex-col justify-between h-[388px]">
+                <div class="p-4 h-full">
+                    <div
+                        class="bg-white p-6 rounded-tr-[30px] rounded-bl-[30px] shadow-[0_0_15px_0_rgba(0,40,255,0.15)] flex flex-col justify-between h-[388px]">
 
-                    <div class="text-Pan_black text-base italic pt-3 line-clamp-9">
-                        <?php the_content(); ?>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-Pan_black text-lg pt-6">
-                            <?php the_title(); ?>
-                        </h4>
-                        <h4 class="font-semibold text-secondry text-lg">
-                            <?php echo get_field('position'); ?>
-                        </h4>
+                        <div class="text-Pan_black text-base italic pt-3 line-clamp-9">
+                            <?php the_content(); ?>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-Pan_black text-lg pt-6">
+                                <?php the_title(); ?>
+                            </h4>
+                            <h4 class="font-semibold text-secondry text-lg">
+                                <?php echo get_field('position'); ?>
+                            </h4>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <?php
+                <?php
                 endwhile;
             else:
                 echo '<p>No testimonials found.</p>';
@@ -176,10 +176,10 @@
 
             wp_reset_postdata();
             ?>
-        </div>
+            </div>
 
+        </div>
     </div>
-</div>
 </section>
 
 
@@ -192,7 +192,8 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 text-white items-center">
             <!-- card 1 -->
             <div class="see_card ">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Excellence.svg" alt="" class='w-[70px] h-[82px] ' />
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Excellence.svg" alt=""
+                    class='w-[70px] h-[82px] ' />
                 <h3 class="font-bold text-secondry text-2xl   py-2">Excellence</h3>
                 <p class='text-2xl text-Pan_black line-clamp-1'>in Eyecare since 1980</p>
             </div>
@@ -244,13 +245,13 @@
                     while ($loop->have_posts()):
                         $loop->the_post(); ?>
                 <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-lg ">
-                   <?php
+                    <?php
                          if (has_post_thumbnail()) {
-                         echo get_the_post_thumbnail(get_the_ID(), 'full', [
-                         'class' => 'h-[320px] w-full  !h-[320px]'
-                       ]);
-                      }
-                   ?>
+                           echo get_the_post_thumbnail(get_the_ID(), 'large', [
+                          'class' => 'w-full !h-[350px] object-cover'
+                        ]);
+                         }
+                    ?>
 
                     <div class='p-4 sm:px-6'>
                         <div class="font-bold text-Pan_black text-2xl py-2">
@@ -260,10 +261,10 @@
                             <?php the_excerpt(); ?>
                         </div>
                         <div class="mt-8 text-hovLink text-center flex items-center mx-auto justify-center ">
-                            <a href="/" class="read-more">MORE
-                                DETAILS <img
-                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg"
-                                    alt="icon" class='w-4'></a>
+                            <a href="<?php the_permalink(); ?>" class="read-more">MORE DETAILS
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg"
+                                    alt="icon" class="w-4">
+                            </a>
                         </div>
                     </div>
                 </div>
