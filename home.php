@@ -128,18 +128,19 @@
 <!-- See What Our Patients Are Saying -->
 <section class="flex flex-col md:flex-row ">
     <!-- Image Side -->
-    <div class="w-full md:w-1/3">
+    <div class="w-full md:w-1/2">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dentist.png" alt="Dentist"
             class="w-full h-full object-cover">
     </div>
     <!-- Testimonials Side -->
-    <div class="w-full md:w-2/3  px-6 bg-white container mx-auto md:py-16 md:px-10 py-12">
+     <div class='container mx-auto px-4'>
+    <div class="w-full  px-6 bg-white container mx-auto md:py-16  py-12">
         <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold  pb-6">
             See What Our<br /> Patients Are Saying
         </h2>
 
         <!-- Testimonial Slider -->
-        <div class="testimonial-slider w-full md:-ml-20">
+        <div class="testimonial-slider w-full md:-ml-24">
             <?php
             $args = array(
                 'post_type' => 'testimonials',
@@ -178,6 +179,7 @@
         </div>
 
     </div>
+</div>
 </section>
 
 
@@ -192,28 +194,28 @@
             <div class="see_card ">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Excellence.svg" alt="" class='w-[70px] h-[82px] ' />
                 <h3 class="font-bold text-secondry text-2xl   py-2">Excellence</h3>
-                <p class='text-2xl text-Pan_black '>in Eyecare since 1980</p>
+                <p class='text-2xl text-Pan_black line-clamp-1'>in Eyecare since 1980</p>
             </div>
             <!-- card 2 -->
             <div class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Award-winning.svg" alt=""
                     class='w-[70px] h-[82px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2">Award winning</h3>
-                <p class='text-2xl text-Pan_black'>Eye specialists</p>
+                <p class='text-2xl text-Pan_black line-clamp-1'>Eye specialists</p>
             </div>
             <!-- card 3 -->
             <div class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Empathetic.svg" alt=""
                     class='w-[70px] h-[82px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2">Empathetic</h3>
-                <p class='text-2xl text-Pan_black'>Personalized patient care</p>
+                <p class='text-2xl text-Pan_black line-clamp-1'>Personalized patient care</p>
             </div>
             <!-- card 4 -->
             <div class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vision.svg" alt=""
                     class='w-[70px] h-[82px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2">Advanced care</h3>
-                <p class='text-2xl text-Pan_black'>Personalized patient care</p>
+                <p class='text-2xl text-Pan_black line-clamp-1'>Personalized patient care</p>
             </div>
         </div>
     </div>

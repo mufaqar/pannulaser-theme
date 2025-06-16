@@ -14,22 +14,22 @@
 
                 <div class="bg-white mt-10 rounded-[2px] overflow-hidden">
                     <div class="grid grid-cols-1 sm:grid-cols-2 text-topBarBg">
-                        <div class="p-3 border flex items-center gap-4 ">
-                            <h4 class='text-[18px] font-semibold'>Find an Expert</h4>
+                        <div class="p-2 border flex items-center justify-between gap-2 py-3 ">
+                            <h4 class=' font-semibold'>Find an Expert</h4>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-skip-2840.svg"
                                 alt="">
                         </div>
-                        <div class="p-2 border flex items-center gap-2">
-                            <h4 class='text-[18px] font-semibold'> Schedule an Appointment</h4>
+                        <div class="p-2 border flex items-center justify-between gap-2 py-3 ">
+                            <h4 class=' font-semibold'> Schedule an Appointment</h4>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-skip-2840.svg"
                                 alt="">
                         </div>
-                        <div class="p-2 border flex items-center gap-2">
+                        <div class="p-2 border flex items-center justify-between gap-2 py-3 ">
                             <h4 class=' font-semibold'>Find a Location</h4>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-skip-2840.svg"
                                 alt="">
                         </div>
-                        <div class="p-2 border flex items-center gap-2">
+                        <div class="p-2 border flex items-center justify-between gap-2 py-3 ">
                             <h4 class=' font-semibold'>Free LASIK Consultation</h4>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-skip-2840.svg"
                                 alt="">
