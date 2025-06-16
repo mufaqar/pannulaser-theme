@@ -105,7 +105,7 @@ $Menu2 = [
 <footer class="w-full image-overlay bg-footercol ">
     <div class="px-4 container mx-auto">
         <!--Grid-->
-        <div class=" grid grid-cols-1 md:grid-cols-5 sm:grid-cols-3 xl:grid-cols-5 gap-3 gap-y-8 md:gap-8 py-10">
+        <div class=" grid grid-cols-1 md:grid-cols-5 sm:grid-cols-3 xl:grid-cols-5 gap-3 gap-y-8 md:gap-8 py-14">
             <div class="">
                 <a href="<?php bloginfo('url'); ?>" class="flex  ">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class='w-52'>

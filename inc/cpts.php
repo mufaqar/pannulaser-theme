@@ -4,7 +4,6 @@ function cptui_register_my_cpts() {
 	/**
 	 * Post Type: Directions.
 	 */
-
 	$labels = [
 		"name" => esc_html__( "Directions", "tp_theme" ),
 		"singular_name" => esc_html__( "Direction", "tp_theme" ),
