@@ -91,9 +91,7 @@
       get_template_part('templates/hero', 'page');
     } ?>
   </div>
-
   <Script>
-
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll('[data-toggle="dropdown"]').forEach(function (trigger) {
         trigger.addEventListener("click", function (e) {
@@ -130,6 +128,4 @@
         iconClose.classList.toggle("hidden");
       });
     });
-
-
   </Script>
