@@ -44,7 +44,7 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <div
-    class="relative bg-cover bg-center  bg-cente bg-no-repeat bg-[#27304B] min-h-[450px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">
+    class="relative bg-cover bg-center  bg-no-repeat bg-[#27304B] min-h-[450px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">
     <section class="!bg-primary w-full py-3.5 hidden md:flex">
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
@@ -66,14 +66,14 @@
             <?php
             wp_nav_menu([
               'theme_location' => 'primary',
-              'menu_class' => 'flex space-x-6 ',
+              'menu_class' => 'flex space-x-6',
               'container' => false,
               'walker' => new Tailwind_Hover_Nav_Walker()
             ]); ?>
-            <div class="bg-secondry hover:bg-primary py-2 px-4 rounded-sm">
-              <a href="tel:9544840700" class='flex gap-2 items-center'>
+            <div class="bg-secondry hover:bg-primary p-2 px-4  rounded-sm">
+              <a href="tel:9544840700" class='flex gap-2 items-center '>
                 <i class="fa-solid fa-phone-volume text-white text-xl"></i>
-                <p class='text-lg md:text-xl text-white'>954-484-0700</p>
+                <p class='text-lg md:text-xl text-white pt-1'>954-484-0700</p>
               </a>
             </div>
           </nav>

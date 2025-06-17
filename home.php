@@ -248,7 +248,7 @@
                     <?php
                          if (has_post_thumbnail()) {
                            echo get_the_post_thumbnail(get_the_ID(), 'large', [
-                          'class' => 'w-full !h-[350px] object-cover'
+                          'class' => ' '
                         ]);
                          }
                     ?>
