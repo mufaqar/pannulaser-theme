@@ -44,7 +44,7 @@
                 wp_nav_menu( array(
                     'container' => false ,
                     'menu_class'=>'footer_nav',                   
-                    'theme_location' => 'footer_services',
+                    'theme_location' => 'footer_surgery',
                     'fallback_cb'    => false // Do not fall back to wp_page_menu()
                     ) );
                 ?>
