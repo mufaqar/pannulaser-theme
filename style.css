@@ -40,9 +40,9 @@ h6 {
   font-family: axiformabold;
 }
 :root {
-  --primary: #27304b;
+  --primary: #244848;
   --secondry: #65bd9c;
-  --topBarBg: #445d84;
+  --topBar: #3F574E;
   --Pan_black: #1f2b37;
   --hovLink: #5076f6;
   --bgcolor: #f2f6f5;

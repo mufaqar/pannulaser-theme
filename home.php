@@ -25,7 +25,7 @@
                     world.
                 </p>
 
-                <div class="mt-8 text-hovLink  ">
+                <div class="mt-8 text-[#3F574E]  ">
                     <a href="/" class="text-md font-semibold hover:underline flex w-fit gap-2 items-center ">
                         MORE DETAILS
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg" alt="" />
@@ -76,7 +76,7 @@
 </section>
 
 <!--Services -->
-<section class="bg-primary pt-[100px] pb-[80px]">
+<section class="bg-[#3F574E] pt-[100px] pb-[80px]">
     <div class="container mx-auto px-4">
         <div class="md:max-w-[50%] w-full mx-auto text-white text-center mb-10">
             <p class="text-2xl pb-7 font-normal">Transparent price</p>
@@ -117,7 +117,7 @@
             wp_reset_postdata();
             ?>
         </div>
-        <div class="mt-8 text-hovLink text-white ">
+        <div class="mt-8 text-hovLink text-white  ">
             <a href="/"
                 class="text-md font-semibold hover:underline flex w-fit gap-2 items-center  mx-auto justify-center ">
                 VIEW ALL
@@ -189,7 +189,7 @@
 
 <!-- See the Difference -->
 
-<section class='bg-primary pt-[131px] pb-[108px]'>
+<section class='bg-[#3F574E] pt-[131px] pb-[108px]'>
     <div class='container mx-auto px-4'>
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-white text-center">See the Difference</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 text-white items-center text-center justify-center">
@@ -283,7 +283,7 @@
 </section>
 
 <!-- Locate a Centre -->
-<section class='bg-primary pt-[85px] pb-[113px]'>
+<section class='bg-[#3F574E] pt-[100px] pb-[113px]'>
     <div class='container mx-auto px-4'>
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-white text-center">Locate a Centre</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2  text-white items-center">

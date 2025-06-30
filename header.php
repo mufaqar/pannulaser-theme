@@ -43,18 +43,22 @@
 </head>
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
+  
   <div
-    class="relative bg-cover bg-center  bg-no-repeat bg-[#27304B] min-h-[450px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">
-    <section class="!bg-primary w-full py-3.5 hidden md:flex">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
-          <p class="text-center md:text-left text-white ">Your Eyes, Our Passion</p>
-          <?php wp_nav_menu(array('theme_location' => 'top', 'fallback_cb' => 'fallbackmenu1', 'menu_class' => 'top_nav', )); ?>
-        </div>
-      </div>
-    </section>
-    <!-- Header -->
-    <header class="bg-topBarBg w-full py-4">
+    class="relative  bg-right  bg-no-repeat bg-[#3F574E] min-h-[450px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">
+    <section class="w-full py-3.5 hidden md:flex relative">
+  <!-- Gradient background -->
+  <div class="absolute inset-0 bg-gradient-to-r from-[#244848] via-[#244848] to-[#244848]/80"></div>
+
+  <!-- Content with relative z-index -->
+  <div class="relative z-10 container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
+      <p class="text-center md:text-left text-white">Your Eyes, Our Passion</p>
+      <?php wp_nav_menu(array('theme_location' => 'top', 'fallback_cb' => 'fallbackmenu1', 'menu_class' => 'top_nav', )); ?>
+    </div>
+  </div>
+</section>
+  <header class="bg-[#3F574E] w-full py-4">
       <div class="container mx-auto px-4 ">
         <div class="flex justify-between items-center">
           <!-- Logo -->
@@ -103,6 +107,8 @@
         </div>
       </div>
     </header>
+    <!-- Header -->
+    
     <!-- Hero Section -->
     <?php if (is_front_page()) {
       get_template_part('templates/hero', 'banner');
@@ -110,6 +116,7 @@
       get_template_part('templates/hero', 'page');
     } ?>
   </div>
+  
   <Script>
 
     document.addEventListener("DOMContentLoaded", function () {
