@@ -90,10 +90,10 @@
         </div>
         <!--Grid-->
         <div class="py-7 border-t border-gray-700">
-            <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
+            <div class="flex flex-wrap items-center justify-center flex-col lg:justify-between lg:flex-row">
                 <span class="text-sm text-white ">©<a href="<?php bloginfo('url'); ?>"> Copyright 2026,
                         designercrunch.net</span>
-                <div class="flex mt-4 space-x-4 sm:justify-center lg:mt-0 text-white ">
+                <div class="flex flex-wrap lg:flex-row flex-col mt-4 md:space-x-4 sm:justify-center lg:mt-0 text-white ">
                     <a href="/Sitemap" class='text-[14px]'>Sitemap</a>
                     <a href="/Terms & Conditions" class='text-[14px]'>- Terms & Conditions</a>
                     <a href="/Privacy Policy" class='text-[14px]'>- Privacy Policy</a>

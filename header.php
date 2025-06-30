@@ -55,14 +55,14 @@
     </section>
     <!-- Header -->
     <header class="bg-topBarBg w-full py-4">
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 ">
         <div class="flex justify-between items-center">
           <!-- Logo -->
           <a href="/">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class='w-52'>
           </a>
           <!-- Desktop Navigation -->
-          <nav class="hidden md:flex items-center space-x-6">
+          <nav class="hidden md:flex items-center space-x-6 ">
             <?php
             wp_nav_menu([
               'theme_location' => 'primary',

@@ -69,13 +69,12 @@ html {
 }
 .primary_nav .menu-item a,
 .primary_nav .menu-item-has-children > ul .menu-item a {
-  @apply text-white hover:text-secondry;
+  @apply text-white hover:text-secondry ;
 }
 .primary_nav .menu-item.current-menu-item a,
 .top_nav .menu-item.current-menu-item a {
   @apply text-secondry;
 }
-
 .footer_nav {
   @apply text-sm  transition-all duration-500;
 }
@@ -99,7 +98,7 @@ html {
 }
 
 .about_card {
-  @apply h-[323px] bg-white text-center flex flex-col items-center justify-center py-4 px-8 shadow-md rounded-md;
+  @apply  bg-white text-center flex flex-col items-center justify-center py-4 px-8 shadow-md rounded-md;
 }
 .service_card {
   @apply text-center flex flex-col items-center justify-center p-3 text-white;
@@ -124,6 +123,4 @@ html {
 .slick-dots li.slick-active button {
   scale: 130%;
 }
-
-
 

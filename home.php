@@ -36,7 +36,7 @@
             <div class="md:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div class="space-y-3 flex flex-col sm:pt-6">
                     <!-- Surgeon Image (full width of first column) -->
-                    <div class="h-[323px] items-center justify-center shadow-md rounded-md">
+                    <div class=" items-center justify-center shadow-md rounded-md">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/srini.png" alt=""
                             class="w-full h-full object-cover rounded-md " />
                     </div>
@@ -45,7 +45,9 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/transparent.png" alt=""
                             class='w-[93px] h-[107px] object-contain' />
                         <h3 class="font-bold text-xl text-secondry py-2">Transparent Price</h3>
-                        <p class="text-Pan_black text-base">Enjoy competitive and clear pricing with no hidden fees.</p>
+                        <p class="text-Pan_black text-base">
+                            Enjoy competitive and clear pricing with no hidden fees.
+                        </p>
                     </div>
                 </div>
                 <div class="space-y-3 flex flex-col">
@@ -55,7 +57,8 @@
                             class='w-[93px] h-[107px] object-contain' />
                         <h3 class="font-bold text-xl text-secondry py-2">Experienced Doctor</h3>
                         <p class="text-Pan_black text-base">Our highly skilled doctors ensure safe and effective
-                            treatments with years of expertise.</p>
+                            treatments with years of expertise.
+                        </p>
                     </div>
                     <!-- Card 3 -->
                     <div class="about_card ">
@@ -78,8 +81,8 @@
         <div class="md:max-w-[50%] w-full mx-auto text-white text-center mb-10">
             <p class="text-2xl pb-7 font-normal">Transparent price</p>
             <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-[300] font-axiformaregular">WE PROVIDE BEST <span
-                    class="font-bold font-axiformabold">SERVICES FOR
-                    PATIENT</span></h2>
+                    class="font-bold font-axiformabold">SERVICES FOR PATIENT</span>
+            </h2>
         </div>
         <!-- Responsive Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 items-center">
@@ -115,7 +118,7 @@
             ?>
         </div>
         <div class="mt-8 text-hovLink text-white ">
-            <a href="/services"
+            <a href="/"
                 class="text-md font-semibold hover:underline flex w-fit gap-2 items-center  mx-auto justify-center ">
                 VIEW ALL
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg" alt="" />
@@ -189,33 +192,33 @@
 <section class='bg-primary pt-[131px] pb-[108px]'>
     <div class='container mx-auto px-4'>
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-white text-center">See the Difference</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 text-white items-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 text-white items-center text-center justify-center">
             <!-- card 1 -->
             <div class="see_card ">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Excellence.svg" alt=""
                     class='w-[70px] h-[82px] ' />
-                <h3 class="font-bold text-secondry text-2xl   py-2">Excellence</h3>
+                <h3 class="font-bold text-secondry text-2xl pt-6  py-2">Excellence</h3>
                 <p class='text-2xl text-Pan_black line-clamp-1'>in Eyecare since 1980</p>
             </div>
             <!-- card 2 -->
             <div class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Award-winning.svg" alt=""
-                    class='w-[70px] h-[82px]'>
-                <h3 class="font-bold text-secondry text-2xl py-2">Award winning</h3>
+                    class='w-[70px] h-[70px]'>
+                <h3 class="font-bold text-secondry text-2xl py-2 pt-6">Award winning</h3>
                 <p class='text-2xl text-Pan_black line-clamp-1'>Eye specialists</p>
             </div>
             <!-- card 3 -->
             <div class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Empathetic.svg" alt=""
-                    class='w-[70px] h-[82px]'>
-                <h3 class="font-bold text-secondry text-2xl py-2">Empathetic</h3>
+                    class='w-[70px] h-[70px]'>
+                <h3 class="font-bold text-secondry text-2xl py-2 pt-6">Empathetic</h3>
                 <p class='text-2xl text-Pan_black line-clamp-1'>Personalized patient care</p>
             </div>
             <!-- card 4 -->
             <div class="see_card">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vision.svg" alt=""
-                    class='w-[70px] h-[82px]'>
-                <h3 class="font-bold text-secondry text-2xl py-2">Advanced care</h3>
+                    class='w-[70px] h-[90px]'>
+                <h3 class="font-bold text-secondry text-2xl py-2 pt-6">Advanced care</h3>
                 <p class='text-2xl text-Pan_black line-clamp-1'>Personalized patient care</p>
             </div>
         </div>

@@ -19,17 +19,17 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-skip-2840.svg"
                                 alt="">
                         </div>
-                        <div class="p-2 border flex items-center gap-2">
+                        <div class="p-3 border flex items-center gap-2">
                             <h4 class='text-[18px] font-semibold'> Schedule an Appointment</h4>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-skip-2840.svg"
                                 alt="">
                         </div>
-                        <div class="p-2 border flex items-center gap-2">
+                        <div class="p-3 border flex items-center gap-2">
                             <h4 class=' font-semibold'>Find a Location</h4>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-skip-2840.svg"
                                 alt="">
                         </div>
-                        <div class="p-2 border flex items-center gap-2">
+                        <div class="p-4 border flex items-center gap-2">
                             <h4 class=' font-semibold'>Free LASIK Consultation</h4>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-skip-2840.svg"
                                 alt="">
