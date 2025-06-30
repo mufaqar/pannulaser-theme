@@ -1,14 +1,4 @@
 <section class="relative overflow-hidden min-h-[500px]">
-  <!-- Background slider -->
-  <div class="absolute inset-0 z-0">
-    <div id="heroSlider" class="w-full h-full absolute inset-0">
-      <img src="/images/image1.jpg" class="w-full h-full object-cover absolute opacity-100 transition-opacity duration-1000" />
-      <img src="/images/image2.jpg" class="w-full h-full object-cover absolute opacity-0 transition-opacity duration-1000" />
-      <img src="/images/image3.jpg" class="w-full h-full object-cover absolute opacity-0 transition-opacity duration-1000" />
-    </div>
-    
-  </div>
-
   <!-- Foreground content -->
   <div class="relative z-10 container mx-auto px-4 text-white flex items-center justify-start text-left min-h-[500px]">
     <div class="md:w-[49%] w-full">
@@ -31,14 +21,13 @@
 
   <!-- Script for slider -->
   <script>
-    const slides = document.querySelectorAll("#heroSlider img");
     const titleEl = document.getElementById("sliderTitle");
     const descEl = document.getElementById("sliderDesc");
     const btnEl = document.getElementById("sliderButtons");
 
     const sliderData = [
       {
-        image: "/images/image1.jpg",
+     
         title: "Excellence in Eyecare",
         desc: "Dr. Srini Mutyala leads with expertise and care.",
         buttons: [
@@ -49,7 +38,7 @@
         ]
       },
       {
-        image: "/images/image2.jpg",
+       
         title: "Advanced LASIK Technology",
         desc: "Bringing clarity to thousands of patients.",
         buttons: [
@@ -58,7 +47,7 @@
         ]
       },
       {
-        image: "/images/image3.jpg",
+
         title: "Your Vision, Our Mission",
         desc: "Trusted care for your family's eyes.",
         buttons: [

@@ -52,7 +52,7 @@
 
   <!-- Content with relative z-index -->
   <div class="relative z-10 container mx-auto px-4">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
       <p class="text-center md:text-left text-white">Your Eyes, Our Passion</p>
       <?php wp_nav_menu(array('theme_location' => 'top', 'fallback_cb' => 'fallbackmenu1', 'menu_class' => 'top_nav', )); ?>
     </div>
