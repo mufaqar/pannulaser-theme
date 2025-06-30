@@ -192,7 +192,8 @@
 <section class='bg-[#3F574E] pt-[131px] pb-[108px]'>
     <div class='container mx-auto px-4'>
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-white text-center">See the Difference</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 text-white items-center text-center justify-center">
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 text-white items-center text-center justify-center">
             <!-- card 1 -->
             <div class="see_card ">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Excellence.svg" alt=""
@@ -237,7 +238,8 @@
                 <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-primary font-axiformaregular">THE MOST
                     QUALIFIED,<br><span class="font-bold font-axiformabold"> SKILLFUL& PROFESSIONAL DOCTORS.</span></h2>
             </div>
-            <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 items-center'>
+            <div
+                class='w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 items-center'>
                 <?php
                 $args = array(
                     'post_type' => 'doctors',
