@@ -1,4 +1,6 @@
 <section class="relative overflow-hidden min-h-[500px]">
+
+
   <!-- Foreground content -->
   <div class="relative z-10 container mx-auto px-4 text-white flex items-center justify-start text-left min-h-[500px]">
     <div class="md:w-[49%] w-full">
@@ -21,13 +23,14 @@
 
   <!-- Script for slider -->
   <script>
+    const slides = document.querySelectorAll("#heroSlider");
     const titleEl = document.getElementById("sliderTitle");
     const descEl = document.getElementById("sliderDesc");
     const btnEl = document.getElementById("sliderButtons");
 
     const sliderData = [
       {
-     
+    
         title: "Excellence in Eyecare",
         desc: "Dr. Srini Mutyala leads with expertise and care.",
         buttons: [
@@ -38,7 +41,7 @@
         ]
       },
       {
-       
+        
         title: "Advanced LASIK Technology",
         desc: "Bringing clarity to thousands of patients.",
         buttons: [
@@ -47,7 +50,7 @@
         ]
       },
       {
-
+        
         title: "Your Vision, Our Mission",
         desc: "Trusted care for your family's eyes.",
         buttons: [
