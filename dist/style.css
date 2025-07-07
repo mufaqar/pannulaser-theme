@@ -644,6 +644,10 @@ video {
   top: 0.75rem;
 }
 
+.top-12 {
+  top: 3rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -715,6 +719,10 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .line-clamp-1 {
@@ -880,76 +888,6 @@ video {
   flex: 1 1 0%;
 }
 
-@keyframes shake {
-  0% {
-    transform: translateX(0rem);
-  }
-
-  25% {
-    transform: translateX(-1rem);
-  }
-
-  75% {
-    transform: translateX(1rem);
-  }
-
-  100% {
-    transform: translateX(0rem);
-  }
-}
-
-.animate-shake {
-  animation: shake var(--default-animation-duration, 0.5s) var(--default-animation-timing-function, ease) var(--default-animation-delay, 0s) both;
-}
-
-@keyframes jump-in {
-  0% {
-    transform: scale(0);
-  }
-
-  80% {
-    transform: scale(1.2);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-.animate-jump-in {
-  animation: jump-in var(--default-animation-duration, 0.5s) var(--default-animation-timing-function, ease) var(--default-animation-delay, 0s) both;
-}
-
-@keyframes wiggle {
-  0%, 100% {
-    transform: rotate(-3deg);
-  }
-
-  50% {
-    transform: rotate(3deg);
-  }
-}
-
-.animate-wiggle {
-  animation: wiggle var(--default-animation-duration, 1s) var(--default-animation-timing-function, ease) var(--default-animation-delay, 0s) both;
-}
-
-@keyframes fade-up {
-  0% {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-up {
-  animation: fade-up var(--default-animation-duration, 1s) var(--default-animation-timing-function, ease) var(--default-animation-delay, 0s) both;
-}
-
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -964,6 +902,20 @@ video {
 
 .animate-bounce {
   animation: bounce var(--default-animation-duration, 1s) var(--default-animation-timing-function, ease) var(--default-animation-delay, 0s) infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.animate-wiggle {
+  animation: wiggle var(--default-animation-duration, 1s) var(--default-animation-timing-function, ease) var(--default-animation-delay, 0s) both;
 }
 
 .grid-cols-1 {
@@ -1046,6 +998,12 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -1563,18 +1521,6 @@ video {
   transition-duration: 500ms;
 }
 
-.animate-delay-300 {
-  animation-delay: 300ms;
-}
-
-.animate-duration-1000 {
-  animation-duration: 1000ms;
-}
-
-.animate-infinite {
-  animation-iteration-count: infinite;
-}
-
 .animate-once {
   animation-iteration-count: 1;
 }
@@ -1798,26 +1744,14 @@ html {
   scale: 130%;
 }
 
-@keyframes shake {
-  0% {
-    transform: translateX(0rem);
-  }
-
-  25% {
-    transform: translateX(-1rem);
-  }
-
-  75% {
-    transform: translateX(1rem);
-  }
-
-  100% {
-    transform: translateX(0rem);
-  }
+.after\:ml-2::after {
+  content: var(--tw-content);
+  margin-left: 0.5rem;
 }
 
-.hover\:animate-shake:hover {
-  animation: shake var(--default-animation-duration, 0.5s) var(--default-animation-timing-function, ease) var(--default-animation-delay, 0s) both;
+.after\:content-\[\"\25BC\"\]::after {
+  --tw-content: "▼";
+  content: var(--tw-content);
 }
 
 .hover\:bg-gray-100:hover {
@@ -1827,6 +1761,11 @@ html {
 
 .hover\:bg-primary:hover {
   background-color: var(--primary);
+}
+
+.hover\:bg-gray-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .hover\:text-secondry:hover {
