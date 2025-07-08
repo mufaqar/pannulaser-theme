@@ -33,9 +33,33 @@ function theme_register_nav_menu() {
 add_action('after_setup_theme', 'theme_register_nav_menu');
 
 
-function my_theme_enqueue_styles() {
-    wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/dist/style.css', array(), null);
+
+
+
+function enqueue_slick_slider_assets() {
+
+   
+    // jQuery (optional – already bundled in WordPress)
+    wp_enqueue_script('jquery');
+
+
+    // Slick CSS
+    wp_enqueue_style('slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css', [], '1.8.1');
+    wp_enqueue_style('slick-theme-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css', ['slick-css'], '1.8.1');
+
+    // Slick JS
+    wp_enqueue_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', ['jquery'], '1.8.1', true);
+
+    // Your custom Slick initialization
+    wp_enqueue_script('custom-slick-slider', get_template_directory_uri() . '/js/slick-slider.js', ['jquery', 'slick-js'], null, true);
+
+      wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/dist/style.css', array(), null);
 }
-add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+add_action('wp_enqueue_scripts', 'enqueue_slick_slider_assets');
+
+
+
+
+
 
 

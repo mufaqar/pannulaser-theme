@@ -45,10 +45,10 @@
   <?php wp_body_open(); ?>
   
   <div
-    class="relative  bg-right  bg-no-repeat bg-[#3F574E] min-h-[450px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">
+    class="relative z-50 bg-[position:right_top]  bg-no-repeat bg-[#3F574E] min-h-[360px] bg-[url('<?php echo get_template_directory_uri(); ?>/assets/images/home-banner.png')]">
     <section class="w-full py-3.5 hidden md:flex relative">
   <!-- Gradient background -->
-  <div class="absolute inset-0 bg-gradient-to-r from-[#244848] via-[#244848] to-[#244848]/80"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-[#244848]  bg-[#244848]"></div>
 
   <!-- Content with relative z-index -->
   <div class="relative z-10 container mx-auto px-4">

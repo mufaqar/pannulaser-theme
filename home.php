@@ -1,13 +1,6 @@
 <?php /*Template Name: FrontPage*/ get_header(); ?>
 
-<!--Meet-->
-<button class="animate-wiggle">
-  Hej, look at me!
-</button>
 
-<button class="">
-  Wait a bit, then jump right in.
-</button>
 <section class="bg-bgcolor py-32">
     <div class="container mx-auto px-4">
         <div class="flex md:flex-row flex-col items-center md:gap-16 gap-10">

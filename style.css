@@ -44,7 +44,7 @@ h6 {
 :root {
   --primary: #244848;
   --secondry: #65bd9c;
-  --topBar: #3F574E;
+  --topBar: #3f574e;
   --Pan_black: #1f2b37;
   --hovLink: #5076f6;
   --bgcolor: #f2f6f5;
@@ -71,7 +71,7 @@ html {
 }
 .primary_nav .menu-item a,
 .primary_nav .menu-item-has-children > ul .menu-item a {
-  @apply text-white hover:text-secondry ;
+  @apply text-white hover:text-secondry;
 }
 .primary_nav .menu-item.current-menu-item a,
 .top_nav .menu-item.current-menu-item a {
@@ -100,7 +100,7 @@ html {
 }
 
 .about_card {
-  @apply  bg-white text-center flex flex-col items-center justify-center py-4 px-8 shadow-md rounded-md;
+  @apply bg-white text-center flex flex-col items-center justify-center py-4 px-8 shadow-md rounded-md;
 }
 .service_card {
   @apply text-center flex flex-col items-center justify-center p-3 text-white;
@@ -126,3 +126,15 @@ html {
   scale: 130%;
 }
 
+.slick-next {
+  right: 60px;
+  z-index: 9999;
+}
+.slick-prev {
+  left: 60px;
+  z-index: 9999;
+}
+.slick-next:before,
+.slick-prev:before {
+  font-size: 45px;
+}

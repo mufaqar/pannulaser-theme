@@ -20,18 +20,13 @@
 
                 </a>
                 <div class='mt-10 flex flex-wrap  lg:justify-start gap-6 sm:gap-8'>
-                    <a href="/" aria-label="Facebook">
+                    <a href="http://www.facebook.com/PannuLaser" aria-label="Facebook" target="_blank">
                         <i class="fa-brands fa-facebook-f text-2xl text-white"></i>
                     </a>
-                    <a href="/" aria-label="Twitter">
+                    <a href="https://twitter.com/" aria-label="Twitter" target="_blank">
                         <i class="fa-brands fa-twitter text-2xl text-white"></i>
                     </a>
-                    <a href="/" aria-label="YouTube">
-                        <i class="fa-brands fa-youtube text-2xl text-white"></i>
-                    </a>
-                    <a href="/" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram text-2xl text-white"></i>
-                    </a>
+                  
 
 
                 </div>
