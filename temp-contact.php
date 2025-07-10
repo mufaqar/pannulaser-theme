@@ -96,10 +96,10 @@
                     <label for="message" class="hidden">
                         Message *
                     </label>
-                    <textarea name="message" placeholder="Message *" row="10"
+                    <textarea name="message" placeholder="Message *" rows="10"
                         class="text-base placeholder:text-black text-black w-full bg-white px-5 py-3 rounded-lg border border-[#EFEFEF] focus:border-primary outline-none"></textarea>
                 </div>
-                <button class="text-lg font-semibold text-white bg-secondry hover:bg-primary py-3.5 px-7 rounded-sm">
+                <button class="text-lg font-semibold text-white bg-secondry hover:bg-primary py-3.5 px-7 rounded-3xl">
                     Send Message
                 </button>
             </form>
@@ -119,21 +119,21 @@
             <h2 class="text-2xl sm:!text-3xl pb-3 font-[300] font-axiformaregular">
                 Schedule Your Appointment?
             </h2>
-            <p class="text-base text-black">
+            <p class="text-xl text-black mb-7">
                 Your Feedback Drives Our Excellence,
             </p>
-            <div
-                    class="flex md:flex-row flex-col gap-6 items-center justify-start">
-                    <span
-                        class="map_icon icon flex items-center justify-center text-2xl text-white group-hover:text-white group-hover:bg-primary transition-all h-[56px] w-[56px] rounded-full bg-primary border border-primary">
-                        <i class="fa-solid fa-headphones"></i>
-                    </span>
-                    <div>
-                       <a href="tel:03244644208" target="_blank" class="text-2xl font-normal  text-black ">
+            <div class="flex md:flex-row flex-col gap-4 items-center justify-start">
+                <span
+                    class="map_icon icon flex items-center justify-center text-2xl text-white group-hover:text-white group-hover:bg-primary transition-all h-[56px] w-[56px] rounded-full bg-primary border border-primary">
+                    <i class="fa-solid fa-headphones"></i>
+                </span>
+                <div>
+                    <a href="tel:03244644208" target="_blank"
+                        class="text-2xl font-normal text-primary hover:text-hovLink ">
                         0324 4644208
                     </a>
-                    </div>
                 </div>
+            </div>
         </div>
     </div>
 </section>
@@ -142,7 +142,7 @@
     <div class="container mx-auto px-4">
         <div class="w-full h-[400px] rounded-2xl overflow-hidden">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.7013507630825!2d-80.2587344!3d26.1018792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d901d0836479ed%3A0x34578f225f8ccfb8!2s0650%20W%20State%20Rd%2084%20%23100%2C%20Davie%2C%20FL%2033324%2C%20USA!5e0!3m2!1sen!2s!4v1720456800000!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.738034233116!2d-80.2919452255896!3d26.10746879423315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d908119560a1df%3A0xc29bd4c5e993dcc7!2s10650%20W%20State%20Rd%2084%20%23100%2C%20Davie%2C%20FL%2033324!5e0!3m2!1sen!2sus!4v1752133933731!5m2!1sen!2sus"
                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
