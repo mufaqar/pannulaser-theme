@@ -1,7 +1,7 @@
 <?php /*Template Name: Location*/ get_header(); ?>
 
 
-
+<section class="pt-[100px] pb-[80px] space-y-10">
 
 <?php
 $args = array(
@@ -16,12 +16,12 @@ $locations_query = new WP_Query($args);
 if ($locations_query->have_posts()) :
     while ($locations_query->have_posts()) : $locations_query->the_post();        
              $phone =  get_post_meta($post->ID, "phone", true);
-               $address =  get_post_meta($post->ID, "address", true);
-                 $map_iframe =  get_post_meta($post->ID, "map_iframe", true);
-                   $map_link =  get_post_meta($post->ID, "map_link", true);
+             $address =  get_post_meta($post->ID, "address", true);
+             $map_iframe =  get_post_meta($post->ID, "map_iframe", true);
+             $map_link =  get_post_meta($post->ID, "map_link", true);
         ?>
 
-<section class="pt-[100px] pb-[80px]">
+<div class="">
     <div
         class="container mx-auto flex md:flex-row flex-col gap-8 items-center bg-[#3F574E] rounded-tl-[25px] rounded-bl-[75px]  rounded-br-[25px] rounded-tr-[75px] shadow-2xl">
         <div class="md:w-1/2 w-full ">
@@ -63,7 +63,7 @@ if ($locations_query->have_posts()) :
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <?php
     endwhile;
@@ -75,6 +75,7 @@ else :
 endif;
 ?>
 
+</section>
 
 
 
