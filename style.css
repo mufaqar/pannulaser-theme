@@ -77,13 +77,26 @@ html {
 }
 
 .primary_nav .menu-item a,
-.primary_nav .menu-item-has-children>ul .menu-item a {
+.primary_nav .menu-item-has-children > ul .menu-item a {
   @apply text-white hover:text-secondry;
 }
 
 .primary_nav .menu-item.current-menu-item a,
 .top_nav .menu-item.current-menu-item a {
   @apply text-secondry;
+}
+
+.parent_nav,
+.child_nav {
+  @apply py-9;
+}
+
+.child_nav ul  {
+  @apply  divide-y divide-white;
+}
+
+.child_nav ul li {
+  @apply py-3 divide-y divide-white;
 }
 
 .footer_nav {
@@ -121,9 +134,15 @@ html {
   @apply bg-white text-center flex flex-col items-center justify-center p-3 shadow-md rounded-[15px] h-[221px];
 }
 
-.map_box { @apply flex md:flex-row flex-col gap-4 items-center justify-start  }
-.map_icon { @apply  flex items-center justify-center text-2xl text-white group-hover:bg-hovLink transition-all h-[56px] w-[56px] rounded-full bg-primary}
-.map_title { @apply  text-2xl font-normal text-white group-hover:text-hovLink }
+.map_box {
+  @apply flex md:flex-row flex-col gap-4 items-center justify-start;
+}
+.map_icon {
+  @apply flex items-center justify-center text-2xl text-white group-hover:bg-hovLink transition-all h-[56px] w-[56px] rounded-full bg-primary;
+}
+.map_title {
+  @apply text-2xl font-normal text-white group-hover:text-hovLink;
+}
 
 .slick-dots li {
   margin: 0;
@@ -163,7 +182,6 @@ html {
 }
 
 @media (max-width: 768px) {
-
   .hero_slider .slick-next:before,
   .hero_slider .slick-prev:before {
     font-size: 32px;

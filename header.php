@@ -59,7 +59,7 @@
                 </div>
             </div>
         </section>
-        <header class="bg-[#3F574E] w-full py-4">
+        <header class="bg-[#3F574E] w-full">
             <div class="container mx-auto px-4 ">
                 <div class="flex justify-between items-center">
                     <!-- Logo -->
@@ -70,12 +70,12 @@
                     <!-- Desktop Navigation -->
                     <nav class="hidden md:flex items-center space-x-6 ">
                         <?php
-            wp_nav_menu([
-              'theme_location' => 'primary',
-              'menu_class' => 'flex space-x-6',
-              'container' => false,
-              'walker' => new Tailwind_Hover_Nav_Walker()
-            ]); ?>
+                          wp_nav_menu([
+                            'theme_location' => 'primary',
+                            'menu_class' => 'flex space-x-6',
+                            'container' => false,
+                            'walker' => new Tailwind_Hover_Nav_Walker()
+                          ]); ?>
                         <div class="bg-secondry hover:bg-primary p-2 px-4  rounded-sm">
                             <a href="tel:9544840700" class='flex gap-2 items-center '>
                                 <i class="fa-solid fa-phone-volume text-white text-xl"></i>
