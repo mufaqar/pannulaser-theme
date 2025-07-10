@@ -1018,6 +1018,10 @@ video {
   border-radius: 1rem;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .rounded-\[2px\] {
   border-radius: 2px;
 }
@@ -1036,10 +1040,6 @@ video {
 
 .rounded-sm {
   border-radius: 0.125rem;
-}
-
-.rounded-3xl {
-  border-radius: 1.5rem;
 }
 
 .rounded-bl-\[30px\] {
@@ -1684,13 +1684,13 @@ html {
 }
 
 .primary_nav .menu-item a,
-.primary_nav .menu-item-has-children > ul .menu-item a {
+.primary_nav .menu-item-has-children>ul .menu-item a {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .primary_nav .menu-item a:hover,
-.primary_nav .menu-item-has-children > ul .menu-item a:hover {
+.primary_nav .menu-item-has-children>ul .menu-item a:hover {
   color: var(--secondry);
 }
 
@@ -1794,19 +1794,39 @@ html {
   scale: 130%;
 }
 
-.slick-next {
+.hero_slider .slick-next {
   right: 60px;
   z-index: 9999;
 }
 
-.slick-prev {
+.hero_slider .slick-prev {
   left: 60px;
   z-index: 9999;
 }
 
-.slick-next:before,
-.slick-prev:before {
+.hero_slider .slick-next:before,
+.hero_slider .slick-prev:before {
   font-size: 45px;
+}
+
+@media (max-width: 768px) {
+  .hero_slider .slick-next:before,
+  .hero_slider .slick-prev:before {
+    font-size: 32px;
+  }
+
+  .hero_slider .slick-next,
+  .hero_slider .slick-prev {
+    top: 93%;
+  }
+
+  .hero_slider .slick-prev {
+    left: 40%;
+  }
+
+  .hero_slider .slick-next {
+    right: 40%;
+  }
 }
 
 .placeholder\:text-black::-moz-placeholder {
@@ -1830,10 +1850,6 @@ html {
 
 .hover\:bg-primary:hover {
   background-color: var(--primary);
-}
-
-.hover\:text-hovLink:hover {
-  color: var(--hovLink);
 }
 
 .hover\:text-secondry:hover {
@@ -1876,25 +1892,21 @@ html {
   display: block;
 }
 
+.group:hover .group-hover\:bg-hovLink {
+  background-color: var(--hovLink);
+}
+
 .group:hover .group-hover\:bg-primary {
   background-color: var(--primary);
 }
 
-.group:hover .group-hover\:bg-topBarBg {
-  background-color: var(--topBarBg);
-}
-
-.group:hover .group-hover\:bg-hovLink {
-  background-color: var(--hovLink);
+.group:hover .group-hover\:text-hovLink {
+  color: var(--hovLink);
 }
 
 .group:hover .group-hover\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.group:hover .group-hover\:text-hovLink {
-  color: var(--hovLink);
 }
 
 @media (min-width: 640px) {

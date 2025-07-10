@@ -29,10 +29,12 @@ Tags: custom theme development
   font-weight: normal;
   font-style: normal;
 }
+
 p a {
   font-family: axiformaregular;
   font-weight: 400;
 }
+
 h1,
 h2,
 h3,
@@ -41,6 +43,7 @@ h5,
 h6 {
   font-family: axiformabold;
 }
+
 :root {
   --primary: #244848;
   --secondry: #65bd9c;
@@ -60,26 +63,33 @@ html {
 .read-more {
   @apply font-semibold hover:underline flex gap-2 items-center;
 }
+
 .top_nav {
   @apply flex flex-wrap justify-center md:justify-end gap-4;
 }
+
 .top_nav .menu-item {
   @apply text-white hover:text-secondry;
 }
+
 .primary_nav {
   @apply flex md:flex-row flex-col md:items-center md:space-x-6 md:space-y-0 space-y-4;
 }
+
 .primary_nav .menu-item a,
-.primary_nav .menu-item-has-children > ul .menu-item a {
+.primary_nav .menu-item-has-children>ul .menu-item a {
   @apply text-white hover:text-secondry;
 }
+
 .primary_nav .menu-item.current-menu-item a,
 .top_nav .menu-item.current-menu-item a {
   @apply text-secondry;
 }
+
 .footer_nav {
-  @apply text-sm  transition-all duration-500;
+  @apply text-sm transition-all duration-500;
 }
+
 .footer_nav li {
   @apply mb-4;
 }
@@ -102,39 +112,69 @@ html {
 .about_card {
   @apply bg-white text-center flex flex-col items-center justify-center py-4 px-8 shadow-md rounded-md;
 }
+
 .service_card {
   @apply text-center flex flex-col items-center justify-center p-3 text-white;
 }
+
 .see_card {
   @apply bg-white text-center flex flex-col items-center justify-center p-3 shadow-md rounded-[15px] h-[221px];
 }
+
 .slick-dots li {
   margin: 0;
 }
+
 .slick-dots li button {
   padding: 0;
 }
+
 .slick-dots li button:before {
   color: #0028ff;
   font-size: 12px;
 }
+
 .slick-dots li.slick-active button:before {
   opacity: 0.75;
   color: #0028ff;
 }
+
 .slick-dots li.slick-active button {
   scale: 130%;
 }
 
-.slick-next {
+.hero_slider .slick-next {
   right: 60px;
   z-index: 9999;
 }
-.slick-prev {
+
+.hero_slider .slick-prev {
   left: 60px;
   z-index: 9999;
 }
-.slick-next:before,
-.slick-prev:before {
+
+.hero_slider .slick-next:before,
+.hero_slider .slick-prev:before {
   font-size: 45px;
+}
+
+@media (max-width: 768px) {
+
+  .hero_slider .slick-next:before,
+  .hero_slider .slick-prev:before {
+    font-size: 32px;
+  }
+
+  .hero_slider .slick-next,
+  .hero_slider .slick-prev {
+    top: 93%;
+  }
+
+  .hero_slider .slick-prev {
+    left: 40%;
+  }
+
+  .hero_slider .slick-next {
+    right: 40%;
+  }
 }
