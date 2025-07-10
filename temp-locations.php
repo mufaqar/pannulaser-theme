@@ -17,7 +17,7 @@ if ($locations_query->have_posts()) :
     while ($locations_query->have_posts()) : $locations_query->the_post();        
              $phone =  get_post_meta($post->ID, "phone", true);
                $address =  get_post_meta($post->ID, "address", true);
-                 $map_iframe =  get_post_meta($post->ID, "map_ifram", true);
+                 $map_iframe =  get_post_meta($post->ID, "map_iframe", true);
                    $map_link =  get_post_meta($post->ID, "map_link", true);
         ?>
 
