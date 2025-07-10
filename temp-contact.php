@@ -122,17 +122,15 @@
             <p class="text-xl text-black mb-7">
                 Your Feedback Drives Our Excellence,
             </p>
-            <div class="flex md:flex-row flex-col gap-4 items-center justify-start">
+            <div class="flex md:flex-row flex-col gap-4 items-center justify-start group">
                 <span
-                    class="map_icon icon flex items-center justify-center text-2xl text-white group-hover:text-white group-hover:bg-primary transition-all h-[56px] w-[56px] rounded-full bg-primary border border-primary">
-                    <i class="fa-solid fa-headphones"></i>
+                    class="map_icon icon flex items-center justify-center text-2xl text-white group-hover:bg-hovLink transition-all h-[56px] w-[56px] rounded-full bg-primary">
+                    <i class="fa-solid fa-phone"></i>
                 </span>
-                <div>
-                    <a href="tel:03244644208" target="_blank"
-                        class="text-2xl font-normal text-primary hover:text-hovLink ">
-                        0324 4644208
-                    </a>
-                </div>
+                <a href="tel:03244644208" target="_blank"
+                    class="text-2xl font-normal text-primary group-hover:text-hovLink ">
+                    0324 4644208
+                </a>
             </div>
         </div>
     </div>
