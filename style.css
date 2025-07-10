@@ -121,6 +121,10 @@ html {
   @apply bg-white text-center flex flex-col items-center justify-center p-3 shadow-md rounded-[15px] h-[221px];
 }
 
+.map_box { @apply flex md:flex-row flex-col gap-4 items-center justify-start  }
+.map_icon { @apply  flex items-center justify-center text-2xl text-white group-hover:bg-hovLink transition-all h-[56px] w-[56px] rounded-full bg-primary}
+.map_title { @apply  text-2xl font-normal text-white group-hover:text-hovLink }
+
 .slick-dots li {
   margin: 0;
 }

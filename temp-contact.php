@@ -19,7 +19,7 @@
                         Address
                     </h3>
                     <p class="text-base font-normal text-black text-center">
-                        0650 West State Road 84, Suite 100 Davie, FL 33324
+                        10650 West State Road 84, Suite 100 Davie, FL 33324
                     </p>
                 </div>
                 <div
@@ -31,8 +31,8 @@
                     <h3 class="text-2xl font-normal text-center mb-3">
                         24/7 Support
                     </h3>
-                    <a href="tel:03244644208" target="_blank" class="text-base font-normal text-black ">
-                        0324 4644208
+                    <a href="tel:954-484-0700" target="_blank" class="text-base font-normal text-black ">
+                        954-484-0700
                     </a>
                 </div>
                 <div
@@ -127,9 +127,9 @@
                     class="map_icon icon flex items-center justify-center text-2xl text-white group-hover:bg-hovLink transition-all h-[56px] w-[56px] rounded-full bg-primary">
                     <i class="fa-solid fa-phone"></i>
                 </span>
-                <a href="tel:03244644208" target="_blank"
+                <a href="tel:954-484-0700" target="_blank"
                     class="text-2xl font-normal text-primary group-hover:text-hovLink ">
-                    0324 4644208
+                    954-484-0700
                 </a>
             </div>
         </div>

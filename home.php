@@ -395,10 +395,10 @@
             </div>
             <!-- Right buttons -->
             <div class='flex flex-col gap-4 items-start lg:items-end mx-auto'>
-                <a href="tel:03244644208"
+                <a href="tel:954-484-0700"
                     class='flex  gap-2 bg-primary py-4 px-8 items-center rounded-tl-2xl rounded-br-2xl'>
                     <i class="fa-solid fa-phone-volume text-white text-xl"></i>
-                    <p class='text-[18px] md:text-xl text-white'>0324 4644208</p>
+                    <p class='text-[18px] md:text-xl text-white'>954-484-0700</p>
                 </a>
                 <a href="#"
                     class='bg-primary text-white py-4 px-8 items-center rounded-tl-2xl rounded-br-2xl font-semibold'>
