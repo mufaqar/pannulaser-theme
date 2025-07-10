@@ -78,7 +78,7 @@ html {
 
 .primary_nav .menu-item a,
 .primary_nav .menu-item-has-children > ul .menu-item a {
-  @apply text-white hover:text-secondry;
+  @apply text-white hover:text-secondry font-normal;
 }
 
 .primary_nav .menu-item.current-menu-item a,
@@ -91,12 +91,12 @@ html {
   @apply py-9;
 }
 
-.child_nav ul  {
-  @apply  divide-y divide-white;
+.child_nav ul {
+  @apply divide-y divide-white/20 ;
 }
 
 .child_nav ul li {
-  @apply py-3 divide-y divide-white;
+  @apply py-3 divide-y divide-white md:px-4;
 }
 
 .footer_nav {

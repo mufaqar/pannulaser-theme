@@ -1736,6 +1736,7 @@ html {
 
 .primary_nav .menu-item a,
 .primary_nav .menu-item-has-children > ul .menu-item a {
+  font-weight: 400;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1760,8 +1761,7 @@ html {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
-  --tw-divide-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-divide-opacity));
+  border-color: rgb(255 255 255 / 0.2);
 }
 
 .child_nav ul li > :not([hidden]) ~ :not([hidden]) {
@@ -1775,6 +1775,13 @@ html {
 .child_nav ul li {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .child_nav ul li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .footer_nav {
@@ -2192,11 +2199,6 @@ html {
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-  }
-
-  .md\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 
   .md\:py-16 {
