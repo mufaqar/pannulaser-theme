@@ -1,4 +1,4 @@
-<?php /*Template Name: Location*/ get_header(); ?>
+<?php /*Template Name: Directions */ get_header(); ?>
 
 <section class="pt-[100px] pb-[80px] space-y-10">
     <?php
