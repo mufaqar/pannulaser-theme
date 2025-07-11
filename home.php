@@ -232,11 +232,13 @@
 <section class='bg-bgcolor pt-[106px] pb-[105px]'>
     <div class='container mx-auto px-4'>
         <div>
-            <div class=" w-full mx-auto text-center">
-                <p class="text-2xl pb-3 text-[#27304B] font-axiformaregular">MEET OUR TEAM</p>
-
-                <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-primary font-axiformaregular">THE MOST
-                    QUALIFIED,<br><span class="font-bold font-axiformabold"> SKILLFUL& PROFESSIONAL DOCTORS.</span></h2>
+            <div class=" w-full mx-auto flex md:flex-row flex-col gap-5 justify-between items-center">
+                <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-bold text-primary font-axiformaregular">
+                    MEET OUR TEAM
+                </h2>
+                <p class="text-base font-normal text-primary">
+                    THE MOST QUALIFIED, SKILLFUL& PROFESSIONAL DOCTORS.
+                </p>
             </div>
             <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-8 items-center'>
                 <?php
