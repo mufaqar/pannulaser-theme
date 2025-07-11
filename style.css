@@ -77,7 +77,7 @@ html {
 }
 
 .primary_nav .menu-item a,
-.primary_nav .menu-item-has-children > ul .menu-item a {
+.primary_nav .menu-item-has-children>ul .menu-item a {
   @apply text-white hover:text-secondry font-normal;
 }
 
@@ -92,7 +92,7 @@ html {
 }
 
 .child_nav ul {
-  @apply md:divide-y md:divide-white/20 divide-y-0 ;
+  @apply md:divide-y md:divide-white/20 divide-y-0;
 }
 
 .child_nav ul li {
@@ -137,9 +137,11 @@ html {
 .map_box {
   @apply flex md:flex-row flex-col gap-4 md:items-center justify-start;
 }
+
 .map_icon {
   @apply flex items-center justify-center text-2xl text-white group-hover:bg-hovLink transition-all h-[56px] w-[56px] rounded-full bg-primary;
 }
+
 .map_title {
   @apply md:text-2xl text-lg font-normal text-white group-hover:text-hovLink;
 }
@@ -181,22 +183,62 @@ html {
   font-size: 45px;
 }
 
-@media (max-width: 768px) {
-  .hero_slider .slick-next:before,
-  .hero_slider .slick-prev:before {
-    font-size: 32px;
-  }
-
-  .hero_slider .slick-next,
-  .hero_slider .slick-prev {
-    top: 93%;
-  }
-
-  .hero_slider .slick-prev {
-    left: 40%;
-  }
-
-  .hero_slider .slick-next {
-    right: 40%;
-  }
+.team_box::before {
+  content: "";
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  right: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: var(--primary);
+  transform: scaleY(0.0);
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
+  .team_box:hover::before {
+        transform: scaleY(1.0);
+  }
+  .team_box .img-holder::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: var(--primary);
+  opacity: 0.7;
+  transform: scaleY(0.0);
+  transform-origin: center;
+  transform-style: preserve-3d;
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.22);
+}
+.team_box:hover .img-holder::before {
+        transform: scaleY(1.0);
+  }
+  @media (max-width: 768px) {
+
+    .hero_slider .slick-next:before,
+    .hero_slider .slick-prev:before {
+      font-size: 32px;
+    }
+
+    .hero_slider .slick-next,
+    .hero_slider .slick-prev {
+      top: 93%;
+    }
+
+    .hero_slider .slick-prev {
+      left: 40%;
+    }
+
+    .hero_slider .slick-next {
+      right: 40%;
+    }
+  }

@@ -96,21 +96,21 @@
             if ($loop->have_posts()):
                 while ($loop->have_posts()):
                     $loop->the_post(); ?>
-            <div class="service_card">
-                <?php
+                    <div class="service_card">
+                        <?php
                         $services_icon = get_post_meta($post->ID, 'services_icon', true);
                         if ($services_icon) {
                             echo wp_get_attachment_image($services_icon, 'medium', false, ['class' => 'h-[60px] w-[60px]']);
                         }
                         ?>
-                <div class="font-bold text-xl line-clamp-1 mt-5">
-                    <?php the_title() ?>
-                </div>
-                <div class='text-[15px] line-clamp-3 mt-2'>
-                    <?php the_excerpt(); ?>
-                </div>
-            </div>
-            <?php endwhile;
+                        <div class="font-bold text-xl line-clamp-1 mt-5">
+                            <?php the_title() ?>
+                        </div>
+                        <div class='text-[15px] line-clamp-3 mt-2'>
+                            <?php the_excerpt(); ?>
+                        </div>
+                    </div>
+                <?php endwhile;
             else:
                 echo '<p>No doctors found.</p>';
             endif;
@@ -145,40 +145,40 @@
             <!-- Testimonial Slider -->
             <div class="testimonial-slider w-full md:-ml-24">
                 <?php
-            $args = array(
-                'post_type' => 'testimonials',
-                'posts_per_page' => -1,
-            );
-            $loop = new WP_Query($args);
+                $args = array(
+                    'post_type' => 'testimonials',
+                    'posts_per_page' => -1,
+                );
+                $loop = new WP_Query($args);
 
-            if ($loop->have_posts()):
-                while ($loop->have_posts()):
-                    $loop->the_post(); ?>
-                <div class="p-4 h-full">
-                    <div
-                        class="bg-white p-6 rounded-tr-[30px] rounded-bl-[30px] shadow-[0_0_15px_0_rgba(0,40,255,0.15)] flex flex-col justify-between h-[388px]">
+                if ($loop->have_posts()):
+                    while ($loop->have_posts()):
+                        $loop->the_post(); ?>
+                        <div class="p-4 h-full">
+                            <div
+                                class="bg-white p-6 rounded-tr-[30px] rounded-bl-[30px] shadow-[0_0_15px_0_rgba(0,40,255,0.15)] flex flex-col justify-between h-[388px]">
 
-                        <div class="text-Pan_black text-base italic pt-3 line-clamp-9">
-                            <?php the_content(); ?>
+                                <div class="text-Pan_black text-base italic pt-3 line-clamp-9">
+                                    <?php the_content(); ?>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-Pan_black text-lg pt-6">
+                                        <?php the_title(); ?>
+                                    </h4>
+                                    <h4 class="font-semibold text-secondry text-lg">
+                                        <?php echo get_field('position'); ?>
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-semibold text-Pan_black text-lg pt-6">
-                                <?php the_title(); ?>
-                            </h4>
-                            <h4 class="font-semibold text-secondry text-lg">
-                                <?php echo get_field('position'); ?>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <?php
-                endwhile;
-            else:
-                echo '<p>No testimonials found.</p>';
-            endif;
+                        <?php
+                    endwhile;
+                else:
+                    echo '<p>No testimonials found.</p>';
+                endif;
 
-            wp_reset_postdata();
-            ?>
+                wp_reset_postdata();
+                ?>
             </div>
 
         </div>
@@ -238,8 +238,7 @@
                 <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-primary font-axiformaregular">THE MOST
                     QUALIFIED,<br><span class="font-bold font-axiformabold"> SKILLFUL& PROFESSIONAL DOCTORS.</span></h2>
             </div>
-            <div
-                class='w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 items-center'>
+            <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-8 items-center'>
                 <?php
                 $args = array(
                     'post_type' => 'doctors',
@@ -249,31 +248,47 @@
                 if ($loop->have_posts()):
                     while ($loop->have_posts()):
                         $loop->the_post(); ?>
-                <div class="bg-white text-center flex flex-col items-center justify-center shadow-lg rounded-lg ">
-                    <?php
-                         if (has_post_thumbnail()) {
-                           echo get_the_post_thumbnail(get_the_ID(), 'large', [
-                          'class' => ' '
-                        ]);
-                         }
-                    ?>
-
-                    <div class='p-4 sm:px-6'>
-                        <div class="font-bold text-Pan_black text-2xl py-2 animate-bounce animate-once">
-                            <?php the_title() ?>
+                        <div class="team_box relative bg-white shadow-lg rounded-lg p-7 ">
+                            <div class="img-holder rounded-lg relative">
+                                <?php
+                                if (has_post_thumbnail()) {
+                                    echo get_the_post_thumbnail(get_the_ID(), '', [
+                                        'class' => 'rounded-lg'
+                                    ]);
+                                } else {
+                                    ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/Dr-Mutyala.png" alt="Default Image"
+                                        class="rounded-lg" />
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                            <div class="flex flex-row items-center justify-between pt-8">
+                                <div>
+                                    <a href="<?php the_permalink(); ?>" class="font-bold text-primary text-xl cursor-pointer">
+                                        <?php the_title() ?>
+                                    </a>
+                                    <h4 class="font-bold text-hovLink text-lg">
+                                        Specialist
+                                    </h4>
+                                </div>
+                                <ul class="flex gap-2 items-center">
+                                    <li>
+                                        <a href="#"
+                                            class="text-primary w-10 h-10 rounded-full bg-gray-200  flex justify-center items-center ">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="text-primary w-10 h-10 rounded-full bg-gray-200  flex justify-center items-center ">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class='text-[14px] text-Pan_black line-clamp-3'>
-                            <?php the_excerpt(); ?>
-                        </div>
-                        <div class="mt-8 text-hovLink text-center flex items-center mx-auto justify-center ">
-                            <a href="<?php the_permalink(); ?>" class="read-more">MORE DETAILS
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg"
-                                    alt="icon" class="w-4">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <?php endwhile;
+                    <?php endwhile;
                 else:
                     echo '<p>No doctors found.</p>';
                 endif;
