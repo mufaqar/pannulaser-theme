@@ -88,11 +88,11 @@ html {
 
 .parent_nav,
 .child_nav {
-  @apply py-9;
+  @apply sm:py-9 py-3;
 }
 
 .child_nav ul {
-  @apply divide-y divide-white/20 ;
+  @apply md:divide-y md:divide-white/20 divide-y-0 ;
 }
 
 .child_nav ul li {
@@ -135,13 +135,13 @@ html {
 }
 
 .map_box {
-  @apply flex md:flex-row flex-col gap-4 items-center justify-start;
+  @apply flex md:flex-row flex-col gap-4 md:items-center justify-start;
 }
 .map_icon {
   @apply flex items-center justify-center text-2xl text-white group-hover:bg-hovLink transition-all h-[56px] w-[56px] rounded-full bg-primary;
 }
 .map_title {
-  @apply text-2xl font-normal text-white group-hover:text-hovLink;
+  @apply md:text-2xl text-lg font-normal text-white group-hover:text-hovLink;
 }
 
 .slick-dots li {

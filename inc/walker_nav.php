@@ -3,7 +3,7 @@
 class Tailwind_Hover_Nav_Walker extends Walker_Nav_Menu {
     public function start_lvl( &$output, $depth = 0, $args = null ) {
 
-        $output .= '<ul class="md:absolute md:bg-primary left-0 mt-9  w-52  py-2 md:shadow-lg hidden group-hover:block invisible group-hover:visible transition-all duration-200 z-50">';
+        $output .= '<ul class="md:absolute md:bg-primary left-0 md:mt-9  md:w-52 w-full md:py-2 py-0 md:shadow-lg hidden group-hover:block invisible group-hover:visible transition-all duration-200 z-50">';
 
     }
 

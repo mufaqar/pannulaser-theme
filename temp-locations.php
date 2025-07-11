@@ -19,16 +19,17 @@
             $map_link = get_post_meta($post->ID, "map_link", true);
             ?>
 
-            <div
-                class="container mx-auto flex md:flex-row flex-col gap-8 items-center bg-[#3F574E] rounded-tl-[25px] rounded-bl-[75px]  rounded-br-[25px] rounded-tr-[75px] shadow-2xl">
+           <div class="container mx-auto px-4">
+             <div
+                class="flex md:flex-row flex-col gap-8 items-center bg-[#3F574E] rounded-tl-[25px] rounded-bl-[75px] rounded-tr-[75px] rounded-br-[25px] md:rounded-tr-[75px] shadow-2xl md:pb-0 pb-10">
                 <div class="md:w-2/5 w-full ">
-                    <div class="w-full h-[400px] rounded-tl-[25px] rounded-bl-[75px] overflow-hidden">
+                    <div class="w-full h-[400px] rounded-tl-[25px] md:rounded-bl-[75px] md:rounded-tr-none rounded-tr-[75px] overflow-hidden">
                         <iframe src="<?php echo $map_iframe ?>" width="100%" height="100%" style="border:0;" allowfullscreen=""
                             loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
-                <div class="md:w-2/5 w-full space-y-4 ">
+                <div class="md:w-2/5 w-full space-y-4 md:px-0 px-4">
                     <h2 class="text-2xl text-white sm:!text-3xl pb-3 font-[300] font-axiformaregular">
                         <?php the_title() ?>
                     </h2>
@@ -81,6 +82,7 @@
                     </div>
                 </div>
             </div>
+           </div>
             <?php
         endwhile;
 
