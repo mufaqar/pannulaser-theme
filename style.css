@@ -139,7 +139,7 @@ html {
 }
 
 .map_icon {
-  @apply flex items-center justify-center text-2xl text-white group-hover:bg-hovLink transition-all h-[56px] w-[56px] rounded-full bg-primary;
+  @apply flex items-center justify-center text-2xl text-white group-hover:bg-hovLink transition-all h-[56px] min-w-[56px] rounded-full bg-primary;
 }
 
 .map_title {

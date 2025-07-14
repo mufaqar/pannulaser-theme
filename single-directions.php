@@ -1,18 +1,25 @@
 <?php
 /**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * The template for displaying all single CPT posts
  *
  * @package tp_theme
  */
 
 get_header();
+
 $post_id = get_the_ID();
+
+// Meta and featured image
 $meta_description = get_post_meta($post_id, '_yoast_wpseo_metadesc', true);
-$thumbnail_url = get_the_post_thumbnail_url($post_id, 'full'); // 'full' or other sizes
-$thumbnail_id = get_post_thumbnail_id(); // Get the ID of the featured image
+$thumbnail_url = get_the_post_thumbnail_url($post_id, 'full');
+$thumbnail_id = get_post_thumbnail_id();
 $caption = wp_get_attachment_caption($thumbnail_id);
+
+// Custom fields
+$address = get_post_meta($post_id, 'address', true);
+$phone = get_post_meta($post_id, 'phone', true);
+$map_link = get_post_meta($post_id, 'map_link', true);
+// $map_image = get_post_meta($post_id, 'map_image', true);
 
 $args = array(
     'post_type' => 'post',
@@ -20,28 +27,61 @@ $args = array(
     'orderby' => 'date',
     'order' => 'DESC'
 );
-
 $query = new WP_Query($args);
-
 ?>
 
-<main class="mt-12">
-    <section>
-        <div class="container mx-auto px-4 relative flex flex-col md:flex-row gap-10 justify-between">
-            <div class="md:w-8/12 w-full">
-                <h1 class="mx-auto mb-4 text-2xl font-extrabold leading-none sm:text-3xl lg:text-4xl">
-                    <?php the_title(); ?>
-            </div>
-
-            <aside class="md:w-4/12 flex-1">
-                <div class="sticky !top-4">
-                    <h4 class="mb-2">
-                        Sidebar
-                    </h4>
+<main>
+    <!-- Content Section -->
+    <section class="md:py-20 py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex md:flex-row flex-col gap-8 items-center">
+                <div class="md:w-1/3 w-full">
+                    <?php
+                    $map_image = get_post_meta($post->ID, 'map_image', true);
+                    if ($map_image) {
+                        echo wp_get_attachment_image($map_image, '', false, ['class' => '']);
+                    } else {
+                        ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/davie_map.png" alt="davie_map"
+                            width="430" height="430" />
+                        <?php
+                    }
+                    ?>
                 </div>
-            </aside>
+                <div class="md:w-2/3 w-full space-y-4 md:px-0 px-4">
+                    <?php if ($address): ?>
+                        <div class="flex gap-2.5 ">
+                            <span class="text-2xl"><i class="fa-regular fa-map"></i></span>
+                            <span class="cursor-pointer text-xl inline-flex"><?php echo esc_html($address); ?></span>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if ($phone): ?>
+                        <div class="flex gap-2.5 ">
+                            <span class="text-2xl"><i class="fa-solid fa-phone"></i></span>
+                            <a href="tel:<?php echo esc_attr($phone); ?>" class="cursor-pointer text-xl inline-flex">
+                                <?php echo esc_html($phone); ?>
+                            </a>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if ($map_link): ?>
+                        <div class="gap-2.5 bg-secondry hover:bg-primary text-white p-2 px-4 inline-flex rounded-sm">
+                            <span class=""><i class="fa-solid fa-map-pin"></i></span>
+                            <a href="<?php echo esc_url($map_link); ?>" target="_blank" class="cursor-pointer text-xl ">
+                               Click Here For Google Maps
+                            </a>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="prose max-w-none mt-10">
+                <?php the_content(); ?>
+            </div>
         </div>
     </section>
+
+    <!-- Testimonial Section -->
     <section class="md:py-20 py-16 bg-gray-100">
         <div class="container mx-auto px-4 grid md:grid-cols-3 grid-cols-1 gap-6 ">
             <div>
@@ -58,7 +98,7 @@ $query = new WP_Query($args);
                                 </span>
                             </p>
                             <p class="text-xs text-gray-500">
-                                Feb 20,2025
+                                Feb 20, 2025
                             </p>
                         </div>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/branding-google.png"
@@ -67,36 +107,35 @@ $query = new WP_Query($args);
                     <p class="text-sm font-normal text-gray-500 mt-2">
                         <span class="font-bold text-hovLink">4.8</span> Stars - Based on 321 User Reviews
                     </p>
-
                     <p class="text-base font-normal text-black max-h-[160px] overflow-y-scroll mt-6 mb-10">
                         Great experience, the staff is very nice and welcoming since the first time I called to make an
-                        appointment. Dr. Don (optometrist) and Dr. Mutyala (surgeon) are great, they took their time to
-                        explain the procedure in depth and what we could expect after. I started to see positive results
-                        as soon as hours after the procedure. It is so good to be able to watch TV and drive without
-                        prescription glasses again. Only regret is not having the procedure done years ago. I
-                        recommended this office 1000%, I couldn’t have found a better team to take care of my eyes.
+                        appointment.
+                        Dr. Don (optometrist) and Dr. Mutyala (surgeon) are great, they took their time to explain the
+                        procedure in depth and what we could expect after.
+                        I started to see positive results as soon as hours after the procedure.
+                        It is so good to be able to watch TV and drive without prescription glasses again.
+                        Only regret is not having the procedure done years ago.
+                        I recommended this office 1000%, I couldn’t have found a better team to take care of my eyes.
                     </p>
                     <div class="flex items-center gap-3">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/review-pic.png" alt="google-badge"
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/review-pic.png" alt="reviewer-pic"
                             width="70" />
-                        <h4 class="text-black text-base ">
-                            Olga Vizcaino
-                        </h4>
+                        <h4 class="text-black text-base">Olga Vizcaino</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
+    <!-- FAQs Section -->
     <section class="py-12">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl sm:!text-5xl lg:!text-6xl font-bold text-primary font-axiformaregular mb-8 text-center">
-                Frequently Asked Questions</h2>
+                Frequently Asked Questions
+            </h2>
 
             <div class="max-w-[1068px] mx-auto faq-wrapper divide-y divide-black/20 bg-white shadow-lg px-7 py-10">
-                <!-- FAQ 1 (open by default) -->
+                <!-- FAQ 1 -->
                 <div class="pt-6">
                     <button class="w-full flex items-center justify-between text-left pb-6 faq-toggle"
                         aria-expanded="true">
@@ -129,8 +168,6 @@ $query = new WP_Query($args);
             </div>
         </div>
     </section>
-
-
 </main>
 
 <script>
