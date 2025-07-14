@@ -69,13 +69,13 @@ $query = new WP_Query($args);
                         <div class="gap-2.5 bg-secondry hover:bg-primary text-white p-2 px-4 inline-flex rounded-sm">
                             <span class=""><i class="fa-solid fa-map-pin"></i></span>
                             <a href="<?php echo esc_url($map_link); ?>" target="_blank" class="cursor-pointer text-xl ">
-                               Click Here For Google Maps
+                                Click Here For Google Maps
                             </a>
                         </div>
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="prose max-w-none mt-10">
+            <div class="direction_Content prose max-w-none mt-10">
                 <?php the_content(); ?>
             </div>
         </div>
@@ -127,8 +127,11 @@ $query = new WP_Query($args);
         </div>
     </section>
 
+    <!-- CTA Section -->
+    <?php get_template_part('templates/content', 'cta'); ?>
+
     <!-- FAQs Section -->
-    <section class="py-12">
+    <section id="faq" class="md:py-20 py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl sm:!text-5xl lg:!text-6xl font-bold text-primary font-axiformaregular mb-8 text-center">
                 Frequently Asked Questions
