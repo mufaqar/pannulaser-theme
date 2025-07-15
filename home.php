@@ -25,34 +25,27 @@
                     world.
                 </p>
 
-                <div class="mt-8 text-[#3F574E]  ">
-                    <a href="/" class="text-md font-semibold hover:underline flex w-fit gap-2 items-center ">
+                <div class="mt-8 text-[#3F574E]">
+                    <a href="/"
+                        class="text-md font-semibold hover:underline flex w-fit gap-2 items-center transform hover:scale-110 duration-150 transition-all ">
                         MORE DETAILS
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg" alt="" />
                     </a>
                 </div>
             </div>
             <!-- Right Side: Image + Cards -->
-            <div class="md:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div class="space-y-3 flex flex-col sm:pt-6">
+            <div class="md:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+                <div class="">
                     <!-- Surgeon Image (full width of first column) -->
-                    <div class=" items-center justify-center shadow-md rounded-md">
+                    <div
+                        class="shadow-md rounded-tl-[100px] rounded-tr-md rounded-br-[100px] rounded-bl-md transform hover:-translate-y-2.5 duration-150 transition-all">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/srini.png" alt=""
-                            class="w-full h-full object-cover rounded-md " />
-                    </div>
-                    <!-- Card 1 -->
-                    <div class="about_card">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/transparent.png" alt=""
-                            class='w-[93px] h-[107px] object-contain' />
-                        <h3 class="font-bold text-xl text-secondry py-2">Transparent Price</h3>
-                        <p class="text-Pan_black text-base">
-                            Enjoy competitive and clear pricing with no hidden fees.
-                        </p>
+                            class="rounded-tl-[100px] rounded-tr-md rounded-br-[100px] rounded-bl-md" height="323" />
                     </div>
                 </div>
                 <div class="space-y-3 flex flex-col">
-                    <!-- Card 2 -->
-                    <div class="about_card">
+                    <!-- Card 1 -->
+                    <div class="about_card rounded-tl-[100px] rounded-tr-md rounded-br-[100px] rounded-bl-md">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/experience.png" alt=""
                             class='w-[93px] h-[107px] object-contain' />
                         <h3 class="font-bold text-xl text-secondry py-2">Experienced Doctor</h3>
@@ -60,8 +53,8 @@
                             treatments with years of expertise.
                         </p>
                     </div>
-                    <!-- Card 3 -->
-                    <div class="about_card ">
+                    <!-- Card 2 -->
+                    <div class="about_card rounded-tr-[100px] rounded-tl-md rounded-bl-[100px] rounded-br-md">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vision.svg" alt=""
                             class='w-[93px] h-[107px] object-contain' />
                         <h3 class="font-bold text-xl text-secondry py-2">100,000 Laser Vision</h3>
@@ -78,7 +71,7 @@
 <!--Services -->
 <section class="bg-[#3F574E] pt-[100px] pb-[80px]">
     <div class="container mx-auto px-4">
-        <div class="md:max-w-[50%] w-full mx-auto text-white text-center mb-10">
+        <div class="md:w-2/3 w-full mx-auto text-white text-center mb-10">
             <p class="text-2xl pb-7 font-normal">Transparent price</p>
             <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 font-[300] font-axiformaregular">WE PROVIDE BEST <span
                     class="font-bold font-axiformabold">SERVICES FOR PATIENT</span>
@@ -96,7 +89,7 @@
             if ($loop->have_posts()):
                 while ($loop->have_posts()):
                     $loop->the_post(); ?>
-                    <div class="service_card">
+                    <div class="service_card transform hover:-translate-y-5 duration-150 transition-all">
                         <?php
                         $services_icon = get_post_meta($post->ID, 'services_icon', true);
                         if ($services_icon) {
@@ -119,7 +112,7 @@
         </div>
         <div class="mt-8 text-hovLink text-white  ">
             <a href="/"
-                class="text-md font-semibold hover:underline flex w-fit gap-2 items-center  mx-auto justify-center ">
+                class="text-md font-semibold hover:underline flex w-fit gap-2 items-center  mx-auto justify-center transform hover:scale-110 duration-150 transition-all">
                 VIEW ALL
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrowRight.svg" alt="" />
             </a>
@@ -154,7 +147,7 @@
                 if ($loop->have_posts()):
                     while ($loop->have_posts()):
                         $loop->the_post(); ?>
-                        <div class="p-4 h-full">
+                        <div class="p-4 pt-8 h-full transform hover:-translate-y-3 duration-150 transition-all">
                             <div
                                 class="bg-white p-6 rounded-tr-[30px] rounded-bl-[30px] shadow-[0_0_15px_0_rgba(0,40,255,0.15)] flex flex-col justify-between h-[388px]">
 
@@ -188,14 +181,13 @@
 
 
 <!-- See the Difference -->
-
 <section class='bg-[#3F574E] pt-[131px] pb-[108px]'>
     <div class='container mx-auto px-4'>
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-white text-center">See the Difference</h2>
         <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 text-white items-center text-center justify-center">
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 text-white items-center text-center justify-center h-[300px]">
             <!-- card 1 -->
-            <div class="see_card ">
+            <div class="see_card md:self-start">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Excellence.svg" alt=""
                     class='w-[70px] h-[82px] ' />
                 <h3 class="font-bold text-secondry text-2xl pt-6  py-2">Excellence</h3>
@@ -209,7 +201,7 @@
                 <p class='text-2xl text-Pan_black line-clamp-1'>Eye specialists</p>
             </div>
             <!-- card 3 -->
-            <div class="see_card">
+            <div class="see_card md:self-start">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Empathetic.svg" alt=""
                     class='w-[70px] h-[70px]'>
                 <h3 class="font-bold text-secondry text-2xl py-2 pt-6">Empathetic</h3>
@@ -306,92 +298,73 @@
     <div class='container mx-auto px-4'>
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl pb-3 text-white text-center">Locate a Centre</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2  text-white items-center">
-            <!-- card 1 -->
-            <div class="relative flex flex-col p-3">
-                <!-- Image with text overlay -->
-                <div class="relative">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Davie-Office.png" alt=""
-                        class="w-full h-auto">
-                    <!-- Overlay text on top-left -->
-                    <div
-                        class="absolute top-3 left-3 bg-secondry text-white text-sm px-3 py-1 rounded-tl-md rounded-br-md shadow-lg">
-                        GET DIRECTIOS
+
+
+            <?php
+            $args = array(
+                'post_type' => 'directions',
+                'posts_per_page' => 4, // Show all locations, or set a number
+                'orderby' => 'title', // Order by title, date, menu_order, etc.
+                'order' => 'ASC' // ASC or DESC
+            );
+            $locations_query = new WP_Query($args);
+
+            if ($locations_query->have_posts()):
+                while ($locations_query->have_posts()):
+                    $locations_query->the_post();
+                    $phone = get_post_meta($post->ID, "phone", true);
+                    $address = get_post_meta($post->ID, "address", true);
+                    $map_iframe = get_post_meta($post->ID, "map_iframe", true);
+                    $map_link = get_post_meta($post->ID, "map_link", true);
+                    ?>
+
+                    <!-- card 1 -->
+                    <div class="flex flex-col p-3">
+                        <!-- Image with text overlay -->
+                        <div class="relative">
+                            <?php
+                            if (has_post_thumbnail()) {
+                                echo get_the_post_thumbnail(get_the_ID(), 'full', [
+                                    'class' => 'w-full h-auto'
+                                ]);
+                            } else {
+                                ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Davie-Office.png" alt=""
+                                    class="w-full h-auto">
+                                <?php
+                            }
+                            ?>
+                            <!-- Overlay text on top-left -->
+                            <div
+                                class="absolute top-3 left-3 bg-secondry text-white text-sm px-3 py-1 rounded-tl-md rounded-br-md shadow-lg">
+                                GET DIRECTIOS
+                            </div>
+                        </div>
+                        <!-- Content below image -->
+                        <h3 class="font-bold text-white text-2xl mt-6"><?php the_title() ?></h3>
+                        <div class='flex gap-2 py-3'>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p class='text-[14px] text-white'> <?php echo $address ?></p>
+                        </div>
+                        <div class='flex gap-2'>
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <a href="tel:<?php echo $phone ?>" target="_blank" class='text-[14px] text-white'><?php echo $phone ?></a>
+                        </div>
                     </div>
-                </div>
-                <!-- Content below image -->
-                <h3 class="font-bold text-white text-2xl mt-6">Davie Office</h3>
-                <div class='flex gap-2 py-3'>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p class='text-[14px] text-white'>10650 West State Road 84, Suite 100 Davie, FL 33324</p>
-                </div>
-                <div class='flex gap-2'>
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <p class='text-[14px] text-white'>954-496-9151</p>
-                </div>
-            </div>
-            <!-- card 2 -->
-            <div class=" flex flex-col  p-3 ">
-                <div class="relative">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Weston-Office.png" alt=""
-                        class="w-full h-auto">
-                    <!-- Overlay text on top-left -->
-                    <div
-                        class="absolute top-3 left-3 bg-secondry text-white text-sm px-3 py-1 rounded-tl-md rounded-br-md shadow-lg">
-                        GET DIRECTIOS
-                    </div>
-                </div>
-                <h3 class="font-bold text-white text-2xl mt-6">Weston Office</h3>
-                <div class='flex gap-2 py-3'>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p class='text-[14px] text-white'>2625 Executive Park Drive, Suite 4 Weston, Florida 33331</p>
-                </div>
-                <div class='flex gap-2 '>
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <p class='text-[14px] text-white'>954-659-9051</p>
-                </div>
-            </div>
-            <!-- card 3 -->
-            <div class=" flex flex-col  p-3 ">
-                <div class="relative">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Fort-Lauderdale-Office.png"
-                        alt="" class="w-full h-auto">
-                    <!-- Overlay text on top-left -->
-                    <div
-                        class="absolute top-3 left-3 bg-secondry text-white text-sm px-3 py-1 rounded-tl-md rounded-br-md shadow-lg">
-                        GET DIRECTIOS
-                    </div>
-                </div>
-                <h3 class="font-bold text-white text-2xl mt-6">Fort Lauderdale Office</h3>
-                <div class='flex gap-2 py-3'>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p class='text-[14px] text-white'>4300 W Oakland Park Boulevard Lauderdale Lakes, Florida 33313</p>
-                </div>
-                <div class='flex gap-2 '>
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <p class='text-[14px] text-white'>954-484-0700</p>
-                </div>
-            </div>
-            <!-- card 4 -->
-            <div class=" flex flex-col  p-3 ">
-                <div class="relative">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Davie-Office.png" alt=""
-                        class="w-full h-auto">
-                    <!-- Overlay text on top-left -->
-                    <div
-                        class="absolute top-3 left-3 bg-secondry text-white text-sm px-3 py-1 rounded-tl-md rounded-br-md shadow-lg">
-                        GET DIRECTIOS
-                    </div>
-                </div>
-                <h3 class="font-bold text-white text-2xl mt-6">Olga Vizcaino</h3>
-                <div class='flex gap-2 py-3'>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p class='text-[14px] text-white'>10650 West State Road 84, Suite 100 Davie, FL 33324</p>
-                </div>
-                <div class='flex gap-2 '>
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <p class='text-[14px] text-white'>954-496-9151</p>
-                </div>
-            </div>
+                    <?php
+                endwhile;
+
+                // Reset post data
+                wp_reset_postdata();
+            else:
+                echo '<p>No locations found.</p>';
+            endif;
+            ?>
+
+
+
+
+
         </div>
     </div>
 </section>

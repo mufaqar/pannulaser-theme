@@ -123,7 +123,7 @@ html {
 }
 
 .about_card {
-  @apply bg-white text-center flex flex-col items-center justify-center py-4 px-8 shadow-md rounded-md;
+  @apply bg-white text-center flex flex-col items-center justify-center py-4 px-8 shadow-md transform hover:-translate-y-2.5 duration-150 transition-all;
 }
 
 .service_card {
@@ -131,7 +131,7 @@ html {
 }
 
 .see_card {
-  @apply bg-white text-center flex flex-col items-center justify-center p-3 shadow-md rounded-[15px] h-[221px];
+  @apply bg-white text-center flex flex-col items-center justify-center p-3 shadow-md rounded-[15px] h-[221px] transform hover:-translate-y-3 duration-150 transition-all;
 }
 
 .map_box {
