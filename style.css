@@ -257,7 +257,7 @@ html {
   rotate: -90deg;
 }
 .faq:hover .faq-question span, .faq.active .faq-question span{
-   color: #0028ff!important;
+   color: var(--hovLink) !important;
 }
 
 .faq-answer {
