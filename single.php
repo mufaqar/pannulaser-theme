@@ -39,7 +39,7 @@ $query = new WP_Query($args);
     <?php get_template_part('templates/content', 'cta'); ?>
 
     <!-- FAQs Section -->
-    <section id="faq" class="md:py-20 py-16">
+    <section id="faq" class="md:py-20 py-16 bg-red-900">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl sm:!text-5xl lg:!text-6xl font-bold text-primary font-axiformaregular mb-8 text-center">
                 Frequently Asked Questions
