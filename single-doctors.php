@@ -136,7 +136,7 @@ $type = get_post_meta($post_id, 'type', true);
 
                 <?php wp_reset_postdata(); ?>
             <?php else: ?>
-                <p class="cols-span-all">No testimonials found.</p>
+                <p class="col-span-full">No testimonials found.</p>
             <?php endif; ?>
 
         </div>
