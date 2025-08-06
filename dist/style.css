@@ -657,6 +657,10 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -2086,12 +2090,12 @@ html {
 
 @media (max-width: 768px) {
   .hero_slider .slick-next:before,
-    .hero_slider .slick-prev:before {
+  .hero_slider .slick-prev:before {
     font-size: 32px;
   }
 
   .hero_slider .slick-next,
-    .hero_slider .slick-prev {
+  .hero_slider .slick-prev {
     top: 93%;
   }
 
@@ -2102,6 +2106,26 @@ html {
   .hero_slider .slick-next {
     right: 40%;
   }
+}
+
+.faq {
+  transition: background 0.3s;
+}
+
+.faq.active .faq-question .icon {
+  rotate: -90deg;
+}
+
+.faq-answer {
+  display: none;
+}
+
+.faq.active .faq-answer {
+  display: block;
+}
+
+.faq-question:hover .faq-question .icon {
+  color: #000;
 }
 
 .placeholder\:text-black::-moz-placeholder {
