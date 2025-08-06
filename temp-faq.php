@@ -28,7 +28,7 @@
                     <div class="pt-6 faq">
                         <button class="faq-question w-full flex items-center justify-between text-left pb-6">
                             <span class="text-xl font-medium faq-title text-black"><?php the_title() ?></span>
-                            <svg class="w-5 h-5 transition-transform duration-300 icon" fill="none" stroke="currentColor"
+                            <svg class="w-5 h-5 transition-all transform duration-300 icon" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>

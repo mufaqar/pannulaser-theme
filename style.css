@@ -250,7 +250,9 @@ html {
     right: 40%;
   }
 }
-
+.faq{
+  transition: all ease-in-out 0.9s;
+}
 .faq.active .faq-question .icon {
   rotate: -90deg;
 }
