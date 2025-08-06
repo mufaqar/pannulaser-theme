@@ -247,12 +247,12 @@
                                 <?php
                                 if (has_post_thumbnail()) {
                                     echo get_the_post_thumbnail(get_the_ID(), '', [
-                                        'class' => 'rounded-lg'
+                                        'class' => 'rounded-lg size-full'
                                     ]);
                                 } else {
                                     ?>
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/Dr-Mutyala.png" alt="Default Image"
-                                        class="rounded-lg" />
+                                        class="rounded-lg size-full" />
                                     <?php
                                 }
                                 ?>
