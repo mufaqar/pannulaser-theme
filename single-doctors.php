@@ -73,11 +73,6 @@ $type = get_post_meta($post_id, 'type', true);
                             </ul>
                         </div>
                     </div>
-                    <?php if (has_post_thumbnail()): ?>
-                        <div class="testimonial-image">
-                            <?php the_post_thumbnail('full'); ?>
-                        </div>
-                    <?php endif; ?>
                 </div>
             </div>
         </div>
