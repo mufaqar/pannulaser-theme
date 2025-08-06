@@ -6,7 +6,6 @@
         <h2 class="text-3xl sm:!text-5xl lg:!text-6xl font-bold text-primary font-axiformaregular mb-8 text-center">
             Frequently Asked Questions
         </h2>
-
         <div class="max-w-[1068px] mx-auto faq-wrapper divide-y divide-black/20 bg-white shadow-lg px-7 py-10">
             <!-- FAQ 1 -->
             <?php
@@ -52,11 +51,8 @@
     </div>
 </section>
 
-
-
 <script>
     const faqs = document.querySelectorAll('.faq');
-
     faqs.forEach(faq => {
         faq.querySelector('.faq-question').addEventListener('click', () => {
             // Close all other FAQs
@@ -65,7 +61,6 @@
                     other.classList.remove('active');
                 }
             });
-
             // Toggle current FAQ
             faq.classList.toggle('active');
         });
