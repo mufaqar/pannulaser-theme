@@ -251,14 +251,11 @@ html {
   }
 }
 
-
-
-.faq {
-  transition: background 0.3s;
-}
-
 .faq.active .faq-question .icon {
   rotate: -90deg;
+}
+.faq:hover .faq-question span, .faq.active .faq-question span{
+   color: #0028ff!important;
 }
 
 .faq-answer {
@@ -267,8 +264,4 @@ html {
 
 .faq.active .faq-answer {
   display: block;
-}
-
-.faq-question:hover .faq-question .icon {
-  color: #000;
 }
