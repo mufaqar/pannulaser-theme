@@ -9,25 +9,13 @@ get_header();
 
 $post_id = get_the_ID();
 
-// Meta and featured image
-$meta_description = get_post_meta($post_id, '_yoast_wpseo_metadesc', true);
-$thumbnail_url = get_the_post_thumbnail_url($post_id, 'full');
-$thumbnail_id = get_post_thumbnail_id();
-$caption = wp_get_attachment_caption($thumbnail_id);
+
 
 // Custom fields
-$address = get_post_meta($post_id, 'address', true);
-$phone = get_post_meta($post_id, 'phone', true);
-$map_link = get_post_meta($post_id, 'map_link', true);
-// $map_image = get_post_meta($post_id, 'map_image', true);
+$type = get_post_meta($post_id, 'type', true);
 
-$args = array(
-    'post_type' => 'post',
-    'posts_per_page' => 5,
-    'orderby' => 'date',
-    'order' => 'DESC'
-);
-$query = new WP_Query($args);
+
+
 ?>
 
 <main>
@@ -60,7 +48,8 @@ $query = new WP_Query($args);
             <?php
                 $args = array(
                     'post_type' => 'testimonials',
-                    'posts_per_page' => -1, // Show all testimonials, adjust as needed
+                    'posts_per_page' => -1, 
+                    'doc_types' => $type,
                     'post_status' => 'publish',
                 );
 
