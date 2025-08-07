@@ -4,7 +4,7 @@ Theme URI: https://pannulaser.com
 Author: Mufaqar
 Author URI: https://mufaqar.com
 Description: Top Providers UK cusom theme for Top Providers
-Version: 1.0.3
+Version: 1.0.4
 License: GNU General Public License 
 Text Domain: tp_theme
 Tags: custom theme development
@@ -77,7 +77,7 @@ html {
 }
 
 .primary_nav .menu-item a,
-.primary_nav .menu-item-has-children>ul .menu-item a {
+.primary_nav .menu-item-has-children > ul .menu-item a {
   @apply text-white hover:text-secondry font-normal;
 }
 
@@ -198,14 +198,14 @@ html {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background: var(--primary);
-  transform: scaleY(0.0);
+  transform: scaleY(0);
   transform-origin: center;
   transform-style: preserve-3d;
   transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.22);
 }
 
 .team_box:hover::before {
-  transform: scaleY(1.0);
+  transform: scaleY(1);
 }
 
 .team_box .img-holder::before {
@@ -219,7 +219,7 @@ html {
   border-bottom-right-radius: 10px;
   background: var(--primary);
   opacity: 0.7;
-  transform: scaleY(0.0);
+  transform: scaleY(0);
   transform-origin: center;
   transform-style: preserve-3d;
   border-radius: 8px;
@@ -227,11 +227,10 @@ html {
 }
 
 .team_box:hover .img-holder::before {
-  transform: scaleY(1.0);
+  transform: scaleY(1);
 }
 
 @media (max-width: 768px) {
-
   .hero_slider .slick-next:before,
   .hero_slider .slick-prev:before {
     font-size: 32px;
@@ -250,14 +249,15 @@ html {
     right: 40%;
   }
 }
-.faq{
+.faq {
   transition: all ease-in-out 0.9s;
 }
 .faq.active .faq-question .icon {
   rotate: -90deg;
 }
-.faq:hover .faq-question span, .faq.active .faq-question span{
-   color: var(--hovLink) !important;
+.faq:hover .faq-question span,
+.faq.active .faq-question span {
+  color: var(--hovLink) !important;
 }
 
 .faq-answer {
@@ -267,27 +267,27 @@ html {
 .faq.active .faq-answer {
   display: block;
 }
-.Post_Content h2 {
-font-size: 28px;
-line-height: 1.5rem;
-color: var(--Pan_black);
-margin-bottom: 20px;
+.post_content h2 {
+  font-size: 28px;
+  line-height: 1.5rem;
+  color: var(--Pan_black);
+  margin-bottom: 20px;
 }
-.Post_Content h3 {
-font-size: 24px;
-line-height: 1.5rem;
-color: var(--Pan_black);
-margin-bottom: 20px;
+.post_content h3 {
+  font-size: 24px;
+  line-height: 1.5rem;
+  color: var(--Pan_black);
+  margin-bottom: 20px;
 }
-.Post_Content h4 {
-font-size: 20px;
-line-height: 1.5rem;
-color: var(--Pan_black);
-margin-bottom: 20px;
+.post_content h4 {
+  font-size: 20px;
+  line-height: 1.5rem;
+  color: var(--Pan_black);
+  margin-bottom: 20px;
 }
-.Post_Content p {
-font-size: 16x;
-line-height: 1.5rem;
-color: var(--Pan_black);
-margin-bottom: 20px;
+.post_content p {
+  font-size: 16x;
+  line-height: 1.5rem;
+  color: var(--Pan_black);
+  margin-bottom: 20px;
 }

@@ -29,7 +29,7 @@ $query = new WP_Query($args);
     <!-- Content Section -->
     <section class="md:py-20 py-16">
         <div class="container mx-auto px-4">
-            <div class="Post_Content prose max-w-none mt-10">
+            <div class="post_content prose max-w-none mt-10">
                 <?php the_content(); ?>
             </div>
         </div>

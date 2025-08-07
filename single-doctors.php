@@ -16,7 +16,7 @@ $type = get_post_meta($post_id, 'type', true);
     <section class="md:py-20 py-16">
         <div class="container mx-auto px-4">
             <div class="flex md:flex-row flex-col gap-8 items-center">
-                <div class="md:w-2/3 w-full max-w-none Post_Content">
+                <div class="md:w-2/3 w-full max-w-none post_content">
                     <p>
                         <?php echo mb_substr(strip_tags(get_the_excerpt()), 0, 150) . '...'; ?>
                     </p>
